@@ -18,8 +18,10 @@
 [zsh.variables]
 prompt_color = "#00FF00"
 
-
 [radian.files]
 "radian/profile" = "~/.config/radian/profile"
 
-
+[zed.files]
+"zed/settings.json" = "~/.config/zed/settings.json"
+"zed/tasks.json" = "~/.config/zed/tasks.json"
+"zed/snippets" = "~/.config/zed/snippets/"

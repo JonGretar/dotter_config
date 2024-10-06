@@ -1,0 +1,12 @@
+{
+  "Backticks": {
+    "prefix": "bt",
+    "body": "`${1}`",
+    "description": "Backticks"
+  },
+  "Code Cell": {
+    "prefix": "cs",
+    "body": "```${1:R}\r\n${2}\r\n```",
+    "description": "Code Cell"
+  }
+}
