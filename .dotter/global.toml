@@ -25,3 +25,8 @@ prompt_color = "#00FF00"
 "zed/settings.json" = "~/.config/zed/settings.json"
 "zed/tasks.json" = "~/.config/zed/tasks.json"
 "zed/snippets" = "~/.config/zed/snippets/"
+
+
+[bat.files]
+"bat/config" = "~/.config/bat/config"
+"bat/themes" = "~/.config/bat/themes"
