@@ -30,3 +30,8 @@ prompt_color = "#00FF00"
 [bat.files]
 "bat/config" = "~/.config/bat/config"
 "bat/themes" = "~/.config/bat/themes"
+
+
+[git.files]
+"git/ignore" = "~/.config/git/ignore"
+"git/gitconfig" = "~/.gitconfig"
