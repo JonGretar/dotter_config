@@ -1,0 +1,9 @@
+# options(radian.color_scheme = "natural")
+options(radian.tab_size = 2)
+
+# either  `"emacs"` (default) or `"vi"`.
+options(radian.editing_mode = "vi")
+
+
+httpgd::hgd()
+httpgd::hgd_browse()
