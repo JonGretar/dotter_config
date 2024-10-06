@@ -9,8 +9,8 @@
 # To clarify, folders in the repository don't have to correspond to packages.
 # On Windows, '~' is expanded to 'C:\Users\<USERNAME>\'
 [zsh.files]
-"zshenv" = "~/.zshenc"
-zshrc = "~/.zshrc"
+"zsh/zshenv" = "~/.zshenv"
+"zsh/zshrc" = "~/.zshrc"
 
 # The 'variables' section contains constants that the templated files
 # can access. This section can contain all the types that toml supports,
