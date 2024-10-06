@@ -1,1 +1,4 @@
 . "$HOME/.cargo/env"
+
+# uv
+export PATH="/Users/jongretar/.local/bin:$PATH"
