@@ -1,4 +1,14 @@
+
+# ASDF
+. "$HOME/.asdf/asdf.sh"
+. ~/.asdf/plugins/golang/set-env.zsh
+
+# Cargo
 . "$HOME/.cargo/env"
 
 # uv
 export PATH="/Users/jongretar/.local/bin:$PATH"
+
+
+
+
