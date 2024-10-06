@@ -1,0 +1,19 @@
+
+
+# The 'files' section is a mapping between the path of the file relative to
+# the repository root and its location in the filesystem (where the program
+# expects it)
+# In this case, say your repository is at `~/.dotfiles`, it will map
+# `~/.dotfiles/zsh/zprofile` to `~/.zprofile`,
+# and `~/.dotfiles/zshrc` to `~/.zshrc`
+# To clarify, folders in the repository don't have to correspond to packages.
+# On Windows, '~' is expanded to 'C:\Users\<USERNAME>\'
+[zsh.files]
+"zshenv" = "~/.zshenc"
+zshrc = "~/.zshrc"
+
+# The 'variables' section contains constants that the templated files
+# can access. This section can contain all the types that toml supports,
+# and is used by the Handlebars templating engine as the rendering context.
+[zsh.variables]
+prompt_color = "#00FF00"
