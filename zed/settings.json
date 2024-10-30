@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   // Visual Settings
+  "show_inline_completions": false,
   "theme": "Catppuccin Mocha",
   "buffer_font_family": "Monaspace Xenon",
   "buffer_font_size": 14,
@@ -70,10 +71,28 @@
       "delay_ms": 200
     }
   },
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "Markdown": ["qmd", "rmd", "md"]
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/.next",
+    "**/_freeze",
+    "**/node_modules"
+  ],
   "jupyter": {
     "enabled": true,
     "kernel_selections": {
-      "python": "cleaner",
       "typescript": "deno",
       "rust": "rust",
       "R": "ark"
@@ -93,6 +112,9 @@
 
   // Language Specific Settings
   "languages": {
+    "Markdown": {
+      "show_inline_completions": false
+    },
     "Python": {
       "language_servers": ["ruff"],
       // Or, if there are other language servers you want to use with Python
