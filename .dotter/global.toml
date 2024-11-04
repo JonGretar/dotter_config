@@ -26,6 +26,8 @@ prompt_color = "#00FF00"
 "zed/tasks.json" = "~/.config/zed/tasks.json"
 "zed/snippets" = "~/.config/zed/snippets/"
 
+[starship.files]
+"starship/starship.toml" = "~/.config/starship.toml"
 
 [bat.files]
 "bat/config" = "~/.config/bat/config"
