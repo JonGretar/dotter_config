@@ -6,7 +6,6 @@
     "label": "LazyGit",
     "command": "lazygit",
     "use_new_terminal": false,
-    "use_center_terminal": true, // One day this will hopefully work
     "allow_concurrent_runs": false,
     "reveal": "always",
     "hide": "on_success",
@@ -15,7 +14,6 @@
   {
     "label": "Posting",
     "command": "posting",
-    "use_center_terminal": true,
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "always",

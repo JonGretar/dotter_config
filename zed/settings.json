@@ -26,7 +26,11 @@
   //   "dlig": true
   // },
   "wrap_guides": [80, 120],
-  "active_pane_magnification": 1.0,
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.6,
+    "border_size": 0.3,
+    "magnification": 1.0
+  },
   "use_system_path_prompts": false,
   "terminal": {
     "font_family": "FiraCode Nerd Font Mono",
@@ -55,6 +59,7 @@
 
   "use_autoclose": true,
   "format_on_save": "on",
+  "auto_indent_on_paste": true,
   "chat_panel": {
     "button": true
   },
@@ -100,8 +105,8 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "provider": "openai",
+      "model": "gpt-3.5-turbo"
     },
     "version": "2"
   },
