@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   // Visual Settings
-  "show_inline_completions": false,
+  "show_edit_predictions": false,
   "theme": "Catppuccin Mocha",
   "buffer_font_family": "Monaspace Xenon",
   "buffer_font_size": 14,
@@ -67,7 +67,7 @@
     "enabled": true
   },
   "features": {
-    "inline_completion_provider": "supermaven"
+    "edit_prediction_provider": "zed"
   },
   "git": {
     "git_gutter": "tracked_files",
@@ -105,7 +105,7 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "openai",
+      "provider": "copilot_chat",
       "model": "gpt-3.5-turbo"
     },
     "version": "2"
@@ -118,7 +118,7 @@
   // Language Specific Settings
   "languages": {
     "Markdown": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     },
     "Python": {
       "language_servers": ["ruff"],
@@ -134,27 +134,27 @@
       ]
     },
     "HTML": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     },
     "JSON": {
       "wrap_guides": [],
       "use_autoclose": true
     },
     "JSONC": {
-      "show_inline_completions": false,
+      "show_edit_predictions": false,
       "wrap_guides": [],
       "use_autoclose": true
     },
     "R": {
-      "show_inline_completions": true,
+      "show_edit_predictions": true,
       "format_on_save": "on",
       "tab_size": 2
     },
     "Rust": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     },
     "Zig": {
-      "show_inline_completions": true
+      "show_edit_predictions": true
     },
     "Lua": {},
     "Typst": {
@@ -162,7 +162,7 @@
       "preferred_line_length": 80
     },
     "TypeScript": {
-      "show_inline_completions": false,
+      "show_edit_predictions": false,
       "tab_size": 4,
       "inlay_hints": {
         "enabled": true,
