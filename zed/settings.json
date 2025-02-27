@@ -8,8 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   // Visual Settings
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   "theme": "Catppuccin Mocha",
+  "icon_theme": "Catppuccin Mocha",
   "buffer_font_family": "Monaspace Xenon",
   "buffer_font_size": 14,
   "ui_font_size": 16,
