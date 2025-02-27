@@ -1,4 +1,4 @@
-# options(radian.color_scheme = "natural")
+options(radian.color_scheme = "rrt")
 options(radian.tab_size = 2)
 
 # either  `"emacs"` (default) or `"vi"`.
