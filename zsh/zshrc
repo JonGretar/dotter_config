@@ -88,6 +88,10 @@ alias activate="source .venv/bin/activate"
 alias nano="echo STOP TYPING NANO"
 alias ic="wezterm imgcat"
 
+# -- Environment Variables --
+export EDITOR=nvim
+export VISUAL=nvim
+
 # -- Bindings --
 bindkey "\e[1;3D" backward-word     # ⌥←
 bindkey "\e[1;3C" forward-word      # ⌥→
