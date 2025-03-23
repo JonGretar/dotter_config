@@ -62,7 +62,7 @@
   "format_on_save": "on",
   "auto_indent_on_paste": true,
   "chat_panel": {
-    "button": true
+    "button": "always"
   },
   "inlay_hints": {
     "enabled": true
@@ -97,12 +97,12 @@
     "**/node_modules"
   ],
   "jupyter": {
-    "enabled": true,
-    "kernel_selections": {
-      "typescript": "deno",
-      "rust": "rust",
-      "R": "ark"
-    }
+    "enabled": true
+    // "kernel_selections": {
+    //   "typescript": "deno",
+    //   "rust": "rust",
+    //   "R": "ark"
+    // }
   },
   "assistant": {
     "default_model": {
@@ -122,7 +122,7 @@
       "show_edit_predictions": false
     },
     "Python": {
-      "language_servers": ["ruff"],
+      "language_servers": ["pyright", "ruff"],
       // Or, if there are other language servers you want to use with Python
       // "language_servers": ["pyright", "ruff"],
       "format_on_save": "on",
