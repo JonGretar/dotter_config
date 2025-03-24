@@ -1,0 +1,91 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift-alt-j": "terminal_panel::ToggleFocus",
+      "ctrl-shift-z": "workspace::ToggleZoom",
+      "ctrl-w z": "workspace::ToggleZoom",
+      "ctrl-w t": "terminal_panel::ToggleFocus",
+      "ctrl-w p": "project_panel::ToggleFocus",
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-left": "workspace::ActivatePaneLeft",
+      "ctrl-shift-right": "workspace::ActivatePaneRight",
+      "ctrl-shift-down": "workspace::ActivatePaneDown",
+      "ctrl-shift-up": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-h": null // Undefine this shortcut so that I can write the pipe character
+    }
+  },
+  {
+    "context": "Editor && VimControl && !menu",
+    "bindings": {
+      "space l g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ],
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "shift-alt-j": "terminal_panel::ToggleFocus",
+      "ctrl-w z": "workspace::ToggleZoom",
+      "ctrl-w t": "terminal_panel::ToggleFocus",
+      "ctrl-w p": "project_panel::ToggleFocus",
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-left": "workspace::ActivatePaneLeft",
+      "ctrl-shift-right": "workspace::ActivatePaneRight",
+      "ctrl-shift-down": "workspace::ActivatePaneDown",
+      "ctrl-shift-up": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space i h": "editor::ToggleInlayHints",
+      "space g .": "editor::GoToHunk",
+      "space g ,": "editor::GoToPreviousHunk",
+      "space g h": "editor::ToggleSelectedDiffHunks",
+      "space g b": "git::Blame",
+      "space p": "editor::GoToDiagnostic",
+      "space shift-p": "editor::GoToPreviousDiagnostic",
+      "space h": "editor::Hover",
+      "g b": "tab_switcher::Toggle",
+      "alt-w": "vim::NextSubwordStart",
+      "alt-b": "vim::PreviousSubwordStart",
+      "alt-e": "vim::PreviousSubwordEnd",
+      "ð": ["vim::PushJump", { "line": false }]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "v": "editor::SelectLargerSyntaxNode",
+      "V": "editor::SelectSmallerSyntaxNode",
+      "shift-x": "vim::Exchange"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "alt-w": "vim::NextSubwordStart",
+      "alt-e": "vim::NextSubwordEnd",
+      "alt-b": "vim::PreviousSubwordStart"
+    }
+  }
+]

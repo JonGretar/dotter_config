@@ -23,6 +23,7 @@ prompt_color = "#00FF00"
 
 [zed.files]
 "zed/settings.json" = "~/.config/zed/settings.json"
+"zed/keymap.json" = "~/.config/zed/keymap.json"
 "zed/tasks.json" = "~/.config/zed/tasks.json"
 "zed/snippets" = "~/.config/zed/snippets/"
 
