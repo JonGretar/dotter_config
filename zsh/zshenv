@@ -1,7 +1,9 @@
 
 # ASDF
-. "$HOME/.asdf/asdf.sh"
-. ~/.asdf/plugins/golang/set-env.zsh
+# . "$HOME/.asdf/asdf.sh"
+# . ~/.asdf/plugins/golang/set-env.zsh
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 
 # Cargo
 . "$HOME/.cargo/env"
