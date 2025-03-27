@@ -76,6 +76,13 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
 
   // Git
   "git": {
@@ -111,13 +118,6 @@
     //   "rust": "rust",
     //   "R": "ark"
     // }
-  },
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
-    },
-    "version": "2"
   },
   "journal": {
     "enabled": false,
