@@ -8,7 +8,6 @@
 // from the command palette or from `Zed` application menu.
 {
   // Visual Settings
-  "show_edit_predictions": true,
   "theme": "Catppuccin Mocha",
   "icon_theme": "Catppuccin Mocha",
   "buffer_font_family": "Monaspace Xenon",
@@ -33,6 +32,7 @@
     "magnification": 1.0
   },
   "use_system_path_prompts": false,
+  "use_system_prompts": false,
   "terminal": {
     "font_family": "FiraCode Nerd Font Mono",
     "font_size": 16,
@@ -67,9 +67,17 @@
   "inlay_hints": {
     "enabled": true
   },
+
+  // AI
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
+
+  // Git
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
@@ -159,7 +167,7 @@
     },
     "Lua": {},
     "Typst": {
-      "soft_wrap": "editor_width",
+      "soft_wrap": "preferred_line_length",
       "preferred_line_length": 80
     },
     "TypeScript": {
