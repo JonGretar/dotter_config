@@ -30,6 +30,7 @@
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
       ],
+      "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
       "shift-alt-j": "terminal_panel::ToggleFocus",

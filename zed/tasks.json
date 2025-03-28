@@ -19,5 +19,11 @@
     "reveal": "always",
     "hide": "on_success",
     "shell": "system"
+  },
+  {
+    "label": "Preview in Skim",
+    "command": "skim-preview '$ZED_FILE'",
+    "reveal": "never",
+    "hide": "on_success"
   }
 ]
