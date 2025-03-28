@@ -6,12 +6,12 @@
 [user]
 	name = Jon Gretar Borgthorsson
 	email = jongretar@jongretar.com
+[init]
+	defaultBranch = main
+[core]
+	excludesFile = /Users/jongretar/.config/git/ignore
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[init]
-	defaultBranch = main
-[core]
-	excludesFile = /Users/jongretar/.config/git/ignore
