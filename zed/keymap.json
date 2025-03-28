@@ -2,6 +2,8 @@
   {
     "context": "Workspace",
     "bindings": {
+      "space space": "tab_switcher::Toggle",
+      "space s f": "file_finder::Toggle",
       "shift-alt-j": "terminal_panel::ToggleFocus",
       "ctrl-shift-z": "workspace::ToggleZoom",
       "ctrl-w z": "workspace::ToggleZoom",
@@ -50,7 +52,6 @@
   {
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
-      "space space": "file_finder::Toggle",
       "space i h": "editor::ToggleInlayHints",
       "space g .": "editor::GoToHunk",
       "space g ,": "editor::GoToPreviousHunk",
