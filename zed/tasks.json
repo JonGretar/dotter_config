@@ -25,5 +25,23 @@
     "command": "skim-preview '$ZED_FILE'",
     "reveal": "never",
     "hide": "on_success"
+  },
+  {
+    "label": "Quarto Render",
+    "command": "quarto render '$ZED_FILE'",
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "Quarto Preview",
+    "command": "quarto preview '$ZED_FILE'",
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "Start R terminal",
+    "command": "radian",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true
   }
 ]
