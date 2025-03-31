@@ -2,8 +2,6 @@
   {
     "context": "Workspace",
     "bindings": {
-      "space space": "tab_switcher::Toggle",
-      "space s f": "file_finder::Toggle",
       "shift-alt-j": "terminal_panel::ToggleFocus",
       "ctrl-shift-z": "workspace::ToggleZoom",
       "ctrl-w z": "workspace::ToggleZoom",
@@ -28,6 +26,8 @@
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
+      "space space": "tab_switcher::Toggle",
+      "space s f": "file_finder::Toggle",
       "space l g": [
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
