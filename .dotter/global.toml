@@ -38,3 +38,6 @@ prompt_color = "#00FF00"
 [git.files]
 "git/ignore" = "~/.config/git/ignore"
 "git/gitconfig" = "~/.gitconfig"
+
+[harlequin.files]
+"harlequin/harlequin.toml" = "~/Library/Application Support/harlequin/config.toml"
