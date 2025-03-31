@@ -112,12 +112,12 @@
     "**/node_modules"
   ],
   "jupyter": {
-    "enabled": true
-    // "kernel_selections": {
-    //   "typescript": "deno",
-    //   "rust": "rust",
-    //   "R": "ark"
-    // }
+    "enabled": true,
+    "kernel_selections": {
+      "typescript": "deno",
+      "rust": "rust",
+      "R": "ark"
+    }
   },
   "journal": {
     "enabled": false,
