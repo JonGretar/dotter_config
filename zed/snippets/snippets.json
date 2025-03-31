@@ -5,8 +5,13 @@
     "description": "Backticks"
   },
   "Code Cell": {
-    "prefix": "cs",
-    "body": "```${1:R}\r\n${2}\r\n```",
+    "prefix": "cc",
+    "body": "```${1:python}\n$0\n```",
+    "description": "Code Cell"
+  },
+  "Quarto Cell": {
+    "prefix": "qc",
+    "body": "```{${1:python}}\n$0\n```",
     "description": "Code Cell"
   }
 }
