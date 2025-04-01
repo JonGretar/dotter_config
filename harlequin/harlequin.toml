@@ -6,404 +6,404 @@ theme = "catppuccin-mocha"
 limit = 100000
 keymap_name = ["vscode", "nonnikeys"]
 
-[[keymaps."nonnikeys"]]
-keys = "ctrl+z"
+[[keymaps.nonnikeys]]
+keys = "ctrl+q,ctrl+z"
 action = "quit"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "f1"
 action = "help"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "tab"
 action = "focus_next"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+tab"
 action = "focus_previous"
 
-[[keymaps."nonnikeys"]]
-keys = "ctrl+2"
+[[keymaps.nonnikeys]]
+keys = "alt+up,f2"
 action = "focus_query_editor"
 
-[[keymaps."nonnikeys"]]
-keys = "ctrl+3"
+[[keymaps.nonnikeys]]
+keys = "alt+down,f5"
 action = "focus_results_viewer"
 
-[[keymaps."nonnikeys"]]
-keys = "ctrl+1"
+[[keymaps.nonnikeys]]
+keys = "alt+left,f6"
 action = "focus_data_catalog"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+b,f9"
 action = "toggle_sidebar"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "f10"
 action = "toggle_full_screen"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "f8"
 action = "show_query_history"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+e"
 action = "show_data_exporter"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+r"
 action = "refresh_catalog"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+o"
 action = "run_query"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+n"
 action = "code_editor.new_buffer"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+w"
 action = "code_editor.close_buffer"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+k"
 action = "code_editor.next_buffer"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+enter,ctrl+j"
 action = "code_editor.run_query"
 key_display = "^⏎ or ^j"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "f4"
 action = "code_editor.format_buffer"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+s"
 action = "code_editor.save_buffer"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+o"
 action = "code_editor.load_buffer"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+f"
 action = "code_editor.find"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "f3"
 action = "code_editor.find_next"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+g"
 action = "code_editor.goto_line"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "up"
 action = "code_editor.cursor_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "down"
 action = "code_editor.cursor_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "left"
 action = "code_editor.cursor_left"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "right"
 action = "code_editor.cursor_right"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+left"
 action = "code_editor.cursor_word_left"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+right"
 action = "code_editor.cursor_word_right"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "home"
 action = "code_editor.cursor_line_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "end"
 action = "code_editor.cursor_line_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+home"
 action = "code_editor.cursor_doc_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+end"
 action = "code_editor.cursor_doc_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "pageup"
 action = "code_editor.cursor_page_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "pagedown"
 action = "code_editor.cursor_page_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+up"
 action = "code_editor.select_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+down"
 action = "code_editor.select_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+left"
 action = "code_editor.select_left"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+right"
 action = "code_editor.select_right"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+left"
 action = "code_editor.select_word_left"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+right"
 action = "code_editor.select_word_right"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+home"
 action = "code_editor.select_line_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+end"
 action = "code_editor.select_line_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+home"
 action = "code_editor.select_doc_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+end"
 action = "code_editor.select_doc_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+a"
 action = "code_editor.select_all"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+up"
 action = "code_editor.scroll_up_one"
 
-[[keymaps."nonnikeys"]]
-keys = "ctrl+down"
+[[keymaps.nonnikeys]]
+keys = "ctrl+up"
 action = "code_editor.scroll_down_one"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+underscore"
 action = "code_editor.toggle_comment"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+x"
 action = "code_editor.cut"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+c"
 action = "code_editor.copy"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+u,ctrl+v,shift+insert"
 action = "code_editor.paste"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+z"
 action = "code_editor.undo"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+y"
 action = "code_editor.redo"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "backspace"
 action = "code_editor.delete_left"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "delete"
 action = "code_editor.delete_right"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+delete"
 action = "code_editor.delete_line"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "j"
 action = "data_catalog.previous_tab"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "k"
 action = "data_catalog.next_tab"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+enter,ctrl+j"
 action = "data_catalog.insert_name"
 key_display = "^⏎ or ^j"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+c"
 action = "data_catalog.copy_name"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "enter"
 action = "data_catalog.select_cursor"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "space"
 action = "data_catalog.toggle_node"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "up"
 action = "data_catalog.cursor_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "down"
 action = "data_catalog.cursor_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "full_stop"
 action = "data_catalog.show_context_menu"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "escape"
 action = "data_catalog.hide_context_menu"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "j"
 action = "results_viewer.previous_tab"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "k"
 action = "results_viewer.next_tab"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+c"
 action = "results_viewer.copy_selection"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "enter"
 action = "results_viewer.select_cursor"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "up"
 action = "results_viewer.cursor_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "down"
 action = "results_viewer.cursor_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "left"
 action = "results_viewer.cursor_left"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "right"
 action = "results_viewer.cursor_right"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+left"
 action = "results_viewer.cursor_row_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+right"
 action = "results_viewer.cursor_row_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+up,home"
 action = "results_viewer.cursor_column_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+down,end"
 action = "results_viewer.cursor_column_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "tab"
 action = "results_viewer.cursor_next_cell"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+tab"
 action = "results_viewer.cursor_previous_cell"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "pageup"
 action = "results_viewer.cursor_page_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "pagedown"
 action = "results_viewer.cursor_page_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+home"
 action = "results_viewer.cursor_table_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+end"
 action = "results_viewer.cursor_table_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+up"
 action = "results_viewer.select_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+down"
 action = "results_viewer.select_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+left"
 action = "results_viewer.select_left"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+right"
 action = "results_viewer.select_right"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+left"
 action = "results_viewer.select_row_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+right"
 action = "results_viewer.select_row_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+up,shift+home"
 action = "results_viewer.select_column_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+down,shift+end"
 action = "results_viewer.select_column_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+pageup"
 action = "results_viewer.select_page_up"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "shift+pagedown"
 action = "results_viewer.select_page_down"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+home"
 action = "results_viewer.select_table_start"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+shift+end"
 action = "results_viewer.select_table_end"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "ctrl+a"
 action = "results_viewer.select_all"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "enter"
 action = "history_screen.select_query"
 
-[[keymaps."nonnikeys"]]
+[[keymaps.nonnikeys]]
 keys = "escape"
 action = "history_screen.cancel"
