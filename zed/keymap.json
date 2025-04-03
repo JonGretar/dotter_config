@@ -56,6 +56,10 @@
       "space g .": "editor::GoToHunk",
       "space g ,": "editor::GoToPreviousHunk",
       "space g h": "editor::ToggleSelectedDiffHunks",
+      "space g S": "git::ToggleStaged",
+      "space g r": "git::Restore", // "d p"
+      "space g s": "git::StageAndNext", // "d u"
+      "space g u": "git::UnstageAndNext", // "d shift-u"
       "space g b": "git::Blame",
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
