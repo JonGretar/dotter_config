@@ -6,6 +6,7 @@ symbol = '󰧯 '
 style = 'bold bright-red'
 
 [custom.just]
+command = 'just -l -u | grep -v Available | wc -l'
 detect_files = ['justfile', 'Justfile', '.justfile']
 symbol = "󰰇 "
 style = "bold blue"
