@@ -21,6 +21,13 @@
     "shell": "system"
   },
   {
+    "label": "Aider (OpenAI: o3-mini)",
+    "command": "aider --watch-files --model o3-mini",
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
     "label": "Preview in Skim",
     "command": "skim-preview '$ZED_FILE'",
     "reveal": "never",
