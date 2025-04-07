@@ -41,3 +41,6 @@ prompt_color = "#00FF00"
 
 [harlequin.files]
 "harlequin/harlequin.toml" = "~/Library/Application Support/harlequin/config.toml"
+
+[fastfetch.files]
+"fastfetch/config.jsonc" = "~/.config/fastfetch/config.jsonc"

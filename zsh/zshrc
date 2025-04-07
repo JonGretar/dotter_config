@@ -87,6 +87,7 @@ alias listening="lsof -n -i4TCP -i4UDP"
 alias activate="source .venv/bin/activate"
 alias nano="echo STOP TYPING NANO"
 alias ic="wezterm imgcat"
+alias imgcat="wezterm imgcat"
 
 # -- Environment Variables --
 export EDITOR=nvim
@@ -104,3 +105,12 @@ eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
 
+# Draw a p
+if [ "$TERM_PROGRAM" = "WezTerm" ]; then
+    fastfetch
+fi
+
+jupyter_count=$(ps aux | grep -v "grep" | grep -c ipykernel)
+if [ "$jupyter_count" -gt 0 ]; then
+    echo "You have $jupyter_count Jupyter kernel(s) running."
+fi
