@@ -27,6 +27,7 @@
     "context": "Editor && VimControl && !menu",
     "bindings": {
       "space space": "tab_switcher::Toggle",
+      "space s b": "tab_switcher::Toggle",
       "space s f": "file_finder::Toggle",
       "space l g": [
         "task::Spawn",
