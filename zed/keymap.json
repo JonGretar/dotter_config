@@ -97,5 +97,23 @@
       "alt-e": "vim::NextSubwordEnd",
       "alt-b": "vim::PreviousSubwordStart"
     }
+  },
+
+  // *** Extension Based Configurations ***
+
+  // R Code
+  {
+    "context": "Editor && extension==R",
+    "bindings": {
+      "ctrl-shift-m": ["workspace::SendKeystrokes", "space |> space"],
+      "alt--": ["workspace::SendKeystrokes", "space < - space"]
+    }
+  },
+  // Cell mode for jupyter
+  {
+    "context": "extension==R || extension==py",
+    "bindings": {
+      "ctrl-alt-i": ["workspace::SendKeystrokes", "\n# space %%\n"]
+    }
   }
 ]
