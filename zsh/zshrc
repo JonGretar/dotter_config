@@ -88,6 +88,7 @@ alias activate="source .venv/bin/activate"
 alias nano="echo STOP TYPING NANO"
 alias ic="wezterm imgcat"
 alias imgcat="wezterm imgcat"
+alias zed-preview="zed --zed /Applications/Zed\ Preview.app"
 
 # -- Environment Variables --
 export EDITOR=nvim
