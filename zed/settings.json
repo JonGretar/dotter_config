@@ -34,13 +34,30 @@
   "use_system_path_prompts": false,
   "use_system_prompts": false,
   "terminal": {
+    "button": true,
     "font_family": "FiraCode Nerd Font Mono",
     "font_size": 16,
     "line_height": "standard"
+    "line_height": "standard",
+    "detect_venv": {
+      "on": {
+        "activate_script": "default",
+        "directories": [".venv", "venv"]
+      }
+    }
   },
   "tabs": {
     "file_icons": false,
+    "file_icons": true,
     "git_status": true
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "notification_panel": {
+    "enabled": true,
+    "button": true
   },
 
   // Vim mode setup
