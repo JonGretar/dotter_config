@@ -3,18 +3,7 @@
     "context": "Workspace",
     "bindings": {
       "shift-alt-j": "terminal_panel::ToggleFocus",
-      "ctrl-shift-z": "workspace::ToggleZoom",
-      "ctrl-w z": "workspace::ToggleZoom",
-      "ctrl-w t": "terminal_panel::ToggleFocus",
-      "ctrl-w p": "project_panel::ToggleFocus",
-      "ctrl-shift-h": "workspace::ActivatePaneLeft",
-      "ctrl-shift-l": "workspace::ActivatePaneRight",
-      "ctrl-shift-j": "workspace::ActivatePaneDown",
-      "ctrl-shift-k": "workspace::ActivatePaneUp",
-      "ctrl-shift-left": "workspace::ActivatePaneLeft",
-      "ctrl-shift-right": "workspace::ActivatePaneRight",
-      "ctrl-shift-down": "workspace::ActivatePaneDown",
-      "ctrl-shift-up": "workspace::ActivatePaneUp"
+      "ctrl-shift-z": "workspace::ToggleZoom"
     }
   },
   {
@@ -23,12 +12,59 @@
       "alt-h": null // Undefine this shortcut so that I can write the pipe character
     }
   },
+
+  // Window's navigation
+  {
+    "context": "Dock || Terminal || Editor",
+    "bindings": {
+      "ctrl-w z": "workspace::ToggleZoom",
+      "ctrl-w t": "terminal_panel::ToggleFocus",
+      "ctrl-w p": "project_panel::ToggleFocus",
+      "ctrl-w g": "git_panel::ToggleFocus",
+      "ctrl-w a": "assistant::ToggleFocus",
+
+      // Window's motions
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      "ctrl-shift-left": "workspace::ActivatePaneLeft",
+      "ctrl-shift-right": "workspace::ActivatePaneRight",
+      "ctrl-shift-up": "workspace::ActivatePaneUp",
+      "ctrl-shift-down": "workspace::ActivatePaneDown"
+    }
+  },
+  // *** Panel Configurations ***
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "q": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "q": "git_panel::Close"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-\\": "workspace::ToggleRightDock",
+      "cmd-k": "workspace::ToggleRightDock"
+    }
+  },
+  // *** VIM Editor ***
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
       "space space": "tab_switcher::Toggle",
       "space s b": "tab_switcher::Toggle",
       "space s f": "file_finder::Toggle",
+      "space b n": "workspace::NewFile",
+      "space b b": "pane::AlternateFile",
+      "space b d": "pane::CloseActiveItem",
+      "space b q": "pane::CloseInactiveItems",
       "space l g": [
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
