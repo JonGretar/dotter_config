@@ -37,7 +37,6 @@
     "button": true,
     "font_family": "FiraCode Nerd Font Mono",
     "font_size": 16,
-    "line_height": "standard"
     "line_height": "standard",
     "detect_venv": {
       "on": {
@@ -47,7 +46,6 @@
     }
   },
   "tabs": {
-    "file_icons": false,
     "file_icons": true,
     "git_status": true
   },
@@ -100,6 +98,7 @@
     "edit_prediction_provider": "zed"
   },
   "assistant": {
+    "default_profile": "ask",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-5-sonnet-latest"
