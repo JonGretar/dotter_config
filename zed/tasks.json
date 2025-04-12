@@ -36,18 +36,21 @@
   {
     "label": "Quarto Render",
     "command": "quarto render '$ZED_FILE'",
+    "tags": ["quarto"],
     "reveal": "always",
     "hide": "on_success"
   },
   {
     "label": "Quarto Preview",
     "command": "quarto preview '$ZED_FILE'",
+    "tags": ["quarto"],
     "reveal": "always",
     "hide": "on_success"
   },
   {
     "label": "Start R terminal",
     "command": "radian",
+    "tags": ["r"],
     "cwd": "$ZED_WORKTREE_ROOT",
     "use_new_terminal": true
   }
