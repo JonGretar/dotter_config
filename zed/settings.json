@@ -60,6 +60,11 @@
     "button": true
   },
 
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+
   // Vim mode setup
   "vim_mode": true,
   "vim": {
