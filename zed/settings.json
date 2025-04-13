@@ -26,6 +26,7 @@
   //   "dlig": true
   // },
   "wrap_guides": [80, 120],
+  "current_line_highlight": "all",
   "active_pane_modifiers": {
     "inactive_opacity": 0.6,
     "border_size": 0.3,
@@ -45,22 +46,36 @@
       }
     }
   },
+  "scrollbar": {
+    "show": "auto"
+  },
   "tabs": {
     "file_icons": true,
-    "git_status": true
+    "git_status": true,
+    "show_diagnostics": "errors",
+    "activate_on_close": "history"
   },
   "tab_bar": {
     "show": true,
+    "show_tab_bar_buttons": true,
     "show_nav_history_buttons": false
   },
   "notification_panel": {
     "enabled": true,
     "button": true
   },
-
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware"
+  },
+
+  // Ensure some extensions are always installed as the config reliest on them
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "just": true,
+    "rainbow-csv": true,
+    "ruff": true
   },
 
   // Vim mode setup
@@ -78,6 +93,8 @@
     "Q": "q"
   },
 
+  // Zed inner workings.
+  "restore_on_startup": "none",
   "use_autoclose": true,
   "format_on_save": "on",
   "auto_indent_on_paste": true,
@@ -98,7 +115,8 @@
     "edit_prediction_provider": "zed"
   },
   "assistant": {
-    "default_profile": "ask",
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-5-sonnet-latest"
@@ -114,6 +132,7 @@
       "delay_ms": 200
     }
   },
+
   "file_types": {
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
     "Markdown": ["qmd", "rmd", "md"]
@@ -155,6 +174,12 @@
       "language_servers": ["pyright", "ruff"],
       // Or, if there are other language servers you want to use with Python
       // "language_servers": ["pyright", "ruff"],
+      "code_actions_on_format": {
+        // Fix all auto-fixable lint violations
+        // "source.fixAll.ruff": true,
+        // Organize imports
+        "source.organizeImports.ruff": true
+      },
       "format_on_save": "on",
       "formatter": [
         {
