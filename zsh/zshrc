@@ -94,6 +94,7 @@ alias zed-preview="zed --zed /Applications/Zed\ Preview.app"
 export EDITOR=nvim
 export VISUAL=nvim
 export LESS="-# 1 -R -F"
+export PAGER="ov"
 
 # -- Bindings --
 bindkey "\e[1;3D" backward-word     # ⌥←
