@@ -1,0 +1,12 @@
+
+
+KeyBind:
+    exit:
+        - "Escape"
+        - "q"
+    align_format:
+        - "ctrl+t"
+    column_width:
+        - "ctrl+o"
+    section_delimiter:
+        - "ctrl+d"

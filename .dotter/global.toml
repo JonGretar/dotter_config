@@ -44,3 +44,9 @@ prompt_color = "#00FF00"
 
 [fastfetch.files]
 "fastfetch/config.jsonc" = "~/.config/fastfetch/config.jsonc"
+
+[ov.files]
+"ov/config.yaml" = "~/.config/ov/config.yaml"
+
+
+
