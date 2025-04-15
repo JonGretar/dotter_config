@@ -93,7 +93,7 @@ alias zed-preview="zed --zed /Applications/Zed\ Preview.app"
 # -- Environment Variables --
 export EDITOR=nvim
 export VISUAL=nvim
-export LESS="-# 1" # You can not disable horizonal scrolling. Only make it less annoying
+export LESS="-# 1 -R -F"
 
 # -- Bindings --
 bindkey "\e[1;3D" backward-word     # ⌥←
