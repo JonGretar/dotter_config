@@ -6,7 +6,7 @@
     "height": 14,
     "position": "left",
     "preserveAspectRatio": true,
-    "source": "/Users/jongretar/Documents/HelsinkiUniversity/Logo/uh_for_under.png"
+    "source": "~/.config/fastfetch/uh_for_under.png"
   },
   "modules": [
     "title",

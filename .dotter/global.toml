@@ -44,6 +44,7 @@ prompt_color = "#00FF00"
 
 [fastfetch.files]
 "fastfetch/config.jsonc" = "~/.config/fastfetch/config.jsonc"
+"fastfetch/uh_for_under.png" = { target = "~/.config/fastfetch/uh_for_under.png", type = "symbolic" }
 
 [ov.files]
 "ov/config.yaml" = "~/.config/ov/config.yaml"
