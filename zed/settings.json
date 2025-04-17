@@ -98,6 +98,7 @@
   "use_autoclose": true,
   "format_on_save": "on",
   "auto_indent_on_paste": true,
+  "extend_comment_on_newline": false,
   "chat_panel": {
     "button": "always"
   },
