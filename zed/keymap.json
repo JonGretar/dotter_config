@@ -12,7 +12,6 @@
       "alt-h": null // Undefine this shortcut so that I can write the pipe character
     }
   },
-
   // Window's navigation
   {
     "context": "Dock || Terminal || Editor",
@@ -58,6 +57,8 @@
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
+      "j": ["vim::Down", { "display_lines": true }],
+      "k": ["vim::Up", { "display_lines": true }],
       "space space": "tab_switcher::Toggle",
       "space s b": "tab_switcher::Toggle",
       "space s f": "file_finder::Toggle",
@@ -84,6 +85,13 @@
       "ctrl-shift-right": "workspace::ActivatePaneRight",
       "ctrl-shift-down": "workspace::ActivatePaneDown",
       "ctrl-shift-up": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "VimCount && Editor && VimControl && !menu",
+    "bindings": {
+      "j": ["vim::Down", { "display_lines": false }],
+      "k": ["vim::Up", { "display_lines": false }]
     }
   },
   {
