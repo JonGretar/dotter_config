@@ -16,11 +16,11 @@
   {
     "context": "Dock || Terminal || Editor",
     "bindings": {
-      "ctrl-w z": "workspace::ToggleZoom",
-      "ctrl-w t": "terminal_panel::ToggleFocus",
-      "ctrl-w p": "project_panel::ToggleFocus",
-      "ctrl-w g": "git_panel::ToggleFocus",
-      "ctrl-w a": "assistant::ToggleFocus",
+      "ctrl-t z": "workspace::ToggleZoom",
+      "ctrl-t t": "terminal_panel::ToggleFocus",
+      "ctrl-t p": "project_panel::ToggleFocus",
+      "ctrl-t g": "git_panel::ToggleFocus",
+      "ctrl-t a": "assistant::ToggleFocus",
 
       // Window's motions
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
