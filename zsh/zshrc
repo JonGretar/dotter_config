@@ -16,6 +16,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ---- FZF -----
 
+if [[ -z "$ZED_ENVIRONMENT" ]]; then
+
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
@@ -67,6 +69,8 @@ _fzf_comprun() {
   esac
 }
 
+fi
+
 # ---- Eza (better ls) -----
 
 alias ls="eza --color=always --git --icons=always"
@@ -110,7 +114,7 @@ eval "$(starship init zsh)"
 
 
 # Draw a p
-if [ "$TERM_PROGRAM" = "WezTerm" ]; then
+if [[ "$TERM_PROGRAM" = "WezTerm" &&  -z "$ZED_ENVIRONMENT" ]]; then
     fastfetch
 fi
 
