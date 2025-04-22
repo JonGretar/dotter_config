@@ -113,12 +113,16 @@ eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
 
-# Draw a p
+# Few things should only happen in term.
 if [[ "$TERM_PROGRAM" = "WezTerm" &&  -z "$ZED_ENVIRONMENT" ]]; then
-    fastfetch
+
+  # Show the amount of jupyter kernels
+  jupyter_count=$(procs jupyter --json | jq ". | length")
+  if [ "$jupyter_count" -gt 0 ]; then
+    echo "You have $jupyter_count Jupyter kernel(s) running."
+  fi
+
+  # Display welcome screen
+  fastfetch
 fi
 
-jupyter_count=$(procs jupyter --json | jq ". | length")
-if [ "$jupyter_count" -gt 0 ]; then
-    echo "You have $jupyter_count Jupyter kernel(s) running."
-fi
