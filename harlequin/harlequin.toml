@@ -7,7 +7,7 @@ limit = 100000
 keymap_name = ["vscode", "nonnikeys"]
 
 [[keymaps.nonnikeys]]
-keys = "ctrl+q,ctrl+z"
+keys = "ctrl+q"
 action = "quit"
 
 [[keymaps.nonnikeys]]
