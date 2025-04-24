@@ -82,7 +82,13 @@
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "on_yank",
-    "use_multiline_find": false
+    "use_multiline_find": false,
+    "cursor_shape": {
+      "normal": "block",
+      "insert": "bar",
+      "replace": "underline",
+      "visual": "hollow"
+    }
   },
   "cursor_blink": false,
   "relative_line_numbers": true,
