@@ -57,8 +57,6 @@
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
-      "j": ["vim::Down", { "display_lines": true }],
-      "k": ["vim::Up", { "display_lines": true }],
       "space space": "tab_switcher::Toggle",
       "space s b": "tab_switcher::Toggle",
       "space s f": "file_finder::Toggle",
@@ -145,6 +143,14 @@
 
   // *** Extension Based Configurations ***
 
+  // Text based
+  {
+    "context": "Editor && (extension==md || extension==typ || extension==qmd)",
+    "bindings": {
+      "j": ["vim::Down", { "display_lines": true }],
+      "k": ["vim::Up", { "display_lines": true }]
+    }
+  },
   // R Code
   {
     "context": "Editor && extension==R",
