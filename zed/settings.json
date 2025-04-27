@@ -13,18 +13,18 @@
   "buffer_font_family": "Monaspace Xenon",
   "buffer_font_size": 14,
   "ui_font_size": 16,
-  // "buffer_font_features": {
-  //   "ss01": true,
-  //   "ss02": true,
-  //   "ss03": true,
-  //   "ss04": true,
-  //   "ss05": true,
-  //   "ss06": true,
-  //   "ss07": true,
-  //   "ss08": true,
-  //   "calt": true,
-  //   "dlig": true
-  // },
+  "buffer_font_features": {
+    "ss01": true,
+    "ss02": true,
+    "ss03": true,
+    "ss04": true,
+    "ss05": true,
+    "ss06": true,
+    "ss07": true,
+    "ss08": true,
+    "calt": true,
+    "dlig": true
+  },
   "wrap_guides": [80, 120],
   "current_line_highlight": "all",
   "active_pane_modifiers": {
