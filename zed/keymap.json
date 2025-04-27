@@ -145,7 +145,7 @@
 
   // Text based
   {
-    "context": "Editor && (extension==md || extension==typ || extension==qmd)",
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && (extension==md || extension==typ || extension==qmd)",
     "bindings": {
       "j": ["vim::Down", { "display_lines": true }],
       "k": ["vim::Up", { "display_lines": true }]
