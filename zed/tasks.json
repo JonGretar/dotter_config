@@ -53,5 +53,17 @@
     "tags": ["r"],
     "cwd": "$ZED_WORKTREE_ROOT",
     "use_new_terminal": true
+  },
+  {
+    "label": "Marimo: Run file",
+    "command": "marimo run --watch  '$ZED_FILE'",
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "Marimo: Edit file",
+    "command": "marimo edit --watch  '$ZED_FILE'",
+    "reveal": "always",
+    "hide": "on_success"
   }
 ]
