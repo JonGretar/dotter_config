@@ -100,7 +100,8 @@
   },
 
   // Zed inner workings.
-  "restore_on_startup": "none",
+  "on_last_window_closed": "quit_app",
+  "restore_on_startup": "last_workspace",
   "use_autoclose": true,
   "format_on_save": "on",
   "auto_indent_on_paste": true,
