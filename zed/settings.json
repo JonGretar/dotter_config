@@ -125,10 +125,6 @@
   "assistant": {
     "always_allow_tool_actions": true,
     "default_profile": "write",
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
-    },
     "version": "2"
   },
 
