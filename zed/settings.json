@@ -117,16 +117,17 @@
   "show_edit_predictions": true,
   "edit_predictions": {
     "mode": "subtle",
-    "enabled_in_assistant": true
+    "enabled_in_text_threads": true
   },
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "assistant": {
+  "agent": {
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "version": "2"
   },
+  "context_servers": {},
 
   // Git
   "git": {
