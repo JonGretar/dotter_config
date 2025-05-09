@@ -16,10 +16,15 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ---- FZF -----
 
-if [[ -z "$ZED_ENVIRONMENT" && -z "$__CFBundleIdentifier" ]]; then
+if [[ 
+  -z "$ZED_ENVIRONMENT" 
+  && "$__CFBundleIdentifier" != "dev.zed.Zed-Preview"  
+  && "$__CFBundleIdentifier" != "dev.zed.Zed"  
+]]; then
 
   # Set up fzf key bindings and fuzzy completion
-  eval "$(fzf --zsh)"
+  # eval "$(fzf --zsh)"
+  zvm_after_init_commands+=('eval "$(fzf --zsh)"')
 
   # -- Use fd instead of fzf --
 
@@ -117,7 +122,7 @@ eval "$(starship init zsh)"
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Few things should only happen in term.
-if [[ "$TERM_PROGRAM" = "WezTerm" &&  -z "$ZED_ENVIRONMENT" ]]; then
+if [[ "$TERM_PROGRAM" = "WezTerm" && "$__CFBundleIdentifier" != "dev.zed.Zed-Preview"  ]]; then
 
   # Display welcome screen
   fastfetch
