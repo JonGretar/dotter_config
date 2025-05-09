@@ -113,6 +113,8 @@ eval "$(direnv hook zsh)"
 # --- Starship ---
 eval "$(starship init zsh)"
 
+# --- VI mode ---
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Few things should only happen in term.
 if [[ "$TERM_PROGRAM" = "WezTerm" &&  -z "$ZED_ENVIRONMENT" ]]; then
