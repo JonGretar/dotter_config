@@ -1,17 +1,35 @@
+[core]
+    compression = 9
+	excludesFile = /Users/jongretar/.config/git/ignore
+
+[user]
+	name = Jon Gretar Borgthorsson
+	email = jongretar@jongretar.com
+
+[init]
+	defaultBranch = main
+
+[status]
+    branch = true
+    short = true
+    showStash = true
+
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
+
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[user]
-	name = Jon Gretar Borgthorsson
-	email = jongretar@jongretar.com
-[init]
-	defaultBranch = main
-[core]
-	excludesFile = /Users/jongretar/.config/git/ignore
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+
+
+# URL Shortcuts
+[url "https://github.com/"]
+	insteadOf = "gh/"
+
+[url "https://github.com/JonGretar/"]
+	insteadOf = "ghj/"
