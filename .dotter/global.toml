@@ -37,7 +37,7 @@ prompt_color = "#00FF00"
 
 [git.files]
 "git/ignore" = "~/.config/git/ignore"
-"git/gitconfig" = "~/.gitconfig"
+"git/gitconfig" = "~/.config/git/config"
 
 [harlequin.files]
 "harlequin/harlequin.toml" = "~/Library/Application Support/harlequin/config.toml"
@@ -48,6 +48,3 @@ prompt_color = "#00FF00"
 
 [ov.files]
 "ov/config.yaml" = "~/.config/ov/config.yaml"
-
-
-
