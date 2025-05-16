@@ -64,9 +64,11 @@
     "enabled": true,
     "button": true
   },
+  "minimap": { "show": "never" },
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware"
+    "coloring": "indent_aware",
+    "background_coloring": "disabled"
   },
 
   // Ensure some extensions are always installed as the config reliest on them

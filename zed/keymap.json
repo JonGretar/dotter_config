@@ -3,7 +3,13 @@
     "context": "Workspace",
     "bindings": {
       "shift-alt-j": "terminal_panel::ToggleFocus",
-      "ctrl-shift-z": "workspace::ToggleZoom"
+      "ctrl-shift-z": "workspace::ToggleZoom",
+      "cmd-shift-o": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ]
     }
   },
   {
@@ -20,7 +26,7 @@
       "ctrl-t t": "terminal_panel::ToggleFocus",
       "ctrl-t p": "project_panel::ToggleFocus",
       "ctrl-t g": "git_panel::ToggleFocus",
-      "ctrl-t a": "assistant::ToggleFocus",
+      "ctrl-t a": "agent::ToggleFocus",
 
       // Window's motions
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
@@ -42,9 +48,7 @@
   },
   {
     "context": "GitPanel",
-    "bindings": {
-      "q": "git_panel::Close"
-    }
+    "bindings": {}
   },
   {
     "context": "AgentPanel",
@@ -57,6 +61,12 @@
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
+      "cmd-shift-o": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ],
       "space space": "tab_switcher::Toggle",
       "space s b": "tab_switcher::Toggle",
       "space s f": "file_finder::Toggle",
@@ -142,6 +152,19 @@
   },
 
   // *** Extension Based Configurations ***
+
+  {
+    "context": "Editor && (extension==ex || extension==exs)",
+    "bindings": {
+      "alt-a": [
+        "task::Spawn",
+        {
+          "task_name": "Fawkes: Choose alternate target",
+          "reveal_target": "center"
+        }
+      ]
+    }
+  },
 
   // Text based
   {
