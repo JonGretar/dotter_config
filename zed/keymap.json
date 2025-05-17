@@ -15,18 +15,25 @@
   {
     "context": "Editor",
     "bindings": {
+      "cmd-shift-o": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ],
       "alt-h": null // Undefine this shortcut so that I can write the pipe character
     }
   },
   // Window's navigation
   {
-    "context": "Dock || Terminal || Editor",
+    "context": "(Dock || Terminal || Editor) && !menu && !(Picker > Editor)",
     "bindings": {
-      "ctrl-t z": "workspace::ToggleZoom",
-      "ctrl-t t": "terminal_panel::ToggleFocus",
-      "ctrl-t p": "project_panel::ToggleFocus",
-      "ctrl-t g": "git_panel::ToggleFocus",
-      "ctrl-t a": "agent::ToggleFocus",
+      "ctrl-p z": "workspace::ToggleZoom",
+      "ctrl-p t": "terminal_panel::ToggleFocus",
+      "ctrl-p p": "project_panel::ToggleFocus",
+      "ctrl-p o": "outline_panel::ToggleFocus",
+      "ctrl-p g": "git_panel::ToggleFocus",
+      "ctrl-p a": "agent::ToggleFocus",
 
       // Window's motions
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
@@ -82,9 +89,6 @@
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
       "shift-alt-j": "terminal_panel::ToggleFocus",
-      "ctrl-w z": "workspace::ToggleZoom",
-      "ctrl-w t": "terminal_panel::ToggleFocus",
-      "ctrl-w p": "project_panel::ToggleFocus",
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
       "ctrl-shift-l": "workspace::ActivatePaneRight",
       "ctrl-shift-j": "workspace::ActivatePaneDown",
