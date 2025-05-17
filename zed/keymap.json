@@ -140,8 +140,10 @@
     }
   },
   {
-    "context": "vim_mode == normal || vim_mode == visual",
+    "context": "(vim_mode == normal || vim_mode == visual) && !VimCount",
     "bindings": {
+      "^": "vim::StartOfLine",
+      "0": "vim::FirstNonWhitespace",
       "s": "vim::PushSneak",
       "shift-s": "vim::PushSneakBackward"
     }

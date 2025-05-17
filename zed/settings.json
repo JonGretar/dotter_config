@@ -142,6 +142,7 @@
 
   "file_types": {
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "YAML": ["sls"],
     "Markdown": ["qmd", "rmd", "md"]
   },
   "file_scan_exclusions": [
