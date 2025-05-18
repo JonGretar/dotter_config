@@ -1,0 +1,25 @@
+{
+  "Marimo App Cell": {
+    "prefix": "mac",
+    "description": "Create a Marimo app cell",
+    "body": [
+    "@app.cell",
+    "def _(${1:mo}):",
+    "    $0",
+    "    return"
+    ]
+  },
+  "Marimo MD": {
+    "prefix": "mmd",
+    "description": "Create a Marimo Markdown cell",
+    "body": [
+    "@app.cell",
+    "def _(${1:mo}):",
+    "    mo.md($2\"\"\"",
+    "    $0",
+    "    \"\"\")",
+    "    return"
+    ]
+  },
+
+}
