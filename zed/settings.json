@@ -50,8 +50,9 @@
     "show": "auto"
   },
   "tabs": {
-    "file_icons": true,
+    "file_icons": false,
     "git_status": true,
+    "show_close_button": "hidden",
     "show_diagnostics": "errors",
     "activate_on_close": "history"
   },
@@ -62,6 +63,15 @@
   },
   "notification_panel": {
     "enabled": true,
+    "button": false
+  },
+  "chat_panel": {
+    "button": "when_in_call"
+  },
+  "collaboration_panel": {
+    "button": true
+  },
+  "search": {
     "button": true
   },
   "minimap": { "show": "never" },
@@ -108,9 +118,6 @@
   "format_on_save": "on",
   "auto_indent_on_paste": true,
   "extend_comment_on_newline": false,
-  "chat_panel": {
-    "button": "always"
-  },
   "inlay_hints": {
     "enabled": true
   },
@@ -125,6 +132,7 @@
     "edit_prediction_provider": "zed"
   },
   "agent": {
+    "button": true,
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "version": "2"

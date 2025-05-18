@@ -34,6 +34,8 @@
       "ctrl-p o": "outline_panel::ToggleFocus",
       "ctrl-p g": "git_panel::ToggleFocus",
       "ctrl-p a": "agent::ToggleFocus",
+      "ctrl-p c": "collab_panel::ToggleFocus",
+      "ctrl-p shift-C": "chat_panel::ToggleFocus",
 
       // Window's motions
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
