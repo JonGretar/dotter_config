@@ -124,7 +124,7 @@
       "g b": "tab_switcher::Toggle",
       "alt-w": "vim::NextSubwordStart",
       "alt-b": "vim::PreviousSubwordStart",
-      "alt-e": "vim::PreviousSubwordEnd",
+      "alt-e": "vim::NextSubwordEnd",
       "cmd-alt-k": "editor::AddSelectionAbove",
       "cmd-alt-j": "editor::AddSelectionBelow", // Insert cursor below
       "ð": ["vim::PushJump", { "line": false }]
