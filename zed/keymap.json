@@ -28,14 +28,15 @@
   {
     "context": "(Dock || Terminal || Editor) && !menu && !(Picker > Editor)",
     "bindings": {
-      "ctrl-p z": "workspace::ToggleZoom",
-      "ctrl-p t": "terminal_panel::ToggleFocus",
-      "ctrl-p p": "project_panel::ToggleFocus",
-      "ctrl-p o": "outline_panel::ToggleFocus",
-      "ctrl-p g": "git_panel::ToggleFocus",
-      "ctrl-p a": "agent::ToggleFocus",
-      "ctrl-p c": "collab_panel::ToggleFocus",
-      "ctrl-p shift-C": "chat_panel::ToggleFocus",
+      "ctrl-q z": "workspace::ToggleZoom",
+      "ctrl-q t": "terminal_panel::ToggleFocus",
+      "ctrl-q p": "project_panel::ToggleFocus",
+      "ctrl-q o": "outline_panel::ToggleFocus",
+      "ctrl-q g": "git_panel::ToggleFocus",
+      "ctrl-q a": "agent::ToggleFocus",
+      "ctrl-q c": "collab_panel::ToggleFocus",
+      "ctrl-q shift-C": "chat_panel::ToggleFocus",
+      "ctrl-q d": "diagnostics::Deploy",
 
       // Window's motions
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
