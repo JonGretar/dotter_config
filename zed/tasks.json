@@ -34,6 +34,13 @@
     "hide": "on_success"
   },
   {
+    "label": "file_finder",
+    "command": "zed \"$(tv files)\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
+  },
+  {
     "label": "Quarto Render",
     "command": "quarto render '$ZED_FILE'",
     "tags": ["quarto"],

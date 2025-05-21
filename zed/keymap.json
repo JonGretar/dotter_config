@@ -9,6 +9,10 @@
         {
           "create_new_window": false
         }
+      ],
+      "cmd-alt-p": [
+        "task::Spawn",
+        { "task_name": "file_finder", "reveal_target": "center" }
       ]
     }
   },

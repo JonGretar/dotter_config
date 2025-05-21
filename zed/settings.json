@@ -36,6 +36,7 @@
   "use_system_prompts": false,
   "terminal": {
     "button": true,
+    "cursor_shape": "block",
     "font_family": "FiraCode Nerd Font Mono",
     "font_size": 16,
     "line_height": "standard",
@@ -52,7 +53,7 @@
   "tabs": {
     "file_icons": false,
     "git_status": true,
-    "show_close_button": "hidden",
+    "show_close_button": "hover",
     "show_diagnostics": "errors",
     "activate_on_close": "history"
   },
@@ -187,7 +188,8 @@
       "show_edit_predictions": false
     },
     "Python": {
-      "language_servers": ["pyright", "ruff"],
+      "language_servers": ["pyright", "ty", "ruff"],
+      // "language_servers": ["ty", "ruff"],
       // Or, if there are other language servers you want to use with Python
       // "language_servers": ["pyright", "ruff"],
       "code_actions_on_format": {
@@ -247,6 +249,12 @@
             "extendSelect": ["E", "F", "I"]
           }
         }
+      }
+    },
+    "ty": {
+      "binary": {
+        "path": "/Users/jongretar/.local/bin/ty",
+        "arguments": ["server"]
       }
     },
     "rust-analyzer": {
