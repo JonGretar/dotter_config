@@ -42,31 +42,18 @@
     }
   },
 
-  // *** Panel Configurations ***
-  {
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "q": "workspace::ToggleLeftDock"
-    }
-  },
-  {
-    "context": "GitPanel",
-    "bindings": {}
-  },
-  {
-    "context": "AgentPanel",
-    "bindings": {
-      "ctrl-\\": "workspace::ToggleRightDock",
-      "cmd-k": "workspace::ToggleRightDock"
-    }
-  },
-
   // *** VIM Editor ***
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
       "alt-h": null, // Undefine this shortcut so that I can write the pipe character
-      "cmd-shift-o": null, // Undefine so it does not override Workspace
+
+      "cmd-shift-o": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ],
 
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
@@ -89,6 +76,7 @@
 
       // Leader
       "space space": "tab_switcher::Toggle",
+      "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
       "space l g": [
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
@@ -99,7 +87,6 @@
       "space b b": "pane::AlternateFile",
       "space b d": "pane::CloseActiveItem",
       "space b q": "pane::CloseInactiveItems",
-      "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
       "space i h": "editor::ToggleInlayHints",
       "space g .": "editor::GoToHunk",
       "space g ,": "editor::GoToPreviousHunk",
