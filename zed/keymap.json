@@ -107,13 +107,6 @@
     }
   },
   {
-    "context": "VimCount && Editor && VimControl && !menu",
-    "bindings": {
-      "j": ["vim::Down", { "display_lines": false }],
-      "k": ["vim::Up", { "display_lines": false }]
-    }
-  },
-  {
     "context": "vim_mode == normal",
     "bindings": {
       "space i h": "editor::ToggleInlayHints",
@@ -193,7 +186,7 @@
 
   // Text based
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual) && (extension==md || extension==typ || extension==qmd)",
+    "context": "Editor && !VimCount && (vim_mode == normal || vim_mode == visual) && (extension==md || extension==typ || extension==qmd)",
     "bindings": {
       "j": ["vim::Down", { "display_lines": true }],
       "k": ["vim::Up", { "display_lines": true }]
