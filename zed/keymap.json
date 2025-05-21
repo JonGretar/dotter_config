@@ -81,21 +81,17 @@
           "create_new_window": false
         }
       ],
-      "space space": "tab_switcher::Toggle",
-      "space s b": "tab_switcher::Toggle",
-      "space s f": "file_finder::Toggle",
-      "space b n": "workspace::NewFile",
-      "space b b": "pane::AlternateFile",
-      "space b d": "pane::CloseActiveItem",
-      "space b q": "pane::CloseInactiveItems",
-      "space l g": [
-        "task::Spawn",
-        { "task_name": "LazyGit", "reveal_target": "center" }
-      ],
-      "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
+
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
-      "shift-alt-j": "terminal_panel::ToggleFocus",
+      "alt-w": "vim::NextSubwordStart",
+      "alt-b": "vim::PreviousSubwordStart",
+      "alt-e": "vim::NextSubwordEnd",
+      "cmd-alt-k": "editor::AddSelectionAbove",
+      "cmd-alt-j": "editor::AddSelectionBelow", // Insert cursor below
+      "ð": ["vim::PushJump", { "line": false }],
+
+      // Pane Stuff
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
       "ctrl-shift-l": "workspace::ActivatePaneRight",
       "ctrl-shift-j": "workspace::ActivatePaneDown",
@@ -103,12 +99,21 @@
       "ctrl-shift-left": "workspace::ActivatePaneLeft",
       "ctrl-shift-right": "workspace::ActivatePaneRight",
       "ctrl-shift-down": "workspace::ActivatePaneDown",
-      "ctrl-shift-up": "workspace::ActivatePaneUp"
-    }
-  },
-  {
-    "context": "vim_mode == normal",
-    "bindings": {
+      "ctrl-shift-up": "workspace::ActivatePaneUp",
+
+      // Leader
+      "space space": "tab_switcher::Toggle",
+      "space l g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ],
+      "space s b": "tab_switcher::Toggle",
+      "space s f": "file_finder::Toggle",
+      "space b n": "workspace::NewFile",
+      "space b b": "pane::AlternateFile",
+      "space b d": "pane::CloseActiveItem",
+      "space b q": "pane::CloseInactiveItems",
+      "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
       "space i h": "editor::ToggleInlayHints",
       "space g .": "editor::GoToHunk",
       "space g ,": "editor::GoToPreviousHunk",
@@ -121,13 +126,32 @@
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
       "space h": "editor::Hover",
-      "g b": "tab_switcher::Toggle",
-      "alt-w": "vim::NextSubwordStart",
-      "alt-b": "vim::PreviousSubwordStart",
-      "alt-e": "vim::NextSubwordEnd",
-      "cmd-alt-k": "editor::AddSelectionAbove",
-      "cmd-alt-j": "editor::AddSelectionBelow", // Insert cursor below
-      "ð": ["vim::PushJump", { "line": false }]
+
+      // Brackets are in a bad place in IS keyboards
+      "þ þ": "vim::NextSectionStart",
+      "þ æ": "vim::NextSectionEnd",
+      "æ æ": "vim::PreviousSectionStart",
+      "æ þ": "vim::PreviousSectionEnd",
+      "þ m": "vim::NextMethodStart",
+      "þ shift-m": "vim::NextMethodEnd",
+      "æ m": "vim::PreviousMethodStart",
+      "æ shift-m": "vim::PreviousMethodEnd",
+      "æ *": "vim::PreviousComment",
+      "æ /": "vim::PreviousComment",
+      "þ *": "vim::NextComment",
+      "þ /": "vim::NextComment",
+      "æ -": "vim::PreviousLesserIndent",
+      "æ +": "vim::PreviousGreaterIndent",
+      "æ =": "vim::PreviousSameIndent",
+      "þ -": "vim::NextLesserIndent",
+      "þ +": "vim::NextGreaterIndent",
+      "þ =": "vim::NextSameIndent",
+      "þ b": "pane::ActivateNextItem",
+      "æ b": "pane::ActivatePreviousItem",
+      "þ shift-b": "pane::ActivateLastItem",
+      "æ shift-b": ["pane::ActivateItem", 0],
+      "þ space": "vim::InsertEmptyLineBelow",
+      "æ space": "vim::InsertEmptyLineAbove"
     }
   },
   {
