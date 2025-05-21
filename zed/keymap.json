@@ -2,8 +2,6 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift-alt-j": "terminal_panel::ToggleFocus",
-      "ctrl-shift-z": "workspace::ToggleZoom",
       "cmd-shift-o": [
         "projects::OpenRecent",
         {
@@ -16,23 +14,12 @@
       ]
     }
   },
-  {
-    "context": "Editor",
-    "bindings": {
-      "cmd-shift-o": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false
-        }
-      ],
-      "alt-h": null // Undefine this shortcut so that I can write the pipe character
-    }
-  },
+
   // Window's navigation
   {
     "context": "(Dock || Terminal || Editor) && !menu && !(Picker > Editor)",
     "bindings": {
-      "ctrl-q z": "workspace::ToggleZoom",
+      "ctrl-w z": "workspace::ToggleZoom",
       "ctrl-q t": "terminal_panel::ToggleFocus",
       "ctrl-q p": "project_panel::ToggleFocus",
       "ctrl-q o": "outline_panel::ToggleFocus",
@@ -43,6 +30,7 @@
       "ctrl-q d": "diagnostics::Deploy",
 
       // Window's motions
+      "ctrl-shift-z": "workspace::ToggleZoom",
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
       "ctrl-shift-l": "workspace::ActivatePaneRight",
       "ctrl-shift-k": "workspace::ActivatePaneUp",
@@ -53,6 +41,7 @@
       "ctrl-shift-down": "workspace::ActivatePaneDown"
     }
   },
+
   // *** Panel Configurations ***
   {
     "context": "ProjectPanel && not_editing",
@@ -71,16 +60,13 @@
       "cmd-k": "workspace::ToggleRightDock"
     }
   },
+
   // *** VIM Editor ***
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
-      "cmd-shift-o": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false
-        }
-      ],
+      "alt-h": null, // Undefine this shortcut so that I can write the pipe character
+      "cmd-shift-o": null, // Undefine so it does not override Workspace
 
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
@@ -128,32 +114,33 @@
       "space h": "editor::Hover",
 
       // Brackets are in a bad place in IS keyboards
-      "þ þ": "vim::NextSectionStart",
-      "þ æ": "vim::NextSectionEnd",
+      "´ ´": "vim::NextSectionStart",
+      "´ æ": "vim::NextSectionEnd",
       "æ æ": "vim::PreviousSectionStart",
-      "æ þ": "vim::PreviousSectionEnd",
-      "þ m": "vim::NextMethodStart",
-      "þ shift-m": "vim::NextMethodEnd",
+      "æ ´": "vim::PreviousSectionEnd",
+      "´ m": "vim::NextMethodStart",
+      "´ shift-m": "vim::NextMethodEnd",
       "æ m": "vim::PreviousMethodStart",
       "æ shift-m": "vim::PreviousMethodEnd",
       "æ *": "vim::PreviousComment",
       "æ /": "vim::PreviousComment",
-      "þ *": "vim::NextComment",
-      "þ /": "vim::NextComment",
+      "´ *": "vim::NextComment",
+      "´ /": "vim::NextComment",
       "æ -": "vim::PreviousLesserIndent",
       "æ +": "vim::PreviousGreaterIndent",
       "æ =": "vim::PreviousSameIndent",
-      "þ -": "vim::NextLesserIndent",
-      "þ +": "vim::NextGreaterIndent",
-      "þ =": "vim::NextSameIndent",
-      "þ b": "pane::ActivateNextItem",
+      "´ -": "vim::NextLesserIndent",
+      "´ +": "vim::NextGreaterIndent",
+      "´ =": "vim::NextSameIndent",
+      "´ b": "pane::ActivateNextItem",
       "æ b": "pane::ActivatePreviousItem",
-      "þ shift-b": "pane::ActivateLastItem",
+      "´ shift-b": "pane::ActivateLastItem",
       "æ shift-b": ["pane::ActivateItem", 0],
-      "þ space": "vim::InsertEmptyLineBelow",
+      "´ space": "vim::InsertEmptyLineBelow",
       "æ space": "vim::InsertEmptyLineAbove"
     }
   },
+
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
@@ -166,6 +153,8 @@
       "b": "vim::MiniBrackets"
     }
   },
+
+  // Visual Vim mode
   {
     "context": "vim_mode == visual",
     "bindings": {
@@ -175,6 +164,7 @@
       "shift-x": "vim::Exchange"
     }
   },
+
   {
     "context": "(vim_mode == normal || vim_mode == visual) && !VimCount",
     "bindings": {
@@ -184,6 +174,7 @@
       "shift-s": "vim::PushSneakBackward"
     }
   },
+
   {
     "context": "vim_mode == insert",
     "bindings": {
@@ -194,7 +185,7 @@
   },
 
   // *** Extension Based Configurations ***
-
+  // Elixir
   {
     "context": "Editor && (extension==ex || extension==exs)",
     "bindings": {
@@ -216,6 +207,7 @@
       "k": ["vim::Up", { "display_lines": true }]
     }
   },
+
   // R Code
   {
     "context": "Editor && extension==R",
@@ -224,6 +216,7 @@
       "alt--": ["workspace::SendKeystrokes", "space < - space"]
     }
   },
+
   // Cell mode for jupyter
   {
     "context": "extension==R || extension==py",
