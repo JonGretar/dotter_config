@@ -26,7 +26,7 @@
     "dlig": true
   },
   "wrap_guides": [80, 120],
-  "current_line_highlight": "all",
+  "current_line_highlight": "line",
   "active_pane_modifiers": {
     "inactive_opacity": 0.6,
     "border_size": 0.3,
