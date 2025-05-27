@@ -31,6 +31,7 @@
       "ctrl-q a": "agent::ToggleFocus",
       "ctrl-q c": "collab_panel::ToggleFocus",
       "ctrl-q shift-C": "chat_panel::ToggleFocus",
+      "ctrl-q b": "debug_panel::ToggleFocus",
       "ctrl-q d": "diagnostics::Deploy",
 
       // Window's motions
@@ -100,6 +101,7 @@
       "space g s": "git::StageAndNext", // "d u"
       "space g u": "git::UnstageAndNext", // "d shift-u"
       "space g b": "git::Blame",
+      "space g d": "git::Diff",
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
       "space h": "editor::Hover",
