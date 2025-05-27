@@ -145,7 +145,8 @@
     "git_gutter": "tracked_files",
     "inline_blame": {
       "enabled": true,
-      "delay_ms": 200
+      "show_commit_summary": true,
+      "delay_ms": 0
     }
   },
 
