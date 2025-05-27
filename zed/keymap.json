@@ -11,6 +11,10 @@
       "cmd-alt-p": [
         "task::Spawn",
         { "task_name": "file_finder", "reveal_target": "center" }
+      ],
+      "cmd-alt-shift-o": [
+        "task::Spawn",
+        { "task_name": "project_finder", "reveal_target": "center" }
       ]
     }
   },
