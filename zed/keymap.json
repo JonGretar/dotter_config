@@ -171,6 +171,7 @@
   {
     "context": "vim_mode == insert",
     "bindings": {
+      "j k": "vim::NormalBefore",
       "alt-w": "vim::NextSubwordStart",
       "alt-e": "vim::NextSubwordEnd",
       "alt-b": "vim::PreviousSubwordStart"
