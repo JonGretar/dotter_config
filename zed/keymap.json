@@ -86,7 +86,7 @@
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
       ],
-      "space s b": "tab_switcher::Toggle",
+      "space s b": "tab_switcher::ToggleAll",
       "space s f": "file_finder::Toggle",
       "space b n": "workspace::NewFile",
       "space b b": "pane::AlternateFile",
