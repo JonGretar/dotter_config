@@ -9,8 +9,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-autopair/autopair.zsh
 
 
-# --- Starship ---
-eval "$(starship init zsh)"
 
 # --- VI mode ---
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
