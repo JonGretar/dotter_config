@@ -11,6 +11,7 @@
 [zsh.files]
 "zsh/zshenv" = "~/.zshenv"
 "zsh/zshrc" = "~/.zshrc"
+"zsh/zprofile" = "~/.zprofile"
 
 # The 'variables' section contains constants that the templated files
 # can access. This section can contain all the types that toml supports,
