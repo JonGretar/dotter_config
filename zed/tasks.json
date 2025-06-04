@@ -6,6 +6,7 @@
     "label": "LazyGit",
     "command": "lazygit",
     "use_new_terminal": false,
+    "reveal_target": "center",
     "allow_concurrent_runs": false,
     "reveal": "always",
     "hide": "on_success",
@@ -16,6 +17,7 @@
     "command": "posting",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
+    "reveal_target": "center",
     "reveal": "always",
     "hide": "on_success",
     "shell": "system"
@@ -37,6 +39,7 @@
     "label": "file_finder",
     "command": "zed \"$(tv files)\"",
     "hide": "always",
+    "reveal_target": "center",
     "allow_concurrent_runs": true,
     "use_new_terminal": true
   },
@@ -44,6 +47,7 @@
     "label": "project_finder",
     "command": "zed \"$(tv git-repos)\"",
     "hide": "always",
+    "reveal_target": "center",
     "allow_concurrent_runs": true,
     "use_new_terminal": true
   },
