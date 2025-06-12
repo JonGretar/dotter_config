@@ -139,6 +139,7 @@
     "button": true,
     "always_allow_tool_actions": true,
     "default_profile": "write",
+    "play_sound_when_agent_done": true,
     "version": "2"
   },
   "context_servers": {},
