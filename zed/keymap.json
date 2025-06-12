@@ -92,6 +92,7 @@
       "space b b": "pane::AlternateFile",
       "space b d": "pane::CloseActiveItem",
       "space b q": "pane::CloseInactiveItems",
+      "space b p": "pane::TogglePinTab",
       "space i h": "editor::ToggleInlayHints",
       "space g .": "editor::GoToHunk",
       "space g ,": "editor::GoToPreviousHunk",
