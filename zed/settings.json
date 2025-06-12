@@ -62,6 +62,9 @@
     "show_tab_bar_buttons": true,
     "show_nav_history_buttons": false
   },
+  "project_panel": {
+    "hide_root": true
+  },
   "notification_panel": {
     "enabled": true,
     "button": false
