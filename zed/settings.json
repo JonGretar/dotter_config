@@ -192,6 +192,9 @@
     "Markdown": {
       "show_edit_predictions": false
     },
+    "Elixir": {
+      "language_servers": ["elixir-ls", "tailwindcss-language-server"]
+    },
     "Python": {
       "language_servers": ["pyright", "ty", "ruff"],
       // "language_servers": ["ty", "ruff"],
