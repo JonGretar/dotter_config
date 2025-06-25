@@ -15,7 +15,7 @@
     showStash = true
 
 [credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
+	helper = /usr/local/bin/git-credential-manager
 
 [credential "https://dev.azure.com"]
 	useHttpPath = true
