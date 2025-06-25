@@ -10,9 +10,9 @@
   // Visual Settings
   "theme": "Catppuccin Mocha",
   "icon_theme": "Catppuccin Mocha",
-  "buffer_font_family": "Monaspace Xenon",
   "buffer_font_size": 14,
   "ui_font_size": 16,
+  "buffer_font_family": "Monaspace Xenon",
   "buffer_font_features": {
     "ss01": true,
     "ss02": true,
@@ -26,7 +26,7 @@
     "dlig": true
   },
   "wrap_guides": [80, 120],
-  "current_line_highlight": "line",
+  "show_whitespaces": "trailing",
   "active_pane_modifiers": {
     "inactive_opacity": 0.6,
     "border_size": 0.3,
@@ -37,7 +37,7 @@
   "terminal": {
     "button": true,
     "cursor_shape": "block",
-    "font_family": "FiraCode Nerd Font Mono",
+    "font_family": "Monaspace Argon",
     "font_size": 16,
     "line_height": "standard",
     "detect_venv": {
