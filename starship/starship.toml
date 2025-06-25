@@ -1,6 +1,6 @@
 
 [custom.uv]
-command = 'cat .python-version'
+command = 'uv python find --show-version'
 detect_files = ['uv.lock']
 symbol = '󰧯 '
 style = 'bold bright-red'
