@@ -16,6 +16,10 @@ source ~/.config/zsh/plugins/fzf-setup.zsh
 source ~/.config/zsh/plugins/yazi-command.zsh
 source ~/.config/zsh/plugins/jupyter-count.zsh
 
+ZSH_TAB_TITLE_ONLY_FOLDER=true
+source ~/.config/zsh/plugins/zsh-tab-title.plugin.zsh
+
+
 # Few things should only happen in term.
 if [[ "$TERM_PROGRAM" = "WezTerm" && "$__CFBundleIdentifier" != "dev.zed.Zed-Preview"  ]]; then
 
