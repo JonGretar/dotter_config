@@ -1,8 +1,8 @@
 # The peeps piss of my dog
 unsetopt BEEP
 
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $HOMEBREW_PREFIX/share/zsh/site-functions ~/.config/zsh/completions $fpath)
+# direnv
+eval "$(direnv hook zsh)"
 
 # --- ALIASES +++
 
@@ -30,12 +30,17 @@ alias zed-preview="zed --zed /Applications/Zed\ Preview.app"
 alias lg="lazygit"
 
 
+# --- Stop if in non-interactive shell ---
+[[ $- != *i* ]] && return
+
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $HOMEBREW_PREFIX/share/zsh/site-functions ~/.config/zsh/completions $fpath)
+
 # -- Bindings --
 bindkey "\e[1;3D" backward-word     # ⌥←
 bindkey "\e[1;3C" forward-word      # ⌥→
 
-# direnv
-eval "$(direnv hook zsh)"
 
 # --- Starship ---
 eval "$(starship init zsh)"

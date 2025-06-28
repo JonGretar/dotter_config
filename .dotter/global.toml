@@ -12,6 +12,7 @@
 "zsh/zshenv" = "~/.zshenv"
 "zsh/zshrc" = "~/.zshrc"
 "zsh/zprofile" = "~/.zprofile"
+"zsh/plugins" = "~/.config/zsh/plugins/"
 
 # The 'variables' section contains constants that the templated files
 # can access. This section can contain all the types that toml supports,
@@ -46,6 +47,7 @@ prompt_color = "#00FF00"
 [fastfetch.files]
 "fastfetch/config.jsonc" = "~/.config/fastfetch/config.jsonc"
 "fastfetch/uh_for_under.png" = { target = "~/.config/fastfetch/uh_for_under.png", type = "symbolic" }
+"fastfetch/montel-logo-clean.png" = { target = "~/.config/fastfetch/montel-logo-clean.png", type = "symbolic" }
 
 [ov.files]
 "ov/config.yaml" = "~/.config/ov/config.yaml"
