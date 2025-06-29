@@ -27,6 +27,7 @@
   },
   "wrap_guides": [80, 120],
   "show_whitespaces": "trailing",
+  "lsp_document_colors": "inlay",
   "active_pane_modifiers": {
     "inactive_opacity": 0.6,
     "border_size": 0.3,
