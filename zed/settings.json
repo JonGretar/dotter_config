@@ -48,6 +48,7 @@
       }
     }
   },
+  "bottom_dock_layout": "left_aligned",
   "scrollbar": {
     "show": "auto"
   },
@@ -63,6 +64,7 @@
     "show_tab_bar_buttons": true,
     "show_nav_history_buttons": false
   },
+  "max_tabs": 8,
   "project_panel": {
     "hide_root": true
   },
@@ -82,8 +84,14 @@
   "minimap": { "show": "never" },
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware",
+    "line_width": 2,
+    "active_line_width": 4,
+    "coloring": "fixed",
     "background_coloring": "disabled"
+  },
+  "experimental.theme_overrides": {
+    // "editor.indent_guide_active": "#FF0000" // When using fixed
+    // "editor.indent_guide": "#00FF00" // When using fixed
   },
 
   // Ensure some extensions are always installed as the config reliest on them
@@ -110,6 +118,8 @@
   "cursor_blink": false,
   "relative_line_numbers": true,
   "scroll_beyond_last_line": "off",
+  "pane_split_direction_horizontal": "down",
+  "pane_split_direction_vertical": "right",
   "command_aliases": {
     "W": "w",
     "Wq": "wq",
@@ -137,6 +147,10 @@
     "edit_prediction_provider": "zed"
   },
   "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
     "button": true,
     "always_allow_tool_actions": true,
     "default_profile": "write",
