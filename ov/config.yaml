@@ -1,4 +1,6 @@
+General:
 
+QuitSmall: true
 
 KeyBind:
     exit:
