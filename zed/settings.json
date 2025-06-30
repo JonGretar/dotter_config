@@ -41,6 +41,10 @@
     "font_family": "Monaspace Argon",
     "font_size": 16,
     "line_height": "standard",
+    "env": {
+      "EDITOR": "zed -w",
+      "VISUAL": "zed -w"
+    },
     "detect_venv": {
       "on": {
         "activate_script": "default",
