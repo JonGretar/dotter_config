@@ -15,20 +15,7 @@
       "cmd-alt-shift-o": [
         "task::Spawn",
         { "task_name": "project_finder", "reveal_target": "center" }
-      ],
-
-      // Leader
-      "space space": "tab_switcher::Toggle",
-      "space l g": [
-        "task::Spawn",
-        { "task_name": "LazyGit", "reveal_target": "center" }
-      ],
-      "space s b": "tab_switcher::ToggleAll",
-      "space s f": "file_finder::Toggle",
-      "space b n": "workspace::NewFile",
-      "space b b": "pane::AlternateFile",
-      "space b d": "pane::CloseActiveItem",
-      "space b q": "pane::CloseInactiveItems"
+      ]
     }
   },
 
@@ -57,6 +44,18 @@
       "ctrl-shift-right": "workspace::ActivatePaneRight",
       "ctrl-shift-up": "workspace::ActivatePaneUp",
       "ctrl-shift-down": "workspace::ActivatePaneDown"
+    }
+  },
+
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space l g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ],
+      "space s f": "file_finder::Toggle",
+      "space b n": "workspace::NewFile"
     }
   },
 
@@ -93,6 +92,17 @@
       "ctrl-shift-up": "workspace::ActivatePaneUp",
 
       // Leader
+      "space space": "tab_switcher::Toggle",
+      "space l g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ],
+      "space s b": "tab_switcher::ToggleAll",
+      "space s f": "file_finder::Toggle",
+      "space b n": "workspace::NewFile",
+      "space b b": "pane::AlternateFile",
+      "space b d": "pane::CloseActiveItem",
+      "space b q": "pane::CloseInactiveItems",
       "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
       "space b p": "pane::TogglePinTab",
       "space i h": "editor::ToggleInlayHints",
