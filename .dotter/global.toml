@@ -41,6 +41,7 @@ prompt_color = "#00FF00"
 "yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
 "yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
 "yazi/package.toml" = "~/.config/yazi/package.toml"
+"yazi/theme.toml" = "~/.config/yazi/theme.toml"
 
 [git.files]
 "git/ignore" = "~/.config/git/ignore"
