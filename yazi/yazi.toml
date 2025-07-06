@@ -5,6 +5,7 @@ max_height = 1024
 [opener]
 zed = [{ run = 'zed "$@"', desc = "Open in Zed" }]
 skim = [{ run = 'skim-preview "$@"', desc = "Preview in Skim" }]
+macopen = [{ run = 'open "$@"', desc = "Open with default app" }]
 
 [open]
 prepend_rules = [
@@ -13,5 +14,6 @@ prepend_rules = [
 ]
 append_rules = [
     { mime = "inode/directory", use = "zed" },
+    { name = "*", use = "macopen" },
     { name = "*", use = "zed" },
 ]
