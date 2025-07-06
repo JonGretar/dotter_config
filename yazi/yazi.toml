@@ -1,3 +1,7 @@
+[preview]
+max_width = 1024
+max_height = 1024
+
 [opener]
 zed = [{ run = 'zed "$@"', desc = "Open in Zed" }]
 skim = [{ run = 'skim-preview "$@"', desc = "Preview in Skim" }]
