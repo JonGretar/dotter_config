@@ -180,6 +180,7 @@
   },
   "file_scan_exclusions": [
     "**/.git",
+    "**/.jj",
     "**/.svn",
     "**/.hg",
     "**/CVS",
