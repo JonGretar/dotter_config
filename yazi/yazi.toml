@@ -1,0 +1,13 @@
+[opener]
+zed = [{ run = 'zed "$@"', desc = "Open in Zed" }]
+skim = [{ run = 'skim-preview "$@"', desc = "Preview in Skim" }]
+
+[open]
+prepend_rules = [
+    { mime = "application/pdf", use = "skim" },
+    { mime = "text/*", use = "zed" },
+]
+append_rules = [
+    { mime = "inode/directory", use = "zed" },
+    { name = "*", use = "zed" },
+]

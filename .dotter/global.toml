@@ -36,6 +36,11 @@ prompt_color = "#00FF00"
 "bat/config" = "~/.config/bat/config"
 "bat/themes" = "~/.config/bat/themes"
 
+[yazi.files]
+"yazi/init.lua" = "~/.config/yazi/init.lua"
+"yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
+"yazi/keymap.toml" = "~/.config/yazi/keymap.toml"
+"yazi/package.toml" = "~/.config/yazi/package.toml"
 
 [git.files]
 "git/ignore" = "~/.config/git/ignore"
