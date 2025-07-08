@@ -53,6 +53,11 @@ prompt_color = "#00FF00"
 [harlequin.files]
 "harlequin/harlequin.toml" = "~/Library/Application Support/harlequin/config.toml"
 
+[aerc.files]
+"aerc/aerc.conf" = { target = "~/Library/Preferences/aerc/aerc.conf", type = "symbolic" }
+"aerc/binds.conf" = { target = "~/Library/Preferences/aerc/binds.conf", type = "symbolic" }
+"aerc/accounts.conf" = { target = "~/Library/Preferences/aerc/accounts.conf", type = "symbolic" }
+
 [fastfetch.files]
 "fastfetch/config.jsonc" = "~/.config/fastfetch/config.jsonc"
 "fastfetch/uh_for_under.png" = { target = "~/.config/fastfetch/uh_for_under.png", type = "symbolic" }
