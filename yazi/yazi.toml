@@ -1,4 +1,12 @@
+# Yazi Configuration
+# https://yazi-rs.github.io/docs/configuration/yazi/
+
+[mgr]
+ratio = [1, 3, 3]
+sort_sensitive = false
+
 [preview]
+tab_size = 2
 max_width = 1024
 max_height = 1024
 
