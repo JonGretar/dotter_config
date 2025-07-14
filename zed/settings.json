@@ -29,9 +29,8 @@
   "show_whitespaces": "trailing",
   "lsp_document_colors": "inlay",
   "active_pane_modifiers": {
-    "inactive_opacity": 0.6,
-    "border_size": 0.3,
-    "magnification": 1.0
+    "inactive_opacity": 0.7,
+    "border_size": 0.5
   },
   "use_system_path_prompts": false,
   "use_system_prompts": false,
@@ -54,7 +53,10 @@
   },
   "bottom_dock_layout": "left_aligned",
   "scrollbar": {
-    "show": "auto"
+    "show": "auto",
+    "axes": {
+      "horizontal": false
+    }
   },
   "tabs": {
     "file_icons": false,
@@ -111,7 +113,6 @@
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "on_yank",
-    "use_multiline_find": false,
     "cursor_shape": {
       "normal": "block",
       "insert": "bar",
@@ -158,8 +159,7 @@
     "button": true,
     "always_allow_tool_actions": true,
     "default_profile": "write",
-    "play_sound_when_agent_done": true,
-    "version": "2"
+    "play_sound_when_agent_done": true
   },
   "context_servers": {},
 
