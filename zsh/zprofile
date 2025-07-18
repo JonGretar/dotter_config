@@ -27,7 +27,7 @@ source ~/.config/zsh/plugins/zsh-tab-title.plugin.zsh
 
 
 # Few things should only happen in term.
-if [[ "$TERM_PROGRAM" = "WezTerm" && "$__CFBundleIdentifier" != "dev.zed.Zed-Preview"  ]]; then
+if [[ "$TERM_PROGRAM" = "WezTerm" ]]; then
 
   # Display welcome screen
   fastfetch
