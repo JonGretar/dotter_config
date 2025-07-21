@@ -58,6 +58,7 @@ Casks:
 - discord
 - docker-desktop
 - wezterm@nightly
+- font-inter
 - font-fira-code-nerd-font
 - font-fira-mono-nerd-font
 - font-monaspace
