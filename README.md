@@ -24,3 +24,63 @@ This repository contains configurations for the following tools:
 - **harlequin**: SQL client configuration
 - **fastfetch**: System information display tool
 - **ov**: Terminal pager configuration
+
+## Setup
+
+Basics to set up a new computer. Not all of this is related to Dotter config
+files but where else should I store this info.
+
+### Brew Packages
+
+Require for the shell as configured:
+
+```sh
+brew install bat carapace direnv dotter eva eza fastfetch jq ov procs starship \
+ zsh-autopair zsh-autosuggestions zsh-vi-mode
+```
+
+Dev Related:
+
+```sh
+brew install asdf cmake curl duckdb fop git-lfs hexyl jj just lazydocker \
+ lazygit miniserve neovim nushell pandoc sqlite typst
+```
+
+Shell Apps:
+
+```sh
+brew install aerc btop diskonaut duf dust ripgrep ripgrep-all television \
+ yazi zoxide
+```
+
+Casks:
+
+- discord
+- docker-desktop
+- wezterm@nightly
+- font-fira-code-nerd-font
+- font-fira-mono-nerd-font
+- font-monaspace
+- ghostty
+- git-credential-manager
+- google-chrome
+- homerow
+- quarto
+- raycast
+- sioyek
+- skim
+- xquartz
+
+### Wezterm Terminfo
+
+Install the wezterm terminfo.
+
+```sh
+tempfile=$(mktemp) \
+  && curl -o $tempfile https://raw.githubusercontent.com/wezterm/wezterm/main/termwiz/data/wezterm.terminfo \
+  && tic -x -o ~/.terminfo $tempfile \
+  && rm $tempfile
+
+```
+
+### ASDF
