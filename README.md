@@ -35,8 +35,8 @@ files but where else should I store this info.
 Require for the shell as configured:
 
 ```sh
-brew install bat carapace direnv dotter eva eza fastfetch jq ov procs starship \
- zsh-autopair zsh-autosuggestions zsh-vi-mode
+brew install bat carapace direnv dotter eva eza fastfetch fd jq ov procs \
+starship zsh-autopair zsh-autosuggestions zsh-vi-mode
 ```
 
 Dev Related:
