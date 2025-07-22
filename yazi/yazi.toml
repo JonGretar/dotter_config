@@ -12,12 +12,17 @@ max_height = 1024
 
 [opener]
 zed = [{ run = 'zed "$@"', desc = "Open in Zed" }]
+harlequin = [
+    { run = 'harlequin "$@"', block = true, desc = "Open using Harlequin" },
+]
 skim = [{ run = 'skim-preview "$@"', desc = "Preview in Skim" }]
 sioyek = [{ run = 'sioyek "$@"', desc = "Preview in Sioyek" }]
 macopen = [{ run = 'open "$@"', desc = "Open with default app" }]
 
 [open]
 prepend_rules = [
+    { mime = "application/sqlite3", use = "harlequin" },
+    { mime = "application/duckdb", use = "harlequin" },
     { mime = "application/pdf", use = "sioyek" },
     { mime = "text/*", use = "zed" },
 ]
