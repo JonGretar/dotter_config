@@ -72,6 +72,7 @@
   },
   "max_tabs": 8,
   "project_panel": {
+    "auto_reveal_entries": false,
     "hide_root": true
   },
   "notification_panel": {
