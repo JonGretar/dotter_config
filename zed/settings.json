@@ -29,8 +29,8 @@
   "show_whitespaces": "trailing",
   "lsp_document_colors": "inlay",
   "active_pane_modifiers": {
-    "inactive_opacity": 0.7,
-    "border_size": 0.5
+    "inactive_opacity": 0.8,
+    "border_size": 1
   },
   "use_system_path_prompts": false,
   "use_system_prompts": false,
@@ -73,6 +73,7 @@
   "max_tabs": 8,
   "project_panel": {
     "auto_reveal_entries": false,
+    "sticky_scroll": true,
     "hide_root": true
   },
   "notification_panel": {
@@ -204,7 +205,6 @@
     }
   },
   "journal": {
-    "enabled": false,
     "hour_format": "hour24"
   },
 
