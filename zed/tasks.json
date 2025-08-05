@@ -52,6 +52,14 @@
     "use_new_terminal": true
   },
   {
+    "label": "text_finder",
+    "command": "zed \"$(tv text)\"",
+    "hide": "always",
+    "reveal_target": "center",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
+  },
+  {
     "label": "Quarto Render",
     "command": "quarto render '$ZED_FILE'",
     "tags": ["quarto"],

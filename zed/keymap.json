@@ -107,6 +107,10 @@
         "task::Spawn",
         { "task_name": "project_finder", "reveal_target": "center" }
       ],
+      "space s t": [
+        "task::Spawn",
+        { "task_name": "text_finder", "reveal_target": "center" }
+      ],
       "space b n": "workspace::NewFile",
       "space b b": "pane::AlternateFile",
       "space b d": "pane::CloseActiveItem",
