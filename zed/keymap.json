@@ -113,8 +113,8 @@
       ],
       "space b n": "workspace::NewFile",
       "space b b": "pane::AlternateFile",
-      "space b d": "pane::CloseActiveItem",
-      "space b q": "pane::CloseInactiveItems",
+      "space b d": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "space b q": ["pane::CloseOtherItems", { "close_pinned": false }],
       "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
       "space b p": "pane::TogglePinTab",
       "space i h": "editor::ToggleInlayHints",
@@ -127,6 +127,7 @@
       "space g u": "git::UnstageAndNext", // "d shift-u"
       "space g b": "git::Blame",
       "space g d": "git::Diff",
+      "space g c": "git::Commit",
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
       "space h": "editor::Hover",
