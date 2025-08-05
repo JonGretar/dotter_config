@@ -59,40 +59,10 @@
     }
   },
 
-  // *** VIM Editor ***
+  // Global Leader key
   {
-    "context": "Editor && VimControl && !menu",
+    "context": "(Workspace && !Editor) || (Editor && VimControl)",
     "bindings": {
-      "alt-h": null, // Undefine this shortcut so that I can write the pipe character
-
-      "cmd-shift-o": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false
-        }
-      ],
-
-      "alt-k": "editor::MoveLineUp",
-      "alt-j": "editor::MoveLineDown",
-      "alt-w": "vim::NextSubwordStart",
-      "alt-b": "vim::PreviousSubwordStart",
-      "alt-e": "vim::NextSubwordEnd",
-      "cmd-alt-k": "editor::AddSelectionAbove",
-      "cmd-alt-j": "editor::AddSelectionBelow", // Insert cursor below
-      "´": ["vim::PushJump", { "line": false }],
-      "°": ["vim::PushJump", { "line": true }],
-
-      // Pane Stuff
-      "ctrl-shift-h": "workspace::ActivatePaneLeft",
-      "ctrl-shift-l": "workspace::ActivatePaneRight",
-      "ctrl-shift-j": "workspace::ActivatePaneDown",
-      "ctrl-shift-k": "workspace::ActivatePaneUp",
-      "ctrl-shift-left": "workspace::ActivatePaneLeft",
-      "ctrl-shift-right": "workspace::ActivatePaneRight",
-      "ctrl-shift-down": "workspace::ActivatePaneDown",
-      "ctrl-shift-up": "workspace::ActivatePaneUp",
-
-      // Leader
       "space space": "tab_switcher::Toggle",
       "space l g": [
         "task::Spawn",
@@ -130,7 +100,42 @@
       "space g c": "git::Commit",
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
-      "space h": "editor::Hover",
+      "space h": "editor::Hover"
+    }
+  },
+
+  // *** VIM Editor ***
+  {
+    "context": "Editor && VimControl && !menu",
+    "bindings": {
+      "alt-h": null, // Undefine this shortcut so that I can write the pipe character
+
+      "cmd-shift-o": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ],
+
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "alt-w": "vim::NextSubwordStart",
+      "alt-b": "vim::PreviousSubwordStart",
+      "alt-e": "vim::NextSubwordEnd",
+      "cmd-alt-k": "editor::AddSelectionAbove",
+      "cmd-alt-j": "editor::AddSelectionBelow", // Insert cursor below
+      "´": ["vim::PushJump", { "line": false }],
+      "°": ["vim::PushJump", { "line": true }],
+
+      // Pane Stuff - This is needed again to override 'Editor' context default bindings
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-left": "workspace::ActivatePaneLeft",
+      "ctrl-shift-right": "workspace::ActivatePaneRight",
+      "ctrl-shift-down": "workspace::ActivatePaneDown",
+      "ctrl-shift-up": "workspace::ActivatePaneUp",
 
       // Brackets are in a bad place in IS keyboards
       "' '": "vim::NextSectionStart",
