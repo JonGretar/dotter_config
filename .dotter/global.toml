@@ -53,6 +53,10 @@ prompt_color = "#00FF00"
 [harlequin.files]
 "harlequin/harlequin.toml" = "~/Library/Application Support/harlequin/config.toml"
 
+[sioyek.files]
+"sioyek/keys_user.config" = "~/Library/Application Support/sioyek/keys_user.config"
+"sioyek/prefs_user.config" = "~/Library/Application Support/sioyek/prefs_user.config"
+
 [aerc.files]
 "aerc/aerc.conf" = { target = "~/Library/Preferences/aerc/aerc.conf", type = "symbolic" }
 "aerc/binds.conf" = { target = "~/Library/Preferences/aerc/binds.conf", type = "symbolic" }
