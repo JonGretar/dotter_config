@@ -66,7 +66,7 @@
     "activate_on_close": "history"
   },
   "tab_bar": {
-    "show": false,
+    "show": true,
     "show_tab_bar_buttons": true,
     "show_nav_history_buttons": false
   },
@@ -77,8 +77,7 @@
     "hide_root": true
   },
   "notification_panel": {
-    "enabled": true,
-    "button": false
+    "button": true
   },
   "chat_panel": {
     "button": "when_in_call"
@@ -196,14 +195,6 @@
     "**/_freeze",
     "**/node_modules"
   ],
-  "jupyter": {
-    "enabled": true,
-    "kernel_selections": {
-      "typescript": "deno",
-      "rust": "rust",
-      "R": "ark"
-    }
-  },
   "journal": {
     "hour_format": "hour24"
   },
@@ -282,15 +273,6 @@
       "binary": {
         "path": "/Users/jongretar/.local/bin/ty",
         "arguments": ["server"]
-      }
-    },
-    "rust-analyzer": {
-      "procMacro": {
-        "ignored": [
-          // optional:
-          // "component",
-          "server"
-        ]
       }
     }
   }

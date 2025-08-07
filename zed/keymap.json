@@ -184,7 +184,7 @@
     "bindings": {
       "v": "editor::SelectLargerSyntaxNode",
       "V": "editor::SelectSmallerSyntaxNode",
-      "ctrl-s": ["vim::PushAddSurrounds", {}],
+      "ctrl-s": "vim::PushAddSurrounds",
       "shift-x": "vim::Exchange"
     }
   },
