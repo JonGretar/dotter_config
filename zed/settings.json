@@ -29,8 +29,8 @@
   "show_whitespaces": "trailing",
   "lsp_document_colors": "inlay",
   "active_pane_modifiers": {
-    "inactive_opacity": 0.8,
-    "border_size": 1
+    "inactive_opacity": 0.6,
+    "border_size": 0.3
   },
   "use_system_path_prompts": false,
   "use_system_prompts": false,
