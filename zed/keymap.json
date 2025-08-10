@@ -60,7 +60,7 @@
 
   // Global Leader key
   {
-    "context": "(Workspace && !Editor) || (Editor && VimControl)",
+    "context": "(Workspace && !Editor && !Terminal) || (Editor && VimControl)",
     "bindings": {
       "space space": "tab_switcher::Toggle",
       "space l g": [
