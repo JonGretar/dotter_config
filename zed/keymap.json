@@ -15,14 +15,7 @@
       "cmd-alt-shift-o": [
         "task::Spawn",
         { "task_name": "project_finder", "reveal_target": "center" }
-      ]
-    }
-  },
-
-  // Window's navigation
-  {
-    "context": "(Dock || Terminal || Editor) && !menu && !(Picker > Editor)",
-    "bindings": {
+      ],
       "ctrl-w z": "workspace::ToggleZoom",
       "ctrl-q t": "terminal_panel::ToggleFocus",
       "ctrl-q p": "project_panel::ToggleFocus",
@@ -32,8 +25,14 @@
       "ctrl-q c": "collab_panel::ToggleFocus",
       "ctrl-q shift-C": "chat_panel::ToggleFocus",
       "ctrl-q b": "debug_panel::ToggleFocus",
-      "ctrl-q d": "diagnostics::Deploy",
+      "ctrl-q d": "diagnostics::Deploy"
+    }
+  },
 
+  // Window's navigation
+  {
+    "context": "ProjectPanel || (Workspace && !menu && !(Picker > Editor))",
+    "bindings": {
       // Window's motions
       "ctrl-shift-z": "workspace::ToggleZoom",
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
