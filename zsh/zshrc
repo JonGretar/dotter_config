@@ -1,10 +1,6 @@
 # The peeps piss of my dog
 unsetopt BEEP
 
-# direnv
-eval "$(direnv hook zsh)"
-
-# --- ALIASES +++
 
 # ---- Eza (better ls) -----
 alias ls="eza --color=always --git --icons=always"
@@ -29,6 +25,8 @@ alias imgcat="wezterm imgcat"
 alias zed-preview="zed --zed /Applications/Zed\ Preview.app"
 alias lg="lazygit"
 
+# --- MISE ---
+eval "$(mise activate zsh)"
 
 # --- Stop if in non-interactive shell ---
 [[ $- != *i* ]] && return

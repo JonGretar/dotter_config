@@ -1,0 +1,4 @@
+# MISE config file.
+
+[settings]
+env_file = ".env"

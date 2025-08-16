@@ -35,14 +35,14 @@ files but where else should I store this info.
 Require for the shell as configured:
 
 ```sh
-brew install bat carapace direnv dotter eva eza fastfetch fd jq ov procs \
+brew install bat carapace dotter eva eza fastfetch fd jq mise ov procs \
 starship zsh-autopair zsh-autosuggestions zsh-vi-mode
 ```
 
 Dev Related:
 
 ```sh
-brew install asdf cmake curl duckdb fop git-lfs hexyl jj just lazydocker \
+brew install cmake curl duckdb fop git-lfs hexyl jj just lazydocker \
  lazygit miniserve neovim nushell pandoc sqlite typst
 ```
 

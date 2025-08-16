@@ -70,3 +70,6 @@ prompt_color = "#00FF00"
 
 [ov.files]
 "ov/config.yaml" = "~/.config/ov/config.yaml"
+
+[mise.files]
+"mise/config.toml" = "~/.config/mise/config.toml"
