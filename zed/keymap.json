@@ -16,6 +16,7 @@
         "task::Spawn",
         { "task_name": "project_finder", "reveal_target": "center" }
       ],
+      "cmd-k cmd-s": "zed::OpenKeymap",
       "ctrl-w z": "workspace::ToggleZoom",
       "ctrl-q t": "terminal_panel::ToggleFocus",
       "ctrl-q p": "project_panel::ToggleFocus",
@@ -26,6 +27,13 @@
       "ctrl-q shift-C": "chat_panel::ToggleFocus",
       "ctrl-q b": "debug_panel::ToggleFocus",
       "ctrl-q d": "diagnostics::Deploy"
+    }
+  },
+
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-k": "terminal::Clear"
     }
   },
 
@@ -116,6 +124,7 @@
         }
       ],
 
+      "alt-s": "editor::UnwrapSyntaxNode",
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
       "alt-w": "vim::NextSubwordStart",
@@ -202,6 +211,7 @@
     "context": "vim_mode == insert",
     "bindings": {
       "j k": "vim::NormalBefore",
+      "alt-s": "editor::UnwrapSyntaxNode",
       "alt-w": "vim::NextSubwordStart",
       "alt-e": "vim::NextSubwordEnd",
       "alt-b": "vim::PreviousSubwordStart"
