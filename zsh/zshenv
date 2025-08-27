@@ -10,6 +10,7 @@ fi
 
 export LESS="-# 1 -R -F"
 export PAGER="ov"
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 
 # Cargo
