@@ -1,0 +1,10 @@
+
+[custom_commands]
+"jj push" = { key = ["p"], args = ["push"] }
+"jj push selected bookmark(s)" = { key = [
+    "P",
+], args = [
+    "push",
+    "-r",
+    "$change_id",
+] }
