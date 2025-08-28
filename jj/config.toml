@@ -6,3 +6,7 @@ email = "jongretar@jongretar.com"
 
 [ui]
 default-command = "log"
+
+[revset-aliases]
+# set all remote bookmarks (commits pushed to remote branches) to be immutable
+'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
