@@ -75,6 +75,14 @@
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
       ],
+      "space l j": [
+        "task::Spawn",
+        { "task_name": "LazyJJ", "reveal_target": "center" }
+      ],
+      "space j j": [
+        "task::Spawn",
+        { "task_name": "JJUI", "reveal_target": "center" }
+      ],
       "space s b": "tab_switcher::ToggleAll",
       "space s f": [
         "task::Spawn",

@@ -8,6 +8,38 @@
     "use_new_terminal": false,
     "reveal_target": "center",
     "allow_concurrent_runs": false,
+    "env": {
+      "EDITOR": "zed -w",
+      "VISUAL": "zed -w"
+    },
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "JJUI",
+    "command": "jjui",
+    "use_new_terminal": false,
+    "reveal_target": "center",
+    "allow_concurrent_runs": false,
+    "env": {
+      "EDITOR": "zed -w",
+      "VISUAL": "zed -w"
+    },
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "LazyJJ",
+    "command": "lazyjj",
+    "use_new_terminal": false,
+    "reveal_target": "center",
+    "allow_concurrent_runs": false,
+    "env": {
+      "EDITOR": "zed -w",
+      "VISUAL": "zed -w"
+    },
     "reveal": "always",
     "hide": "on_success",
     "shell": "system"
