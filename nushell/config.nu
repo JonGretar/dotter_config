@@ -17,8 +17,21 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
-use std/util "path add"
 
-source $"($nu.home-path)/.cargo/env.nu"
+$env.config.datetime_format.normal = "%y-%m-%d %H:%M:%S"
 
-path add '/opt/homebrew/bin'
+# source $"($nu.home-path)/.cargo/env.nu"
+
+# VI mode stuff
+$env.config.edit_mode = 'vi'
+$env.config.cursor_shape.vi_insert = "line"
+$env.config.cursor_shape.vi_normal = "block"
+$env.PROMPT_INDICATOR_VI_NORMAL = "[N] "
+$env.PROMPT_INDICATOR_VI_INSERT = "[I] "
+
+
+source "lib/zoxide.nu"
+source ~/.cache/carapace/init.nu
+
+alias cd = z
+alias l = eza --icons=auto

@@ -77,5 +77,7 @@ prompt_color = "#00FF00"
 
 [nushell.files]
 "nushell/config.nu" = "/Users/jongretar/Library/Application Support/nushell/config.nu"
+"nushell/env.nu" = "/Users/jongretar/Library/Application Support/nushell/env.nu"
+"nushell/lib" = "/Users/jongretar/Library/Application Support/nushell/lib"
 "nushell/vendor" = "/Users/jongretar/Library/Application Support/nushell/vendor"
 "nushell/autoload" = "/Users/jongretar/Library/Application Support/nushell/autoload"
