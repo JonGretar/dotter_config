@@ -74,3 +74,8 @@ prompt_color = "#00FF00"
 
 [mise.files]
 "mise/config.toml" = "~/.config/mise/config.toml"
+
+[nushell.files]
+"nushell/config.nu" = "/Users/jongretar/Library/Application Support/nushell/config.nu"
+"nushell/vendor" = "/Users/jongretar/Library/Application Support/nushell/vendor"
+"nushell/autoload" = "/Users/jongretar/Library/Application Support/nushell/autoload"

@@ -1,6 +1,10 @@
 # Mac Stuff
 .DS_Store
 
+# Never accidentally expose these
+.env
+.secret
+
 # Convenient way to add temp files
 *NOCHECKIN
 *NOCHECKIN.md
