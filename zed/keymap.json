@@ -70,7 +70,7 @@
   {
     "context": "(Workspace && !Editor && !Terminal) || (Editor && VimControl)",
     "bindings": {
-      "space space": "tab_switcher::Toggle",
+      "space space": "tab_switcher::ToggleAll",
       "space l g": [
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
