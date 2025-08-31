@@ -22,6 +22,7 @@ use std/util "path add"
 path add "/Applications/quarto/bin"
 path add "/opt/homebrew/bin"
 path add "/opt/homebrew/sbin"
+path add "/usr/local/bin"
 path add "~/.cargo/bin"
 path add "~/.local/bin"
 
