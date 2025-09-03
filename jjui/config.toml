@@ -1,10 +1,35 @@
 
 [custom_commands]
+"new from main" = { key = ["n"], args = ["new", "main"] }
 "jj push" = { key = ["p"], args = ["push"] }
-"jj push selected bookmark(s)" = { key = [
+"jj push closest bookmark(s) (allows new)" = { key = [
     "P",
 ], args = [
     "push",
     "-r",
-    "$change_id",
+    "closest_bookmark($change_id)",
+    "--allow-new",
 ] }
+"tug" = { key = [
+    "T",
+], args = [
+    "bookmark",
+    "move",
+    "--from",
+    "closest_bookmark($change_id)",
+    "--to",
+    "closest_pushable($change_id)",
+] }
+"show after revisions" = { key = ["H"], revset = "::$change_id" }
+
+[custom_commands."move commit down"]
+key = ["j"]
+args = ["rebase", "-r", "$change_id", "--insert-before", "$change_id-"]
+
+[custom_commands."move commit up"]
+key = ["k"]
+args = ["rebase", "-r", "$change_id", "--insert-after", "$change_id+"]
+
+[custom_commands."new note commit"]
+key = ["N"]
+args = ["new", "--no-edit", "-A", "$change_id"]
