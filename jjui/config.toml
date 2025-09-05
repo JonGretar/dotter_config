@@ -7,9 +7,9 @@ send = ["?"]
 
 [custom_commands]
 "new from main" = { key = ["N"], args = ["new", "main"] }
-"jj push" = { key = ["z h"], args = ["push"] }
+"jj push" = { key = ["h"], args = ["push"] }
 "jj push closest bookmark(s) (allows new)" = { key = [
-    "z H",
+    "H",
 ], args = [
     "push",
     "-r",
@@ -26,7 +26,7 @@ send = ["?"]
     "--to",
     "closest_pushable($change_id)",
 ] }
-"show after revisions" = { key = ["H"], revset = "::$change_id" }
+"show after revisions" = { key = ["z"], revset = "::$change_id" }
 
 [custom_commands."move commit down"]
 key = ["J"]
@@ -37,5 +37,5 @@ key = ["K"]
 args = ["rebase", "-r", "$change_id", "--insert-after", "$change_id+"]
 
 [custom_commands."new note commit"]
-key = ["z N"]
+key = ["ctrl+n"]
 args = ["new", "--no-edit", "-A", "$change_id"]
