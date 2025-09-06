@@ -7,26 +7,16 @@ send = ["?"]
 
 [custom_commands]
 "new from main" = { key = ["N"], args = ["new", "main"] }
-"jj push" = { key = ["h"], args = ["push"] }
-"jj push closest bookmark(s) (allows new)" = { key = [
-    "H",
-], args = [
-    "push",
-    "-r",
-    "closest_bookmark($change_id)",
-    "--allow-new",
+"jj push" = { key = ["ð"], mode = ["z"], args = ["push"] }
+"jj push closest bookmark(s) (allows new)" = { key = ["Ð"], args = [
+    "push", "-r", "closest_bookmark($change_id)", "--allow-new",
 ] }
 "tug" = { key = [
     "T",
 ], args = [
-    "bookmark",
-    "move",
-    "--from",
-    "closest_bookmark($change_id)",
-    "--to",
-    "closest_pushable($change_id)",
+    "bookmark", "move", "--from", "closest_bookmark($change_id)", "--to", "closest_pushable($change_id)",
 ] }
-"show after revisions" = { key = ["z"], revset = "::$change_id" }
+"show after revisions" = { key = ["Z"], revset = "::$change_id" }
 
 [custom_commands."move commit down"]
 key = ["J"]
