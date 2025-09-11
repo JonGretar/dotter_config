@@ -1,6 +1,10 @@
 [keys]
 leader = ["þ"]
 
+[keys.inline_describe]
+  mode = ["enter"]
+  accept = ["enter", "ctrl+s"]
+
 [leader.h]
 help = "Help"
 send = ["?"]
