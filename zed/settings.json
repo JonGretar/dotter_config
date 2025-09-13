@@ -204,7 +204,15 @@
     "Markdown": {
       "show_edit_predictions": false
     },
-    "Elixir": {},
+    "Elixir": {
+      "language_servers": [
+        "expert",
+        "!elixir-ls",
+        "!next-ls",
+        "!lexical",
+        "..."
+      ]
+    },
     "Python": {
       "language_servers": ["pyright", "ty", "ruff"],
       // "language_servers": ["ty", "ruff"],
