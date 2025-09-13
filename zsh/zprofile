@@ -16,9 +16,10 @@ source /opt/homebrew/share/zsh-autopair/autopair.zsh
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Some local Stuff
-source ~/.config/zsh/plugins/fzf-setup.zsh
+# source ~/.config/zsh/plugins/fzf-setup.zsh
 source ~/.config/zsh/plugins/yazi-command.zsh
 source ~/.config/zsh/plugins/jupyter-count.zsh
+source ~/.config/zsh/plugins/television.zsh
 
 # Tab title setup
 ZSH_TAB_TITLE_ONLY_FOLDER=true
