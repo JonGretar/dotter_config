@@ -12,14 +12,13 @@ source <(carapace _carapace)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-autopair/autopair.zsh
 
-# --- VI mode ---
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Some local Stuff
-# source ~/.config/zsh/plugins/fzf-setup.zsh
+source ~/.config/zsh/plugins/zsh-vi-mode.plugin.zsh
 source ~/.config/zsh/plugins/yazi-command.zsh
 source ~/.config/zsh/plugins/jupyter-count.zsh
 source ~/.config/zsh/plugins/television.zsh
+source ~/.config/zsh/plugins/k8s.zsh
 
 # Tab title setup
 ZSH_TAB_TITLE_ONLY_FOLDER=true

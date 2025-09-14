@@ -5,7 +5,16 @@ $hostname\
 $localip\
 $shlvl\
 $singularity\
+${custom.jj}\
+${git_branch}\
+${git_commit}\
+${git_state}\
+${git_metrics}\
+${git_status}\
 $kubernetes\
+${env_var.KUBE_NS}\
+$docker_context\
+$line_break\
 $directory\
 $vcsh\
 $fossil_branch\
@@ -18,7 +27,6 @@ $git_status\
 $custom\
 $hg_branch\
 $pijul_channel\
-$docker_context\
 $package\
 $c\
 $cmake\
@@ -103,6 +111,11 @@ format = "$output "
 ignore_timeout = true
 shell = ["starship-jj", "--ignore-working-copy", "starship"]
 use_stdin = false
+
+[env_var.KUBE_NS]
+variable = 'KUBE_NS'
+format = " [$env_value]($style) "
+style = "red"
 
 # optionally disable git modules when JJ is found.
 # note that you'll need to add ${custom.git_branch}, ${custom.git_commit} etc
@@ -221,6 +234,12 @@ symbol = " "
 
 [kotlin]
 symbol = " "
+
+[kubernetes]
+format = '[$symbol$context( \($namespace\))]($style)'
+detect_env_vars = [ 'KUBECONFIG']
+disabled = false
+style = 'blue'
 
 [lua]
 symbol = " "

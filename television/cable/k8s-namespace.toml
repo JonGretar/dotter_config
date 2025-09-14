@@ -1,0 +1,18 @@
+[metadata]
+name = "k8s-namespace"
+description = '''List and preview Namespaces
+'''
+requirements = ["ls", "bat"]
+
+[source]
+command = [
+  '''
+  kubectl get namespaces --no-headers
+  ''',
+]
+output = "{0}"
+
+
+
+[ui.preview_panel]
+size = 60

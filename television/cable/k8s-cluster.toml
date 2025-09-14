@@ -1,0 +1,19 @@
+[metadata]
+name = "k8s-cluster"
+description = '''List and preview clusters
+'''
+requirements = ["ls", "bat"]
+
+[source]
+command = [
+  '''
+  fd .yaml ~/.kube/
+  ''',
+]
+display = "{split:/:-1}"
+
+[preview]
+command = "bat {0}"
+
+[ui.preview_panel]
+size = 60
