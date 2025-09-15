@@ -1,3 +1,16 @@
+alias k-netshoot="kubectl run -it --rm --restart=Never -n ${KUBE_NS:-default} --image nicolaka/netshoot net-testing"
+
+# flux get kustomizations --all-namespaces
+# flux -n tappy-flux reconcile kustomization --with-source tappy-staging-fks
+
+k() {
+    if [[ -n "$KUBE_NS" ]]; then
+        kubectl -n "$KUBE_NS" "$@"
+    else
+        kubectl "$@"
+    fi
+}
+
 k-cluster() {
     local kubeconfig_path
     kubeconfig_path=$(tv k8s-cluster)

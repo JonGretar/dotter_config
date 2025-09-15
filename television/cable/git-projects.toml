@@ -1,5 +1,5 @@
 [metadata]
-name = "git-repos"
+name = "git-projects"
 requirements = ["fd", "git"]
 description = """
 A channel to select from git repositories on your local machine.

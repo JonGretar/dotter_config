@@ -1,0 +1,28 @@
+[metadata]
+name = "flux-kustom"
+description = '''List and preview Flux Kustomizations
+'''
+requirements = ["ls", "bat"]
+
+[source]
+command = [
+  # '''
+  # flux get kustomizations -n ${KUBE_NS:-default} --no-header
+  # ''',
+  '''
+  flux get kustomizations --all-namespaces --no-header
+  ''',
+]
+output = "{split:\t:1|trim}"
+
+[ui.preview_panel]
+size = 60
+
+
+[keybindings]
+ctrl-d = "actions:reconcile"
+
+[actions.reconcile]
+description = "Reconcile the selected Service"
+command = "flux -n {split:\t:0|trim} reconcile kustomization --with-source {split:\t:1|trim}"
+mode = "execute"
