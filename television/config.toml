@@ -249,6 +249,7 @@ fallback_channel = "files"
 "git-log" = ["git log", "git show"]
 "docker-images" = ["docker run"]
 "git-repos" = ["nvim", "code", "hx", "git clone", "zed"]
+"k8s-namespace" = ["kubectl"]
 
 
 [shell_integration.keybindings]
