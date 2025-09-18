@@ -5,7 +5,7 @@ alias k-netshoot="kubectl run -it --rm --restart=Never -n ${KUBE_NS:-default} --
 
 k() {
     if [[ -n "$KUBE_NS" ]]; then
-        kubectl -n "$KUBE_NS" "$@"
+        kubectl  "$@" -n "$KUBE_NS"
     else
         kubectl "$@"
     fi
@@ -34,5 +34,13 @@ k-ns() {
     else
         echo "Error: Failed to get namespace from 'tv k8s-namespace'" >&2
         return 1
+    fi
+}
+
+k-stern() {
+    if [[ -n "$KUBE_NS" ]]; then
+        /opt/homebrew/bin/stern  "$@" -n "$KUBE_NS"
+    else
+        /opt/homebrew/bin/stern --all-namespaces "$@"
     fi
 }
