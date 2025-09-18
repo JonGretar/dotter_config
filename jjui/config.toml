@@ -9,6 +9,25 @@ leader = ["þ"]
 help = "Help"
 send = ["?"]
 
+[leader.g]
+help = "Git Context"
+
+[leader.gt]
+help = "Git Tug"
+send = [ ":", "tug", "enter" ]
+
+[leader.n]
+context = ["$change_id"]
+help = "New change"
+
+[leader.na]
+help = "After"
+send = [ ":", "new -A $change_id", "enter" ]
+
+[leader.nb]
+help = "Before"
+send = [ ":", "new -B $change_id", "enter" ]
+
 [custom_commands]
 "new from main" = { key = ["N"], args = ["new", "main"] }
 "jj push" = { key = ["ð"], mode = ["z"], args = ["push"] }
