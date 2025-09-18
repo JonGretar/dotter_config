@@ -36,6 +36,9 @@
   "use_system_prompts": false,
   "terminal": {
     "button": true,
+    "toolbar": {
+      "breadcrumbs": false
+    },
     "cursor_shape": "block",
     "font_family": "Monaspace Argon",
     "font_size": 16,
