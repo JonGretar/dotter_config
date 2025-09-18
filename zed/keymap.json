@@ -1,4 +1,13 @@
 [
+  // Clear out a few defaults
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-h": null, // Undefine this shortcut so that I can write the pipe character
+      "ctrl-w": null // Does not play well with hesitant VIM users
+    }
+  },
+
   {
     "context": "Workspace",
     "bindings": {
@@ -122,7 +131,59 @@
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
-      "alt-h": null, // Undefine this shortcut so that I can write the pipe character
+      "ctrl-w L": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "right" }
+      ],
+      "ctrl-w H": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "left" }
+      ],
+      "ctrl-w J": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "down" }
+      ],
+      "ctrl-w K": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "up" }
+      ],
+
+      "cmd-alt-1": [
+        "workspace::MoveItemToPane",
+        { "destination": 0, "focus": true, "clone": false }
+      ],
+      "cmd-alt-2": [
+        "workspace::MoveItemToPane",
+        { "destination": 1, "focus": true, "clone": false }
+      ],
+      "cmd-alt-3": [
+        "workspace::MoveItemToPane",
+        { "destination": 2, "focus": true, "clone": false }
+      ],
+      "cmd-alt-4": [
+        "workspace::MoveItemToPane",
+        { "destination": 3, "focus": true, "clone": false }
+      ],
+      "cmd-alt-5": [
+        "workspace::MoveItemToPane",
+        { "destination": 4, "focus": true, "clone": false }
+      ],
+      "cmd-alt-6": [
+        "workspace::MoveItemToPane",
+        { "destination": 5, "focus": true, "clone": false }
+      ],
+      "cmd-alt-7": [
+        "workspace::MoveItemToPane",
+        { "destination": 6, "focus": true, "clone": false }
+      ],
+      "cmd-alt-8": [
+        "workspace::MoveItemToPane",
+        { "destination": 7, "focus": true, "clone": false }
+      ],
+      "cmd-alt-9": [
+        "workspace::MoveItemToPane",
+        { "destination": 8, "focus": true, "clone": false }
+      ],
 
       "cmd-shift-o": [
         "projects::OpenRecent",
