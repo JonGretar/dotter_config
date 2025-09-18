@@ -79,9 +79,6 @@
   "notification_panel": {
     "button": true
   },
-  "chat_panel": {
-    "button": "when_in_call"
-  },
   "collaboration_panel": {
     "button": true
   },

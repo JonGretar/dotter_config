@@ -24,7 +24,6 @@
       "ctrl-q g": "git_panel::ToggleFocus",
       "ctrl-q a": "agent::ToggleFocus",
       "ctrl-q c": "collab_panel::ToggleFocus",
-      "ctrl-q shift-C": "chat_panel::ToggleFocus",
       "ctrl-q b": "debug_panel::ToggleFocus",
       "ctrl-q d": "diagnostics::Deploy"
     }
