@@ -20,6 +20,7 @@ tug = [
 
 [revset-aliases]
 # set all remote bookmarks (commits pushed to remote branches) to be immutable
-'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
+# 'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
+'immutable_heads()' = "builtin_immutable_heads() | main@origin | (trunk().. & ~mine())"
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
