@@ -203,24 +203,13 @@
     },
     "Elixir": {},
     "Python": {
-      "language_servers": ["pyright", "ty", "ruff"],
-      // "language_servers": ["ty", "ruff"],
-      // Or, if there are other language servers you want to use with Python
-      // "language_servers": ["pyright", "ruff"],
       "code_actions_on_format": {
         // Fix all auto-fixable lint violations
         // "source.fixAll.ruff": true,
         // Organize imports
         "source.organizeImports.ruff": true
       },
-      "format_on_save": "on",
-      "formatter": [
-        {
-          "language_server": {
-            "name": "ruff"
-          }
-        }
-      ]
+      "format_on_save": "on"
     },
     "JSON": {
       "wrap_guides": [],
