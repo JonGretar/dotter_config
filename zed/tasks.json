@@ -31,8 +31,8 @@
     "shell": "system"
   },
   {
-    "label": "LazyJJ",
-    "command": "lazyjj",
+    "label": "K9s",
+    "command": "export KUBECONFIG=$(tv k8s-cluster) && k9s",
     "use_new_terminal": false,
     "reveal_target": "center",
     "allow_concurrent_runs": false,

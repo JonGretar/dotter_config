@@ -83,9 +83,9 @@
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
       ],
-      "space l j": [
+      "space k 9": [
         "task::Spawn",
-        { "task_name": "LazyJJ", "reveal_target": "center" }
+        { "task_name": "K9s", "reveal_target": "center" }
       ],
       "space j j": [
         "task::Spawn",

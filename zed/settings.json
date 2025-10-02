@@ -85,6 +85,15 @@
   "collaboration_panel": {
     "button": true
   },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 2,
+      "min_column": 80,
+      "max_severity": "error"
+    }
+  },
   "search": {
     "button": true
   },
@@ -170,7 +179,9 @@
     "inline_blame": {
       "enabled": true,
       "show_commit_summary": true,
-      "delay_ms": 0
+      "delay_ms": 500,
+      "min_column": 80,
+      "padding": 2
     }
   },
 
@@ -204,7 +215,15 @@
     "Markdown": {
       "show_edit_predictions": false
     },
-    "Elixir": {},
+    "Elixir": {
+      "language_servers": [
+        "expert",
+        "!elixir-ls",
+        "!next-ls",
+        "!lexical",
+        "..."
+      ]
+    },
     "Python": {
       "code_actions_on_format": {
         // Fix all auto-fixable lint violations

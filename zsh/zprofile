@@ -19,6 +19,7 @@ source ~/.config/zsh/plugins/yazi-command.zsh
 source ~/.config/zsh/plugins/jupyter-count.zsh
 source ~/.config/zsh/plugins/television.zsh
 source ~/.config/zsh/plugins/k8s.zsh
+source ~/.config/zsh/plugins/misc.zsh
 
 # Tab title setup
 ZSH_TAB_TITLE_ONLY_FOLDER=true
