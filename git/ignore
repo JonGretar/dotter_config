@@ -6,5 +6,5 @@
 .secret
 
 # Convenient way to add temp files
-*NOCHECKIN
+*NOCHECKIN*
 *NOCHECKIN.md
