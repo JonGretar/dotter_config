@@ -36,6 +36,9 @@ prompt_color = "#00FF00"
 "bat/config" = "~/.config/bat/config"
 "bat/themes" = "~/.config/bat/themes"
 
+[ledger.files]
+"ledger/ledgerrc" = "~/.config/ledger/ledgerrc"
+
 [yazi.files]
 "yazi/init.lua" = "~/.config/yazi/init.lua"
 "yazi/yazi.toml" = "~/.config/yazi/yazi.toml"

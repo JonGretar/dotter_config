@@ -24,6 +24,7 @@ alias ic="wezterm imgcat"
 alias imgcat="wezterm imgcat"
 alias zed-preview="zed --zed /Applications/Zed\ Preview.app"
 alias lg="lazygit"
+alias l="ledger"
 
 # --- MISE ---
 eval "$(mise activate zsh)"
