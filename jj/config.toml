@@ -2,10 +2,13 @@
 
 [user]
 name = "Jón Grétar Borgþórsson"
-email = "jongretar@jongretar.com"
+email = "jon@montel.fi"
 
 [ui]
 default-command = "log"
+
+[git]
+private-commits = 'blacklist()'
 
 [aliases]
 push = ["util", "exec", "--", "uvx", "jj-pre-push", "push"]
@@ -19,8 +22,24 @@ tug = [
 ]
 
 [revset-aliases]
-# set all remote bookmarks (commits pushed to remote branches) to be immutable
-'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
-# 'immutable_heads()' = "builtin_immutable_heads() | main@origin | (trunk().. & ~mine())"
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
+
+
+# set all remote bookmarks (commits pushed to remote branches) to be immutable
+# 'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
+
+
+# Private and WIP commits that should never be pushed anywhere. Often part of
+# work-in-progress merge stacks.
+'wip()' = 'description(glob:"wip:*")'
+'private()' = 'description(glob:"private:*")'
+'blacklist()' = 'wip() | private()'
+
+# stack(x, n) is the set of mutable commits reachable from 'x', with 'n'
+# parents. 'n' is often useful to customize the display and return set for
+# certain operations. 'x' can be used to target the set of 'roots' to traverse,
+# e.g. @ is the current stack.
+'stack()' = 'ancestors(reachable(@, mutable()), 2)'
+'stack(x)' = 'ancestors(reachable(x, mutable()), 2)'
+'stack(x, n)' = 'ancestors(reachable(x, mutable()), n)'
