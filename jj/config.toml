@@ -43,3 +43,25 @@ tug = [
 'stack()' = 'ancestors(reachable(@, mutable()), 2)'
 'stack(x)' = 'ancestors(reachable(x, mutable()), 2)'
 'stack(x, n)' = 'ancestors(reachable(x, mutable()), n)'
+
+# The current set of "open" works. It is defined as:
+#
+# - given the set of commits not in trunk, that are written by me,
+# - calculate the given stack() for each of those commits
+#
+# n = 1, meaning that nothing from `trunk()` is included, so all resulting
+# commits are mutable by definition.
+'open()' = 'stack(trunk().. & mine(), 1)'
+
+# the set of 'ready()' commits. defined as the set of open commits, but nothing
+# that is blacklisted or any of their children.
+#
+# often used with gerrit, which you can use to submit whole stacks at once:
+#
+# - jj gerrit send -r 'ready()' --dry-run
+'ready()' = 'open() ~ blacklist()::'
+
+[colors]
+# Base customizations
+"normal change_id" = { bold = true, fg = "magenta" }
+"immutable change_id" = { bold = false, fg = "bright cyan" }
