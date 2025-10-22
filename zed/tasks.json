@@ -45,6 +45,16 @@
     "shell": "system"
   },
   {
+    "label": "yazi",
+    "command": "yazi",
+    "hide": "on_success",
+    "reveal_target": "center",
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
+  },
+  {
     "label": "Preview in Skim",
     "command": "skim-preview '$ZED_FILE'",
     "reveal": "never",
