@@ -9,6 +9,12 @@
   },
 
   {
+    "bindings": {
+      "cmd-,": "zed::OpenSettingsFile"
+    }
+  },
+
+  {
     "context": "Workspace",
     "bindings": {
       "cmd-shift-o": [
@@ -25,7 +31,8 @@
         "task::Spawn",
         { "task_name": "project_finder", "reveal_target": "center" }
       ],
-      "cmd-k cmd-s": "zed::OpenKeymap",
+      "cmd-k cmd-s": "zed::OpenKeymapFile",
+      "cmd-,": "zed::OpenSettingsFile",
       "ctrl-w z": "workspace::ToggleZoom",
       "ctrl-q t": "terminal_panel::ToggleFocus",
       "ctrl-q p": "project_panel::ToggleFocus",
