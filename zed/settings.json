@@ -27,7 +27,6 @@
   },
   "wrap_guides": [80, 120],
   "show_whitespaces": "trailing",
-  "lsp_document_colors": "inlay",
   "active_pane_modifiers": {
     "inactive_opacity": 0.6,
     "border_size": 0.3
@@ -68,12 +67,23 @@
     "show_diagnostics": "errors",
     "activate_on_close": "history"
   },
+  "max_tabs": 8,
   "tab_bar": {
     "show": true,
     "show_tab_bar_buttons": true,
     "show_nav_history_buttons": false
   },
-  "max_tabs": 8,
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+    "agent_review": true,
+    "code_actions": false,
+    "selections_menu": true
+  },
+  "title_bar": {
+    "show_branch_name": true,
+    "show_branch_icon": false
+  },
   "project_panel": {
     "auto_reveal_entries": false,
     "sticky_scroll": true,
@@ -226,9 +236,6 @@
     },
     "Python": {
       "code_actions_on_format": {
-        // Fix all auto-fixable lint violations
-        // "source.fixAll.ruff": true,
-        // Organize imports
         "source.organizeImports.ruff": true
       },
       "format_on_save": "on"
