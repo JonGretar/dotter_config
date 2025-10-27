@@ -49,6 +49,10 @@
     "command": "yazi",
     "hide": "on_success",
     "reveal_target": "center",
+    "env": {
+      "EDITOR": "zed",
+      "VISUAL": "zed"
+    },
     "show_summary": false,
     "show_command": false,
     "allow_concurrent_runs": true,
@@ -62,24 +66,24 @@
   },
   {
     "label": "file_finder",
-    "command": "zed \"$(tv files)\"",
-    "hide": "always",
+    "command": "zed --add \"$(tv files)\"",
+    "hide": "on_success",
     "reveal_target": "center",
     "allow_concurrent_runs": true,
     "use_new_terminal": true
   },
   {
     "label": "project_finder",
-    "command": "zed \"$(tv git-projects)\"",
-    "hide": "always",
+    "command": "zed --reuse \"$(tv git-projects)\"",
+    "hide": "on_success",
     "reveal_target": "center",
     "allow_concurrent_runs": true,
     "use_new_terminal": true
   },
   {
     "label": "text_finder",
-    "command": "zed \"$(tv text)\"",
-    "hide": "always",
+    "command": "zed --add \"$(tv text)\"",
+    "hide": "on_success",
     "reveal_target": "center",
     "allow_concurrent_runs": true,
     "use_new_terminal": true
