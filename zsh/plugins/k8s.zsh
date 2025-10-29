@@ -11,6 +11,14 @@ k() {
     fi
 }
 
+k9() {
+    if [[ -n "$KUBE_NS" ]]; then
+        k9s "$@" -n "$KUBE_NS"
+    else
+        k9s "$@" -A
+    fi
+}
+
 k-cluster() {
     local kubeconfig_path
     kubeconfig_path=$(tv k8s-cluster)
