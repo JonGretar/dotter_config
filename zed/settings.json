@@ -26,6 +26,7 @@
     "dlig": true
   },
   "wrap_guides": [80, 120],
+  "preferred_line_length": 120,
   "show_whitespaces": "trailing",
   "active_pane_modifiers": {
     "inactive_opacity": 0.6,
@@ -125,8 +126,7 @@
     "catppuccin": true,
     "catppuccin-icons": true,
     "just": true,
-    "rainbow-csv": true,
-    "ruff": true
+    "rainbow-csv": true
   },
 
   // Vim mode setup
@@ -141,7 +141,7 @@
     }
   },
   "cursor_blink": false,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "scroll_beyond_last_line": "off",
   "pane_split_direction_horizontal": "down",
   "pane_split_direction_vertical": "right",
@@ -181,7 +181,15 @@
     "default_profile": "write",
     "play_sound_when_agent_done": true
   },
-  "context_servers": {},
+  "context_servers": {
+    "chrome-devtools": {
+      "source": "custom",
+      "enabled": true,
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+      "env": {}
+    }
+  },
 
   // Git
   "git": {
@@ -198,7 +206,7 @@
   "file_types": {
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
     "YAML": ["sls"],
-    "Markdown": ["qmd", "rmd", "md"]
+    "Markdown": ["qmd", "rmd", "md", "livemd"]
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -223,22 +231,18 @@
   // Language Specific Settings
   "languages": {
     "Markdown": {
-      "show_edit_predictions": false
+      "show_edit_predictions": false,
+      "soft_wrap": "preferred_line_length",
+      "preferred_line_length": 120
     },
     "Elixir": {
-      "language_servers": [
-        "expert",
-        "!elixir-ls",
-        "!next-ls",
-        "!lexical",
-        "..."
-      ]
+      "language_servers": ["expert", "!elixir-ls", "!next-ls", "!lexical", "..."]
     },
     "Python": {
       "code_actions_on_format": {
         "source.organizeImports.ruff": true
       },
-      "format_on_save": "on"
+      "language_servers": ["ty", "!basedpyright", "..."]
     },
     "JSON": {
       "wrap_guides": [],
@@ -254,7 +258,7 @@
       "tab_size": 2
     },
     "Ruby": {
-      "language_servers": ["!solargraph", "ruby-lsp"]
+      "language_servers": ["ruby-lsp", "!solargraph", "!rubocop", "..."]
     },
     "Rust": {},
     "Zig": {},
@@ -276,6 +280,24 @@
 
   // LSP Settings
   "lsp": {
+    "expert": {
+      "binary": {
+        "arguments": ["--stdio"]
+      }
+    },
+    "tinymist": {
+      "settings": {
+        "exportPdf": "onType",
+        "outputPath": "$root/target/$dir/$name"
+      },
+      "initialization_options": {
+        "preview": {
+          "background": {
+            "enabled": true
+          }
+        }
+      }
+    },
     "rubocop": {
       "initialization_options": {}
     },
@@ -287,17 +309,17 @@
           // "formatter": "none"
         }
       }
-    },
-    "ruff": {
-      "initialization_options": {
-        "settings": {
-          // Ruff server settings goes here
-          "lineLength": 80,
-          "lint": {
-            "extendSelect": ["E", "F", "I"]
-          }
-        }
-      }
     }
+    // "ruff": {
+    //   "initialization_options": {
+    //     "settings": {
+    //       // Ruff server settings goes here
+    //       "lineLength": 80,
+    //       "lint": {
+    //         "extendSelect": ["E", "F", "I"]
+    //       }
+    //     }
+    //   }
+    // }
   }
 }

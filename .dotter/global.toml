@@ -1,5 +1,3 @@
-
-
 # The 'files' section is a mapping between the path of the file relative to
 # the repository root and its location in the filesystem (where the program
 # expects it)
@@ -35,6 +33,9 @@ prompt_color = "#00FF00"
 [bat.files]
 "bat/config" = "~/.config/bat/config"
 "bat/themes" = "~/.config/bat/themes"
+
+[bin.files]
+"bin" = "~/.local/bin"
 
 [ledger.files]
 "ledger/ledgerrc" = "~/.config/ledger/ledgerrc"
