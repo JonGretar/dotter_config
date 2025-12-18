@@ -39,10 +39,18 @@
     }
   },
 
+  // Panel Stuff
   {
     "context": "Terminal",
     "bindings": {
       "cmd-k": "terminal::Clear"
+    }
+  },
+
+  {
+    "context": "GitPanel > Editor && vim_mode==normal",
+    "bindings": {
+      "escape": "git_panel::FocusChanges"
     }
   },
 
@@ -63,6 +71,7 @@
     }
   },
 
+  // Global Leader key
   {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
@@ -71,8 +80,6 @@
       "space b n": "workspace::NewFile"
     }
   },
-
-  // Global Leader key
   {
     "context": "(Workspace && !Editor && !Terminal) || (Editor && VimControl)",
     "bindings": {
