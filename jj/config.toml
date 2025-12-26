@@ -8,42 +8,37 @@ email = "jon@montel.fi"
 default-command = "log"
 
 [git]
-private-commits = 'blacklist()'
+private-commits = "blacklist()"
 
 [aliases]
+ui = ["util", "exec", "--", "jjui"]
 push = ["util", "exec", "--", "uvx", "jj-pre-push", "push"]
 tug = [
-    "bookmark",
-    "move",
-    "--from",
-    "closest_bookmark(@)",
-    "--to",
-    "closest_pushable(@)",
+  "bookmark",
+  "move",
+  "--from",
+  "closest_bookmark(@)",
+  "--to",
+  "closest_pushable(@)",
 ]
 
 [revset-aliases]
-'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_bookmark(to)' = "heads(::to & bookmarks())"
 'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
-
-
 # set all remote bookmarks (commits pushed to remote branches) to be immutable
 # 'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
-
-
 # Private and WIP commits that should never be pushed anywhere. Often part of
 # work-in-progress merge stacks.
 'wip()' = 'description(glob:"wip:*")'
 'private()' = 'description(glob:"private:*")'
-'blacklist()' = 'wip() | private()'
-
+'blacklist()' = "wip() | private()"
 # stack(x, n) is the set of mutable commits reachable from 'x', with 'n'
 # parents. 'n' is often useful to customize the display and return set for
 # certain operations. 'x' can be used to target the set of 'roots' to traverse,
 # e.g. @ is the current stack.
-'stack()' = 'ancestors(reachable(@, mutable()), 2)'
-'stack(x)' = 'ancestors(reachable(x, mutable()), 2)'
-'stack(x, n)' = 'ancestors(reachable(x, mutable()), n)'
-
+'stack()' = "ancestors(reachable(@, mutable()), 2)"
+'stack(x)' = "ancestors(reachable(x, mutable()), 2)"
+'stack(x, n)' = "ancestors(reachable(x, mutable()), n)"
 # The current set of "open" works. It is defined as:
 #
 # - given the set of commits not in trunk, that are written by me,
@@ -51,15 +46,14 @@ tug = [
 #
 # n = 1, meaning that nothing from `trunk()` is included, so all resulting
 # commits are mutable by definition.
-'open()' = 'stack(trunk().. & mine(), 1)'
-
+'open()' = "stack(trunk().. & mine(), 1)"
 # the set of 'ready()' commits. defined as the set of open commits, but nothing
 # that is blacklisted or any of their children.
 #
 # often used with gerrit, which you can use to submit whole stacks at once:
 #
 # - jj gerrit send -r 'ready()' --dry-run
-'ready()' = 'open() ~ blacklist()::'
+'ready()' = "open() ~ blacklist()::"
 
 [colors]
 # Base customizations
