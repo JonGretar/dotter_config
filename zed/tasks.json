@@ -10,11 +10,11 @@
     "allow_concurrent_runs": false,
     "env": {
       "EDITOR": "zed -w",
-      "VISUAL": "zed -w"
+      "VISUAL": "zed -w",
     },
     "reveal": "always",
     "hide": "on_success",
-    "shell": "system"
+    "shell": "system",
   },
   {
     "label": "JJUI",
@@ -24,11 +24,11 @@
     "allow_concurrent_runs": false,
     "env": {
       "EDITOR": "zed -w",
-      "VISUAL": "zed -w"
+      "VISUAL": "zed -w",
     },
     "reveal": "always",
     "hide": "on_success",
-    "shell": "system"
+    "shell": "system",
   },
   {
     "label": "K9s",
@@ -38,11 +38,11 @@
     "allow_concurrent_runs": false,
     "env": {
       "EDITOR": "zed -w",
-      "VISUAL": "zed -w"
+      "VISUAL": "zed -w",
     },
     "reveal": "always",
     "hide": "on_success",
-    "shell": "system"
+    "shell": "system",
   },
   {
     "label": "yazi",
@@ -51,18 +51,18 @@
     "reveal_target": "center",
     "env": {
       "EDITOR": "zed",
-      "VISUAL": "zed"
+      "VISUAL": "zed",
     },
     "show_summary": false,
     "show_command": false,
     "allow_concurrent_runs": true,
-    "use_new_terminal": true
+    "use_new_terminal": true,
   },
   {
     "label": "Preview in Skim",
     "command": "skim-preview '$ZED_FILE'",
     "reveal": "never",
-    "hide": "on_success"
+    "hide": "on_success",
   },
   {
     "label": "file_finder",
@@ -70,15 +70,15 @@
     "hide": "on_success",
     "reveal_target": "center",
     "allow_concurrent_runs": true,
-    "use_new_terminal": true
+    "use_new_terminal": true,
   },
   {
     "label": "project_finder",
-    "command": "zed --reuse \"$(tv git-projects)\"",
+    "command": "zed \"$(tv git-projects)\"",
     "hide": "on_success",
     "reveal_target": "center",
     "allow_concurrent_runs": true,
-    "use_new_terminal": true
+    "use_new_terminal": true,
   },
   {
     "label": "text_finder",
@@ -86,39 +86,39 @@
     "hide": "on_success",
     "reveal_target": "center",
     "allow_concurrent_runs": true,
-    "use_new_terminal": true
+    "use_new_terminal": true,
   },
   {
     "label": "Quarto Render",
     "command": "quarto render '$ZED_FILE'",
     "tags": ["quarto"],
     "reveal": "always",
-    "hide": "on_success"
+    "hide": "on_success",
   },
   {
     "label": "Quarto Preview",
     "command": "quarto preview '$ZED_FILE'",
     "tags": ["quarto"],
     "reveal": "always",
-    "hide": "on_success"
+    "hide": "on_success",
   },
   {
     "label": "Start R terminal",
     "command": "radian",
     "tags": ["r"],
     "cwd": "$ZED_WORKTREE_ROOT",
-    "use_new_terminal": true
+    "use_new_terminal": true,
   },
   {
     "label": "Marimo: Run file",
     "command": "marimo run --watch  '$ZED_FILE'",
     "reveal": "always",
-    "hide": "on_success"
+    "hide": "on_success",
   },
   {
     "label": "Marimo: Edit file",
     "command": "marimo edit --watch  '$ZED_FILE'",
     "reveal": "always",
-    "hide": "on_success"
-  }
+    "hide": "on_success",
+  },
 ]
