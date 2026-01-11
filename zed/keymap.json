@@ -4,14 +4,14 @@
     "context": "Editor",
     "bindings": {
       "alt-h": null, // Undefine this shortcut so that I can write the pipe character
-      "ctrl-w": null // Does not play well with hesitant VIM users
-    }
+      "ctrl-w": null, // Does not play well with hesitant VIM users
+    },
   },
 
   {
     "bindings": {
-      "cmd-,": "zed::OpenSettingsFile"
-    }
+      "cmd-,": "zed::OpenSettingsFile",
+    },
   },
 
   {
@@ -20,8 +20,8 @@
       "cmd-shift-o": [
         "projects::OpenRecent",
         {
-          "create_new_window": false
-        }
+          "create_new_window": false,
+        },
       ],
       "cmd-alt-p": ["task::Spawn", { "task_name": "file_finder", "reveal_target": "center" }],
       "cmd-alt-shift-o": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],
@@ -35,23 +35,23 @@
       "ctrl-q a": "agent::ToggleFocus",
       "ctrl-q c": "collab_panel::ToggleFocus",
       "ctrl-q b": "debug_panel::ToggleFocus",
-      "ctrl-q d": "diagnostics::Deploy"
-    }
+      "ctrl-q d": "diagnostics::Deploy",
+    },
   },
 
   // Panel Stuff
   {
     "context": "Terminal",
     "bindings": {
-      "cmd-k": "terminal::Clear"
-    }
+      "cmd-k": "terminal::Clear",
+    },
   },
 
   {
     "context": "GitPanel > Editor && vim_mode==normal",
     "bindings": {
-      "escape": "git_panel::FocusChanges"
-    }
+      "escape": "git_panel::FocusChanges",
+    },
   },
 
   // Window's navigation
@@ -67,8 +67,8 @@
       "ctrl-shift-left": "workspace::ActivatePaneLeft",
       "ctrl-shift-right": "workspace::ActivatePaneRight",
       "ctrl-shift-up": "workspace::ActivatePaneUp",
-      "ctrl-shift-down": "workspace::ActivatePaneDown"
-    }
+      "ctrl-shift-down": "workspace::ActivatePaneDown",
+    },
   },
 
   // Global Leader key
@@ -77,8 +77,8 @@
     "bindings": {
       "space l g": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }],
       "space s f": "file_finder::Toggle",
-      "space b n": "workspace::NewFile"
-    }
+      "space b n": "workspace::NewFile",
+    },
   },
   {
     "context": "(Workspace && !Editor && !Terminal) || (Editor && VimControl)",
@@ -111,8 +111,8 @@
       "space g c": "git::Commit",
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
-      "space h": "editor::Hover"
-    }
+      "space h": "editor::Hover",
+    },
   },
 
   // *** VIM Editor ***
@@ -137,8 +137,8 @@
       "cmd-shift-o": [
         "projects::OpenRecent",
         {
-          "create_new_window": false
-        }
+          "create_new_window": false,
+        },
       ],
 
       "alt-s": "editor::UnwrapSyntaxNode",
@@ -186,8 +186,10 @@
       "' shift-b": "pane::ActivateLastItem",
       "ð shift-b": ["pane::ActivateItem", 0],
       "' space": "vim::InsertEmptyLineBelow",
-      "ð space": "vim::InsertEmptyLineAbove"
-    }
+      "ð space": "vim::InsertEmptyLineAbove",
+
+      "ctrl-q": null, // Clear visual block for whichkey popup
+    },
   },
 
   {
@@ -199,8 +201,8 @@
 
       // mini.ai plugin behavior
       "q": "vim::MiniQuotes",
-      "b": "vim::MiniBrackets"
-    }
+      "b": "vim::MiniBrackets",
+    },
   },
 
   // Visual Vim mode
@@ -210,8 +212,8 @@
       "v": "editor::SelectLargerSyntaxNode",
       "V": "editor::SelectSmallerSyntaxNode",
       "ctrl-s": "vim::PushAddSurrounds",
-      "shift-x": "vim::Exchange"
-    }
+      "shift-x": "vim::Exchange",
+    },
   },
 
   {
@@ -220,8 +222,8 @@
       "^": "vim::StartOfLine",
       "0": "vim::FirstNonWhitespace",
       "s": "vim::PushSneak",
-      "shift-s": "vim::PushSneakBackward"
-    }
+      "shift-s": "vim::PushSneakBackward",
+    },
   },
 
   {
@@ -231,8 +233,8 @@
       "alt-s": "editor::UnwrapSyntaxNode",
       "alt-w": "vim::NextSubwordStart",
       "alt-e": "vim::NextSubwordEnd",
-      "alt-b": "vim::PreviousSubwordStart"
-    }
+      "alt-b": "vim::PreviousSubwordStart",
+    },
   },
 
   // *** Extension Based Configurations ***
@@ -244,10 +246,10 @@
         "task::Spawn",
         {
           "task_name": "Fawkes: Choose alternate target",
-          "reveal_target": "center"
-        }
-      ]
-    }
+          "reveal_target": "center",
+        },
+      ],
+    },
   },
 
   // Text based
@@ -255,8 +257,8 @@
     "context": "Editor && !VimCount && (vim_mode == normal || vim_mode == visual) && (extension==md || extension==typ || extension==qmd)",
     "bindings": {
       "j": ["vim::Down", { "display_lines": true }],
-      "k": ["vim::Up", { "display_lines": true }]
-    }
+      "k": ["vim::Up", { "display_lines": true }],
+    },
   },
 
   // R Code
@@ -264,15 +266,15 @@
     "context": "Editor && extension==R",
     "bindings": {
       "ctrl-shift-m": ["workspace::SendKeystrokes", "space |> space"],
-      "alt--": ["workspace::SendKeystrokes", "space < - space"]
-    }
+      "alt--": ["workspace::SendKeystrokes", "space < - space"],
+    },
   },
 
   // Cell mode for jupyter
   {
     "context": "extension==R || extension==py",
     "bindings": {
-      "ctrl-alt-i": ["workspace::SendKeystrokes", "\n# space %%\n"]
-    }
-  }
+      "ctrl-alt-i": ["workspace::SendKeystrokes", "\n# space %%\n"],
+    },
+  },
 ]
