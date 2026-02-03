@@ -17,17 +17,15 @@ harlequin = [
 ]
 skim = [{ run = 'skim-preview "$@"', desc = "Preview in Skim" }]
 sioyek = [{ run = 'sioyek "$@"', desc = "Preview in Sioyek" }]
-macopen = [{ run = 'open "$@"', desc = "Open with default app" }]
 
 [open]
 prepend_rules = [
     { mime = "application/sqlite3", use = "harlequin" },
     { mime = "application/duckdb", use = "harlequin" },
-    { mime = "application/pdf", use = "sioyek" },
-    { mime = "text/*", use = "zed" },
+    { mime = "application/pdf", use = ["sioyek", "skim", "open"] },
+    { mime = "text/*", use = ["zed", "edit", "reveal"] },
 ]
 append_rules = [
-    { mime = "inode/directory", use = "zed" },
-    { name = "*", use = "macopen" },
-    { name = "*", use = "zed" },
+    { url = "*/", use = ["zed", "edit", "open", "reveal"] },
+    # { name = "*", use = ["zed", "open", "reveal"] },
 ]
