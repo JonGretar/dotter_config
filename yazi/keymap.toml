@@ -19,6 +19,11 @@ run = "plugin lazygit"
 desc = "Run lazygit"
 
 [[mgr.prepend_keymap]]
+on   = [ "g", "j" ]
+run  = "plugin jjui"
+desc = "run jjui"
+
+[[mgr.prepend_keymap]]
 on = ["m"]
 run = "plugin bookmarks save"
 desc = "Save current position as a bookmark"
@@ -37,3 +42,13 @@ desc = "Delete a bookmark"
 on = ["b", "D"]
 run = "plugin bookmarks delete_all"
 desc = "Delete all bookmarks"
+
+[[mgr.prepend_keymap]]
+on   = "f"
+run  = "plugin jump-to-char"
+desc = "Jump to char"
+
+[[mgr.prepend_keymap]]
+on   = "F"
+run  = "filter --smart"
+desc = "Filter files"

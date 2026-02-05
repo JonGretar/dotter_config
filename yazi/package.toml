@@ -23,7 +23,17 @@ use = "Lil-Dank/lazygit"
 rev = "0e56060"
 hash = "ab2e66065a94cca4886b303518e44bd8"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "230b9c6"
+hash = "ce67445ebb1bf3d97b8e44f50904b2c5"
+
+[[plugin.deps]]
+use = "Adda0/jjui"
+rev = "a41b2e1"
+hash = "39a4bc4632509e4a68e26b3eed3c3217"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
 rev = "d04a298"
-hash = "e6c5beeb1da3199355734273ee452a7f"
+hash = "9209fcb5c608df3ca109414fc72f523d"
