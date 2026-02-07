@@ -88,6 +88,7 @@
       "space y": ["task::Spawn", { "task_name": "yazi", "reveal_target": "center" }],
       "space k 9": ["task::Spawn", { "task_name": "K9s", "reveal_target": "center" }],
       "space j j": ["task::Spawn", { "task_name": "JJUI", "reveal_target": "center" }],
+      "space c c": ["task::Spawn", { "task_name": "Claude Code", "reveal_target": "center" }],
       "space s b": "tab_switcher::ToggleAll",
       "space s f": ["task::Spawn", { "task_name": "file_finder", "reveal_target": "center" }],
       "space s p": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],

@@ -59,6 +59,20 @@
     "use_new_terminal": true,
   },
   {
+    "label": "Claude Code",
+    "command": "claude",
+    "hide": "on_success",
+    "reveal_target": "center",
+    "env": {
+      "EDITOR": "zed",
+      "VISUAL": "zed",
+    },
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": false,
+    "use_new_terminal": false,
+  },
+  {
     "label": "Preview in Skim",
     "command": "skim-preview '$ZED_FILE'",
     "reveal": "never",
