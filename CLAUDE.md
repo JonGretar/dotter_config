@@ -49,6 +49,10 @@ Adding a new tool:
 
 **`local.toml` overrides** — file targets and variables in `local.toml` always win over `global.toml`. Set a file target to `""` to disable it on this machine. Use `includes = [".dotter/macos.toml"]` for shared per-OS overrides.
 
+## Skills
+
+Always load the `jj:jj-guide` skill at the start of every session in this repo.
+
 ## Version control
 
 This repo uses **jj (Jujutsu)** as the primary VCS, with git as the backend. The `main` branch is the primary branch.
