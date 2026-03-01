@@ -9,3 +9,5 @@
 NOCHECKIN/
 *NOCHECKIN*
 *NOCHECKIN.md
+
+**/.claude/settings.local.json
