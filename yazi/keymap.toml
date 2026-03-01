@@ -1,3 +1,8 @@
+[[ mgr.prepend_keymap ]]
+on = "q"
+run = "do_nothing"  # Replace with a command that does nothing
+desc = "Disable exit with 'q'"
+
 [[mgr.prepend_keymap]]
 on = "<Enter>"
 run = "plugin smart-enter"
