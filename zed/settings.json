@@ -96,6 +96,7 @@
     "auto_reveal_entries": false,
     "sticky_scroll": true,
     "hide_root": true,
+    "diagnostic_badges": true,
   },
   "notification_panel": {
     "button": true,
@@ -193,7 +194,7 @@
   },
   "agent": {
     "tool_permissions": {
-      "default": "allow"
+      "default": "allow",
     },
     "default_model": {
       "provider": "zed.dev",
@@ -260,7 +261,13 @@
       "preferred_line_length": 120,
     },
     "Elixir": {
-      // "language_servers": ["expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
+      "language_servers": ["expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
+      // "language_servers": ["expert"],
+    },
+    "HEEX": {
+      "language_servers": ["!expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
+      // "language_servers": ["tailwindcss-language-server", "expert", "emmet-language-server"],
+      // "language_servers": ["expert"],
     },
     "Python": {
       "code_actions_on_format": {
@@ -377,4 +384,6 @@
     //   }
     // }
   },
+
+  "profiles": {},
 }
