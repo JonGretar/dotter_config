@@ -1,4 +1,4 @@
-`#:tombi schema.strict = false
+#:tombi schema.strict = false
 
 format = """
 $username\
