@@ -1,3 +1,4 @@
+`#:tombi schema.strict = false
 
 format = """
 $username\
@@ -102,16 +103,6 @@ $shell\
 $character"""
 
 
-[custom.jj]
-# when = "jj root"
-# when = "jj --ignore-working-copy root"
-detect_folders = [".jj"]
-command = "prompt"
-format = "$output "
-ignore_timeout = true
-shell = ["starship-jj", "--ignore-working-copy", "starship"]
-use_stdin = false
-
 [env_var.KUBE_NS]
 variable = 'KUBE_NS'
 format = " [$env_value]($style) "
@@ -123,14 +114,21 @@ style = "red"
 [git_commit]
 disabled = true
 
+[git_metrics]
+disabled = true
+
+[git_branch]
+disabled = true
+symbol = " "
+
+[git_status]
+disabled = true
+
 [custom.git_commit]
 when = "! jj --ignore-working-copy root"
 command = "starship module git_commit"
 style = ""
 description = "Only show git_commit if we're not in a jj repo"
-
-[git_metrics]
-disabled = true
 
 [custom.git_metrics]
 when = "! jj --ignore-working-copy root"
@@ -138,18 +136,11 @@ command = "starship module git_metrics"
 description = "Only show git_metrics if we're not in a jj repo"
 style = ""
 
-[git_branch]
-disabled = true
-symbol = " "
-
 [custom.git_branch]
 when = "! jj --ignore-working-copy root"
 command = "starship module git_branch"
 description = "Only show git_branch if we're not in a jj repo"
 style = ""
-
-[git_status]
-disabled = true
 
 [custom.git_status]
 when = "! jj --ignore-working-copy root"
@@ -157,18 +148,26 @@ command = "starship module git_status"
 style = "" # This disables the default "(bold green)" style
 description = "Only show git_status if we're not in a jj repo"
 
-
 [custom.uv]
 command = 'uv python find --show-version'
 detect_files = ['uv.lock']
 symbol = '󰧯 '
 style = 'bold bright-red'
 
+[custom.jj]
+detect_folders = [".jj"]
+command = "prompt"
+format = "$output "
+ignore_timeout = true
+shell = ["starship-jj", "--ignore-working-copy", "starship"]
+use_stdin = false
+
 [custom.just]
 command = 'just -l -u | grep -v Available | wc -l'
 detect_files = ['justfile', 'Justfile', '.justfile']
 symbol = "󰰇 "
 style = "bold blue"
+
 [aws]
 symbol = "  "
 
