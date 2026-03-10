@@ -15,14 +15,19 @@
   },
 
   {
+    "context": "Editor && showing_completions",
+    "use_key_equivalents": true,
+    "bindings": {
+      "enter": "editor::Newline",
+      "shift-enter": "editor::ConfirmCompletionReplace",
+      "tab": "editor::ComposeCompletion",
+    },
+  },
+
+  {
     "context": "Workspace",
     "bindings": {
-      "cmd-shift-o": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false,
-        },
-      ],
+      "cmd-shift-o": ["projects::OpenRecent", { "create_new_window": false }],
       "cmd-alt-p": ["task::Spawn", { "task_name": "file_finder", "reveal_target": "center" }],
       "cmd-alt-shift-o": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],
       "cmd-k cmd-s": "zed::OpenKeymapFile",
@@ -71,29 +76,24 @@
     },
   },
 
-  // Global Leader key
-  {
-    "context": "EmptyPane || SharedScreen",
-    "bindings": {
-      "space l g": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }],
-      "space s f": "file_finder::Toggle",
-      "space b n": "workspace::NewFile",
-    },
-  },
   {
     "context": "(Workspace && !Editor && !Terminal) || (Editor && VimControl)",
     "bindings": {
-      "space space": "tab_switcher::ToggleAll",
+      // Global Leader key
+      "space b n": "workspace::NewFile",
       "space l g": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }],
       "space y": ["task::Spawn", { "task_name": "yazi", "reveal_target": "center" }],
       "space k 9": ["task::Spawn", { "task_name": "K9s", "reveal_target": "center" }],
       "space j j": ["task::Spawn", { "task_name": "JJUI", "reveal_target": "center" }],
       "space c c": ["task::Spawn", { "task_name": "Claude Code", "reveal_target": "center" }],
+      "space space": "tab_switcher::ToggleAll",
+      // "space s f": "file_finder::Toggle",
       "space s b": "tab_switcher::ToggleAll",
+      "space s p": ["projects::OpenRecent", { "create_new_window": false }],
       "space s f": ["task::Spawn", { "task_name": "file_finder", "reveal_target": "center" }],
-      "space s p": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],
+      "space s g": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],
       "space s t": ["task::Spawn", { "task_name": "text_finder", "reveal_target": "center" }],
-      "space b n": "workspace::NewFile",
+
       "space b b": "pane::AlternateFile",
       "space b d": ["pane::CloseActiveItem", { "close_pinned": false }],
       "space b q": ["pane::CloseOtherItems", { "close_pinned": false }],

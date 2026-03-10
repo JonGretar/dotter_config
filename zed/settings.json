@@ -15,6 +15,7 @@
   "agent_ui_font_size": 16,
   "agent_buffer_font_size": 14,
   "buffer_font_family": "Monaspace Argon",
+  "buffer_font_fallbacks": ["FiraCode Nerd Font"],
   "buffer_font_features": {
     "ss01": true,
     "ss02": true,
@@ -27,6 +28,7 @@
     "calt": true,
     "dlig": true,
   },
+  "show_completions_on_input": true,
   "wrap_guides": [80, 120],
   "preferred_line_length": 120,
   "show_whitespaces": "trailing",
@@ -197,9 +199,12 @@
       "default": "allow",
     },
     "default_model": {
+      "effort": "medium",
+      "enable_thinking": true,
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+      "model": "claude-sonnet-4-6",
     },
+
     "button": true,
     "default_profile": "write",
     "play_sound_when_agent_done": true,
