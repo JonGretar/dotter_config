@@ -1,42 +1,71 @@
 [[actions]]
 name = "new-from-main"
-lua = 'jj_async("new", "main")'
+lua = '''
+  jj("new", "main")
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "push"
-lua = 'jj_interactive("push")'
+lua = '''
+  jj("push")
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "push-closest-bookmark"
-lua = 'jj_interactive("push", "-r", "closest_bookmark(" .. context.change_id() .. ")", "--allow-new")'
+lua = '''
+  jj_interactive("push", "-r", "closest_bookmark(" .. context.change_id() .. ")", "--allow-new")
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "tug"
-lua = 'jj_async("bookmark", "advance")'
+lua = '''
+  jj("bookmark", "advance")
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "show-after-revisions"
-lua = 'revset.set("::" .. context.change_id())'
+lua = '''
+  revset.set("::" .. context.change_id())
+'''
 
 [[actions]]
 name = "move-commit-down"
-lua = 'jj_async("rebase", "-r", context.change_id(), "--insert-before", context.change_id() .. "-")'
+lua = '''
+  jj("rebase", "-r", context.change_id(), "--insert-before", context.change_id() .. "-")
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "move-commit-up"
-lua = 'jj_async("rebase", "-r", context.change_id(), "--insert-after", context.change_id() .. "+")'
+lua = '''
+  jj("rebase", "-r", context.change_id(), "--insert-after", context.change_id() .. "+")
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "new-after-change"
-lua = 'jj_async("new", "-A", context.change_id())'
+lua = '''
+  jj("new", "-A", context.change_id())
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "new-before-change"
-lua = 'jj_async("new", "-B", context.change_id())'
+lua = '''
+  jj("new", "-B", context.change_id())
+  revisions.refresh()
+'''
 
 [[actions]]
 name = "new-note-commit"
-lua = 'jj_async("new", "--no-edit", "-A", context.change_id())'
+lua = '''
+  jj("new", "--no-edit", "-A", context.change_id())
+  revisions.refresh()
+'''
 
 [[bindings]]
 action = "new-from-main"
