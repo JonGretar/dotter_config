@@ -1,54 +1,119 @@
-[keys]
-leader = ["þ"]
+[[actions]]
+name = "new-from-main"
+lua = 'jj_async("new", "main")'
 
-[keys.inline_describe]
-  mode = ["enter"]
-  accept = ["enter", "ctrl+s"]
+[[actions]]
+name = "push"
+lua = 'jj_interactive("push")'
 
-[leader.h]
-help = "Help"
-send = ["?"]
+[[actions]]
+name = "push-closest-bookmark"
+lua = 'jj_interactive("push", "-r", "closest_bookmark(" .. context.change_id() .. ")", "--allow-new")'
 
-[leader.g]
-help = "Git Context"
+[[actions]]
+name = "tug"
+lua = 'jj_async("bookmark", "advance")'
 
-[leader.gt]
-help = "Git Tug"
-send = [ ":", "tug", "enter" ]
+[[actions]]
+name = "show-after-revisions"
+lua = 'revset.set("::" .. context.change_id())'
 
-[leader.n]
-context = ["$change_id"]
-help = "New change"
+[[actions]]
+name = "move-commit-down"
+lua = 'jj_async("rebase", "-r", context.change_id(), "--insert-before", context.change_id() .. "-")'
 
-[leader.na]
-help = "After"
-send = [ ":", "new -A $change_id", "enter" ]
+[[actions]]
+name = "move-commit-up"
+lua = 'jj_async("rebase", "-r", context.change_id(), "--insert-after", context.change_id() .. "+")'
 
-[leader.nb]
-help = "Before"
-send = [ ":", "new -B $change_id", "enter" ]
+[[actions]]
+name = "new-after-change"
+lua = 'jj_async("new", "-A", context.change_id())'
 
-[custom_commands]
-"new from main" = { key = ["N"], args = ["new", "main"] }
-"jj push" = { key = ["ð"], mode = ["z"], args = ["push"] }
-"jj push closest bookmark(s) (allows new)" = { key = ["Ð"], args = [
-    "push", "-r", "closest_bookmark($change_id)", "--allow-new",
-] }
-"tug" = { key = [
-    "T",
-], args = [
-    "bookmark", "move", "--from", "closest_bookmark($change_id)", "--to", "closest_pushable($change_id)",
-] }
-"show after revisions" = { key = ["Z"], revset = "::$change_id" }
+[[actions]]
+name = "new-before-change"
+lua = 'jj_async("new", "-B", context.change_id())'
 
-[custom_commands."move commit down"]
-key = ["J"]
-args = ["rebase", "-r", "$change_id", "--insert-before", "$change_id-"]
+[[actions]]
+name = "new-note-commit"
+lua = 'jj_async("new", "--no-edit", "-A", context.change_id())'
 
-[custom_commands."move commit up"]
-key = ["K"]
-args = ["rebase", "-r", "$change_id", "--insert-after", "$change_id+"]
+[[bindings]]
+action = "new-from-main"
+key = "N"
+scope = "revisions"
+desc = "New change from main"
 
-[custom_commands."new note commit"]
-key = ["ctrl+n"]
-args = ["new", "--no-edit", "-A", "$change_id"]
+[[bindings]]
+action = "push"
+key = "ð"
+scope = "revisions"
+desc = "jj push"
+
+[[bindings]]
+action = "push-closest-bookmark"
+key = "Ð"
+scope = "revisions"
+desc = "Push closest bookmark(s) (allows new)"
+
+[[bindings]]
+action = "tug"
+key = "T"
+scope = "revisions"
+desc = "Tug bookmark"
+
+[[bindings]]
+action = "show-after-revisions"
+key = "Z"
+scope = "revisions"
+desc = "Show after revisions (::@)"
+
+[[bindings]]
+action = "move-commit-down"
+key = "J"
+scope = "revisions"
+desc = "Move commit down"
+
+[[bindings]]
+action = "move-commit-up"
+key = "K"
+scope = "revisions"
+desc = "Move commit up"
+
+[[bindings]]
+action = "new-note-commit"
+key = "ctrl+n"
+scope = "revisions"
+desc = "New note commit"
+
+# Leader sequences (þ as leader key)
+[[bindings]]
+action = "ui.expand_status"
+seq = ["þ", "h"]
+scope = "revisions"
+desc = "Help"
+
+[[bindings]]
+action = "tug"
+seq = ["þ", "g", "t"]
+scope = "revisions"
+desc = "Git Tug"
+
+[[bindings]]
+action = "new-after-change"
+seq = ["þ", "n", "a"]
+scope = "revisions"
+desc = "New change after"
+
+[[bindings]]
+action = "new-before-change"
+seq = ["þ", "n", "b"]
+scope = "revisions"
+desc = "New change before"
+
+# Override inline describe accept: add plain "enter" (default is alt+enter + ctrl+s)
+[[bindings]]
+action = "revisions.inline_describe.accept"
+key = ["enter", "ctrl+s"]
+scope = "revisions.inline_describe"
+desc = "accept"
