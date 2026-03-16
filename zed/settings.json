@@ -209,15 +209,15 @@
     "default_profile": "write",
     "play_sound_when_agent_done": true,
   },
-
-  "context_servers": {
-    "chrome-devtools": {
-      "enabled": true,
-      "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest"],
-      "env": {},
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
     },
   },
+  "context_servers": {},
 
   // Git
   "git": {
