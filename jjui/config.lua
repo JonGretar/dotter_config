@@ -11,6 +11,6 @@ function setup(config)
       end
 
       exec_shell(string.format("jj diff -r %q --git --color never | zed -", change_id))
-    end, { desc = "show diff in diffnav", key = "ctrl+d", scope = "revisions" })
+    end, { desc = "show diff in diffnav", key = "alt+d", scope = "revisions" })
 
 end
