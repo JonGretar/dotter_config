@@ -1,16 +1,9 @@
 [
   // Clear out a few defaults
   {
-    "context": "Editor",
-    "bindings": {
-      "alt-h": null, // Undefine this shortcut so that I can write the pipe character
-      "ctrl-w": null, // Does not play well with hesitant VIM users
-    },
-  },
-  {
-    "context": "((FileFinder || FileFinder > Picker > Editor) || FileFinder > Picker > menu)",
-    "bindings": {
-      "cmd-shift-p": null,
+    "unbind": {
+      "ctrl-q": "vim::ToggleVisualBlock",
+      "cmd-shift-o": "outline::Toggle",
     },
   },
 
@@ -78,7 +71,7 @@
       // Global Leader key
       "space b n": "workspace::NewFile",
       "space l g": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }],
-      "space y": ["task::Spawn", { "task_name": "yazi", "reveal_target": "center" }],
+      "space y y": ["task::Spawn", { "task_name": "yazi", "reveal_target": "center" }],
       "space k 9": ["task::Spawn", { "task_name": "K9s", "reveal_target": "center" }],
       "space j j": ["task::Spawn", { "task_name": "JJUI", "reveal_target": "center" }],
       "space c c": ["task::Spawn", { "task_name": "Claude Code", "reveal_target": "center" }],
@@ -131,12 +124,7 @@
       "cmd-alt-8": ["workspace::MoveItemToPane", { "destination": 7, "focus": true, "clone": false }],
       "cmd-alt-9": ["workspace::MoveItemToPane", { "destination": 8, "focus": true, "clone": false }],
 
-      "cmd-shift-o": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false,
-        },
-      ],
+      "cmd-shift-o": ["projects::OpenRecent", { "create_new_window": false }],
 
       "alt-s": "editor::UnwrapSyntaxNode",
       "alt-k": "editor::MoveLineUp",
@@ -184,8 +172,6 @@
       "ð shift-b": ["pane::ActivateItem", 0],
       "' space": "vim::InsertEmptyLineBelow",
       "ð space": "vim::InsertEmptyLineAbove",
-
-      "ctrl-q": null, // Clear visual block for whichkey popup
     },
   },
 
@@ -226,7 +212,6 @@
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "j k": "vim::NormalBefore",
       "alt-s": "editor::UnwrapSyntaxNode",
       "alt-w": "vim::NextSubwordStart",
       "alt-e": "vim::NextSubwordEnd",

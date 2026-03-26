@@ -100,6 +100,9 @@
     "hide_root": true,
     "diagnostic_badges": true,
   },
+  "git_panel": {
+    "tree_view": false,
+  },
   "notification_panel": {
     "button": true,
   },
@@ -114,6 +117,10 @@
       "min_column": 80,
       "max_severity": "error",
     },
+  },
+  "debugger": {
+    "button": true,
+    "dock": "bottom",
   },
   "search": {
     "button": true,
@@ -195,6 +202,11 @@
     "enabled_in_text_threads": true,
   },
   "agent": {
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-5",
+      "enable_thinking": false,
+    },
     "tool_permissions": {
       "default": "allow",
     },
@@ -269,7 +281,7 @@
       "language_servers": ["expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
       // "language_servers": ["expert"],
     },
-    "HEEX": {
+    "HEEx": {
       "language_servers": ["!expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
       // "language_servers": ["tailwindcss-language-server", "expert", "emmet-language-server"],
       // "language_servers": ["expert"],
