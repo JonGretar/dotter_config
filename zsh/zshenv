@@ -12,6 +12,9 @@ export LESS="-# 1 -R -F"
 export PAGER="ov"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# Secrets
+export PUSHOVER_TOKEN=$(security find-generic-password -w -s 'Pushover CLI' -a 'pushover_token' 3> /dev/null)
+export PUSHOVER_USER=$(security find-generic-password -w -s 'Pushover CLI' -a 'pushover_user' 2> /dev/null)
 
 # Cargo
 . "$HOME/.cargo/env"
