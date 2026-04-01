@@ -27,6 +27,9 @@
 [harlequin.files]
 "harlequin/harlequin.toml" = "~/Library/Application Support/harlequin/config.toml"
 
+[iamb.files]
+"iamb/config.toml" = "~/Library/Application Support/iamb/config.toml"
+
 [jj.files]
 "jj/config.toml" = "~/.config/jj/config.toml"
 "jjui/config.toml" = "~/Library/Application Support/jjui/config.toml"

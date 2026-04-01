@@ -1,0 +1,16 @@
+default_profile = "user"
+
+[profiles.user]
+user_id = "@mongretar:matrix.org"
+
+[settings]
+external_edit_file_suffix = ".md"
+open_command = ["zed", "--wait"]
+reaction_display = true
+read_receipt_display = true
+read_receipt_send = true
+username_display = "displayname"
+
+
+[macros.normal]
+"gc" = ":chats<Enter>"
