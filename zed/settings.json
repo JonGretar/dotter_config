@@ -101,7 +101,7 @@
     "diagnostic_badges": true,
   },
   "git_panel": {
-    "tree_view": false,
+    "tree_view": true,
   },
   "notification_panel": {
     "button": true,
@@ -159,6 +159,7 @@
   // Vim mode setup
   "vim_mode": true,
   "vim": {
+    "toggle_relative_line_numbers": true,
     "use_system_clipboard": "on_yank",
     "cursor_shape": {
       "normal": "block",
@@ -168,7 +169,7 @@
     },
   },
   "cursor_blink": false,
-  "relative_line_numbers": "enabled",
+  // "relative_line_numbers": "enabled",
   "scroll_beyond_last_line": "off",
   "pane_split_direction_horizontal": "down",
   "pane_split_direction_vertical": "right",
@@ -216,7 +217,7 @@
       "provider": "zed.dev",
       "model": "claude-sonnet-4-6",
     },
-
+    "flexible": true,
     "button": true,
     "default_profile": "write",
     "play_sound_when_agent_done": true,

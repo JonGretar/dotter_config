@@ -4,6 +4,8 @@
     "unbind": {
       "ctrl-q": "vim::ToggleVisualBlock",
       "cmd-shift-o": "outline::Toggle",
+      "cmd-?": "agent::ToggleFocus",
+      "cmd-shift-j": "agent::ToggleNavigationMenu",
     },
   },
 
@@ -17,13 +19,18 @@
     "context": "Workspace",
     "bindings": {
       "cmd-shift-o": ["projects::OpenRecent", { "create_new_window": false }],
+      "cmd-shift-j": "multi_workspace::ToggleWorkspaceSidebar",
+      "cmd-Ð": "multi_workspace::PreviousWorkspace",
+      "cmd-?": "multi_workspace::NextWorkspace",
       "cmd-alt-p": ["task::Spawn", { "task_name": "file_finder", "reveal_target": "center" }],
       "cmd-alt-shift-o": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],
       "cmd-k cmd-s": "zed::OpenKeymapFile",
       "cmd-,": "zed::OpenSettingsFile",
       "ctrl-w z": "workspace::ToggleZoom",
+      "ctrl-q e": "workspace::FocusCenterPane",
       "ctrl-q t": "terminal_panel::ToggleFocus",
       "ctrl-q p": "project_panel::ToggleFocus",
+      "ctrl-q w": "multi_workspace::FocusWorkspaceSidebar",
       "ctrl-q o": "outline_panel::ToggleFocus",
       "ctrl-q g": "git_panel::ToggleFocus",
       "ctrl-q a": "agent::ToggleFocus",
@@ -78,6 +85,7 @@
       "space space": "tab_switcher::ToggleAll",
       // "space s f": "file_finder::Toggle",
       "space s b": "tab_switcher::ToggleAll",
+      "space s a": "agents_sidebar::ToggleThreadSwitcher",
       "space s p": ["projects::OpenRecent", { "create_new_window": false }],
       "space s f": ["task::Spawn", { "task_name": "file_finder", "reveal_target": "center" }],
       "space s g": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],
@@ -102,6 +110,17 @@
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
       "space h": "editor::Hover",
+    },
+  },
+
+  {
+    "context": "ThreadSwitcher",
+    // TODO: These bindings suck, Remember to recheck once feature is finished.
+    "bindings": {
+      "j": "agents_sidebar::ToggleThreadSwitcher",
+      "down": "agents_sidebar::ToggleThreadSwitcher",
+      "k": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }],
+      "up": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }],
     },
   },
 
