@@ -4,6 +4,7 @@ default_profile = "user"
 user_id = "@mongretar:matrix.org"
 
 [settings]
+image_preview = {}
 external_edit_file_suffix = ".md"
 open_command = ["zed", "--wait"]
 reaction_display = true
