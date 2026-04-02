@@ -59,16 +59,17 @@
   {
     "context": "ProjectPanel || (Workspace && !menu && !(Picker > Editor))",
     "bindings": {
-      // Window's motions
       "ctrl-shift-z": "workspace::ToggleZoom",
-      "ctrl-shift-h": "workspace::ActivatePaneLeft",
-      "ctrl-shift-l": "workspace::ActivatePaneRight",
-      "ctrl-shift-k": "workspace::ActivatePaneUp",
-      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      // Window's motions
       "ctrl-shift-left": "workspace::ActivatePaneLeft",
       "ctrl-shift-right": "workspace::ActivatePaneRight",
       "ctrl-shift-up": "workspace::ActivatePaneUp",
       "ctrl-shift-down": "workspace::ActivatePaneDown",
+      // This part we will need to rebind again in Editor context below
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
     },
   },
 
