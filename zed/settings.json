@@ -36,8 +36,42 @@
     "inactive_opacity": 0.6,
     "border_size": 0.3,
   },
+
   "use_system_path_prompts": false,
   "use_system_prompts": false,
+  "minimap": { "show": "never" },
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 300,
+  },
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 2,
+    "active_line_width": 4,
+    "coloring": "indent_aware",
+    "background_coloring": "disabled",
+  },
+  "gutter": {
+    "folds": false,
+  },
+  "scrollbar": {
+    "show": "auto",
+    "axes": {
+      "horizontal": false,
+    },
+  },
+  "colorize_brackets": true,
+  "experimental.theme_overrides": {
+    // "editor.indent_guide_active": "#FF0000" // When using fixed
+    // "editor.indent_guide": "#00FF00" // When using fixed
+  },
+  "theme_overrides": {
+    "Catppuccin Mocha": {
+      // "editor.indent_guide_active": "#FF0000",
+    },
+  },
+
+  // Terminal stuff
   "terminal": {
     "button": true,
     "toolbar": {
@@ -60,15 +94,17 @@
       },
     },
   },
+
+  // Panels
   "bottom_dock_layout": "left_aligned",
-  "gutter": {
-    "folds": false,
+  "title_bar": {
+    "show_branch_name": true,
+    "show_branch_icon": false,
   },
-  "scrollbar": {
-    "show": "auto",
-    "axes": {
-      "horizontal": false,
-    },
+  "tab_bar": {
+    "show": true,
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
   },
   "tabs": {
     "file_icons": false,
@@ -78,11 +114,6 @@
     "activate_on_close": "history",
   },
   "max_tabs": 8,
-  "tab_bar": {
-    "show": true,
-    "show_tab_bar_buttons": false,
-    "show_nav_history_buttons": false,
-  },
   "toolbar": {
     "quick_actions": false,
     "breadcrumbs": false,
@@ -90,23 +121,25 @@
     "code_actions": false,
     "selections_menu": true,
   },
-  "title_bar": {
-    "show_branch_name": true,
-    "show_branch_icon": false,
-  },
   "project_panel": {
+    "dock": "right",
     "auto_reveal_entries": false,
     "sticky_scroll": true,
     "hide_root": true,
     "diagnostic_badges": true,
   },
   "git_panel": {
+    "dock": "right",
     "tree_view": true,
   },
   "notification_panel": {
     "button": true,
   },
+  "outline_panel": {
+    "dock": "right",
+  },
   "collaboration_panel": {
+    "dock": "right",
     "button": true,
   },
   "diagnostics": {
@@ -125,28 +158,6 @@
   "search": {
     "button": true,
   },
-  "minimap": { "show": "never" },
-  "which_key": {
-    "enabled": true,
-    "delay_ms": 300,
-  },
-  "indent_guides": {
-    "enabled": true,
-    "line_width": 2,
-    "active_line_width": 4,
-    "coloring": "indent_aware",
-    "background_coloring": "disabled",
-  },
-  "colorize_brackets": true,
-  "experimental.theme_overrides": {
-    // "editor.indent_guide_active": "#FF0000" // When using fixed
-    // "editor.indent_guide": "#00FF00" // When using fixed
-  },
-  "theme_overrides": {
-    "Catppuccin Mocha": {
-      // "editor.indent_guide_active": "#FF0000",
-    },
-  },
 
   // Ensure some extensions are always installed as the config reliest on them
   "auto_install_extensions": {
@@ -159,7 +170,7 @@
   // Vim mode setup
   "vim_mode": true,
   "vim": {
-    "toggle_relative_line_numbers": true,
+    "toggle_relative_line_numbers": false,
     "use_system_clipboard": "on_yank",
     "cursor_shape": {
       "normal": "block",
@@ -169,7 +180,7 @@
     },
   },
   "cursor_blink": false,
-  // "relative_line_numbers": "enabled",
+  "relative_line_numbers": "enabled",
   "scroll_beyond_last_line": "off",
   "pane_split_direction_horizontal": "down",
   "pane_split_direction_vertical": "right",
@@ -181,7 +192,7 @@
 
   // Zed inner workings.
   "on_last_window_closed": "quit_app",
-  "restore_on_startup": "last_workspace",
+  "restore_on_startup": "last_session",
   "use_autoclose": true,
   "format_on_save": "on",
   "auto_indent_on_paste": true,
@@ -203,6 +214,7 @@
     "enabled_in_text_threads": true,
   },
   "agent": {
+    "dock": "left",
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-opus-4-5",
@@ -220,7 +232,7 @@
     "flexible": true,
     "button": true,
     "default_profile": "write",
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
   },
   "agent_servers": {
     "github-copilot-cli": {
