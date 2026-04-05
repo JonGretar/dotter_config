@@ -19,7 +19,9 @@ export PUSHOVER_USER=$(security find-generic-password -w -s 'Pushover CLI' -a 'p
 # Cargo
 . "$HOME/.cargo/env"
 
-# uv
+# Load Mise
+eval "$(mise activate zsh)"
+
 export PATH="/Users/jongretar/.local/bin:$PATH"
 
 export BAT_THEME=Coldark-Dark
