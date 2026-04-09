@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   // Visual Settings
+  "cli_default_open_behavior": "existing_window",
   "theme": "Catppuccin Mocha",
   "icon_theme": "Catppuccin Mocha",
   "buffer_font_size": 15,
@@ -59,6 +60,10 @@
     "axes": {
       "horizontal": false,
     },
+  },
+  "status_bar": {
+    "experimental.show": true,
+    "show_active_file": true,
   },
   "colorize_brackets": true,
   "experimental.theme_overrides": {
@@ -118,10 +123,13 @@
     "quick_actions": false,
     "breadcrumbs": false,
     "agent_review": true,
-    "code_actions": false,
+    "code_actions": true,
     "selections_menu": true,
   },
   "project_panel": {
+    "folder_icons": true,
+    "file_icons": true,
+    "indent_size": 10,
     "dock": "right",
     "auto_reveal_entries": false,
     "sticky_scroll": true,
@@ -131,9 +139,6 @@
   "git_panel": {
     "dock": "right",
     "tree_view": true,
-  },
-  "notification_panel": {
-    "button": true,
   },
   "outline_panel": {
     "dock": "right",
@@ -211,10 +216,10 @@
   "edit_predictions": {
     "provider": "zed",
     "mode": "subtle",
-    "enabled_in_text_threads": true,
   },
   "agent": {
     "dock": "left",
+    "sidebar_side": "left",
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-opus-4-5",

@@ -8,6 +8,10 @@
       "cmd-shift-j": "agent::ToggleNavigationMenu",
       "cmd-ð": "editor::ToggleLineNumbers",
       "cmd-'": ["editor::ToggleComments", { "advance_downwards": false }],
+      "ctrl-shift-up": "editor::SelectToStartOfParagraph",
+      "ctrl-shift-down": "editor::SelectToEndOfParagraph",
+      "ctrl-shift-left": "editor::SelectSmallerSyntaxNode",
+      "ctrl-shift-right": "editor::SelectLargerSyntaxNode",
     },
   },
 
@@ -20,11 +24,23 @@
   {
     "context": "Workspace",
     "bindings": {
+      // Window's motions
+      "ctrl-shift-left": "workspace::ActivatePaneLeft",
+      "ctrl-shift-right": "workspace::ActivatePaneRight",
+      "ctrl-shift-up": "workspace::ActivatePaneUp",
+      "ctrl-shift-down": "workspace::ActivatePaneDown",
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+
+      "ctrl-shift-z": "workspace::ToggleZoom",
+
       "cmd-shift-o": ["projects::OpenRecent", { "create_new_window": false }],
 
       "cmd-shift-j": "multi_workspace::ToggleWorkspaceSidebar",
-      "cmd-ð": "multi_workspace::PreviousProjectGroup",
-      "cmd-'": "multi_workspace::NextProjectGroup",
+      "cmd-ð": "multi_workspace::PreviousProject",
+      "cmd-'": "multi_workspace::NextProject",
       "cmd-Ð": "multi_workspace::PreviousThread",
       "cmd-?": "multi_workspace::NextThread",
 
@@ -63,24 +79,6 @@
     },
   },
 
-  // Window's navigation
-  {
-    "context": "ProjectPanel || (Workspace && !menu && !(Picker > Editor))",
-    "bindings": {
-      "ctrl-shift-z": "workspace::ToggleZoom",
-      // Window's motions
-      "ctrl-shift-left": "workspace::ActivatePaneLeft",
-      "ctrl-shift-right": "workspace::ActivatePaneRight",
-      "ctrl-shift-up": "workspace::ActivatePaneUp",
-      "ctrl-shift-down": "workspace::ActivatePaneDown",
-      // This part we will need to rebind again in Editor context below
-      "ctrl-shift-h": "workspace::ActivatePaneLeft",
-      "ctrl-shift-l": "workspace::ActivatePaneRight",
-      "ctrl-shift-k": "workspace::ActivatePaneUp",
-      "ctrl-shift-j": "workspace::ActivatePaneDown",
-    },
-  },
-
   {
     "context": "(Workspace && !Editor && !Terminal) || (Editor && VimControl)",
     "bindings": {
@@ -103,7 +101,6 @@
       "space b b": "pane::AlternateFile",
       "space b d": ["pane::CloseActiveItem", { "close_pinned": false }],
       "space b q": ["pane::CloseOtherItems", { "close_pinned": false }],
-      "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
       "space b p": "pane::TogglePinTab",
       "space i h": "editor::ToggleInlayHints",
       "space g '": "editor::GoToHunk",
@@ -119,6 +116,7 @@
       "space p": "editor::GoToDiagnostic",
       "space shift-p": "editor::GoToPreviousDiagnostic",
       "space h": "editor::Hover",
+      "space v": ["task::Spawn", { "task_name": "Preview in Skim" }],
     },
   },
 
@@ -164,16 +162,6 @@
       "cmd-alt-j": "editor::AddSelectionBelow", // Insert cursor below
       "´": ["vim::PushJump", { "line": false }],
       "°": ["vim::PushJump", { "line": true }],
-
-      // Pane Stuff - This is needed again to override 'Editor' context default bindings
-      "ctrl-shift-h": "workspace::ActivatePaneLeft",
-      "ctrl-shift-l": "workspace::ActivatePaneRight",
-      "ctrl-shift-j": "workspace::ActivatePaneDown",
-      "ctrl-shift-k": "workspace::ActivatePaneUp",
-      "ctrl-shift-left": "workspace::ActivatePaneLeft",
-      "ctrl-shift-right": "workspace::ActivatePaneRight",
-      "ctrl-shift-down": "workspace::ActivatePaneDown",
-      "ctrl-shift-up": "workspace::ActivatePaneUp",
 
       // Brackets are in a bad place in IS keyboards
       "' '": "vim::NextSectionStart",
@@ -274,6 +262,15 @@
   // R Code
   {
     "context": "Editor && extension==R",
+    "bindings": {
+      "ctrl-shift-m": ["workspace::SendKeystrokes", "space |> space"],
+      "alt--": ["workspace::SendKeystrokes", "space < - space"],
+    },
+  },
+
+  // R Code
+  {
+    "context": "Editor && extension==ipynb",
     "bindings": {
       "ctrl-shift-m": ["workspace::SendKeystrokes", "space |> space"],
       "alt--": ["workspace::SendKeystrokes", "space < - space"],
