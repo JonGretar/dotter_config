@@ -148,3 +148,9 @@ action = "revisions.inline_describe.accept"
 key = ["enter", "ctrl+s"]
 scope = "revisions.inline_describe"
 desc = "accept"
+
+[[bindings]]
+action = "revisions.inline_describe.new_line"
+key = ["shift+enter", "ctrl+n"]
+scope = "revisions.inline_describe"
+desc = "New Line"
