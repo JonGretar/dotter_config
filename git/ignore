@@ -11,3 +11,9 @@ NOCHECKIN/
 *NOCHECKIN.md
 
 **/.claude/settings.local.json
+
+# LSP
+/.dexter.*
+/.elixir-tools
+/.elixir_is
+/.expert
