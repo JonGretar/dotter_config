@@ -8,7 +8,6 @@
 // from the command palette or from `Zed` application menu.
 {
   // Visual Settings
-  "cli_default_open_behavior": "existing_window",
   "theme": "Catppuccin Mocha",
   "icon_theme": "Catppuccin Mocha",
   "buffer_font_size": 15,
@@ -197,6 +196,7 @@
 
   // Zed inner workings.
   "on_last_window_closed": "quit_app",
+  "cli_default_open_behavior": "existing_window",
   "restore_on_startup": "last_session",
   "use_autoclose": true,
   "format_on_save": "on",
@@ -221,18 +221,17 @@
     "dock": "left",
     "sidebar_side": "left",
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-opus-4-5",
+      "provider": "Montel Al",
+      "model": "gpt-oss:20b",
       "enable_thinking": false,
     },
     "tool_permissions": {
       "default": "allow",
     },
     "default_model": {
-      "effort": "medium",
-      "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "enable_thinking": false,
+      "provider": "Montel Al",
+      "model": "qwen3-coder-next:q8_0",
     },
     "flexible": true,
     "button": true,
@@ -240,6 +239,12 @@
     "play_sound_when_agent_done": "always",
   },
   "agent_servers": {
+    "opencode": {
+      "favorite_config_option_values": {
+        "model": ["montel-litellm/gpt-oss:20b", "github-copilot/gpt-5-mini", "opencode/nemotron-3-super-free"],
+      },
+      "type": "registry",
+    },
     "github-copilot-cli": {
       "type": "registry",
     },
@@ -248,6 +253,70 @@
     },
   },
   "context_servers": {},
+  "language_models": {
+    "openai_compatible": {
+      "Montel Al": {
+        "api_url": "https://litellm.spark-one.montel.care/v1",
+        "available_models": [
+          {
+            "name": "gpt-oss:20b",
+            "display_name": "GPT OSS 20b",
+            "max_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "qwen3-coder-next:q8_0",
+            "display_name": "Qwen3 Coder Next (Q8)",
+            "max_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "qwen3.6:35b",
+            "display_name": "Qwen3.6 35b",
+            "max_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "gemma4:31b",
+            "display_name": "Gemma 4 31b",
+            "max_tokens": 131072,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "gemma4:latest",
+            "display_name": "Gemma 4",
+            "max_tokens": 131072,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
+  },
 
   // Git
   "git": {
@@ -292,15 +361,15 @@
   "languages": {
     "Markdown": {
       "show_edit_predictions": false,
-      "soft_wrap": "preferred_line_length",
+      "soft_wrap": "bounded",
       "preferred_line_length": 120,
     },
     "Elixir": {
-      "language_servers": ["expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
+      "language_servers": ["expert", "!dexter", "!elixir-ls", "!next-ls", "!lexical", "..."],
       // "language_servers": ["expert"],
     },
     "HEEx": {
-      "language_servers": ["!expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
+      // "language_servers": ["!expert", "!elixir-ls", "!next-ls", "!lexical", "..."],
       // "language_servers": ["tailwindcss-language-server", "expert", "emmet-language-server"],
       // "language_servers": ["expert"],
     },
@@ -330,7 +399,7 @@
     "Zig": {},
     "Lua": {},
     "Typst": {
-      "soft_wrap": "preferred_line_length",
+      "soft_wrap": "bounded",
       "preferred_line_length": 80,
     },
     "TypeScript": {

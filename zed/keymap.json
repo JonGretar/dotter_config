@@ -80,6 +80,16 @@
   },
 
   {
+    "context": "GitGraph",
+    "bindings": {
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+      "g g": "menu::SelectFirst",
+      "G": "menu::SelectLast",
+    },
+  },
+
+  {
     "context": "(Workspace && !Editor && !Terminal) || (Editor && VimControl)",
     "bindings": {
       // Global Leader key
