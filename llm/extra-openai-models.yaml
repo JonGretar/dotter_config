@@ -1,0 +1,36 @@
+# Extra models
+
+# OpenCode
+- model_id: nemotron
+  model_name: nemotron-3-super-free
+  api_base: "https://opencode.ai/zen/v1/"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+
+# Montel Al
+- model_id: gpt-oss
+  model_name: gpt-oss:20b
+  api_base: "https://litellm.spark-one.montel.care"
+  api_key_name: spark
+  supports_tools: true
+  supports_schema: true
+
+- model_id: deepseek
+  model_name: deepseek-r1:70b
+  api_base: "https://litellm.spark-one.montel.care"
+  api_key_name: spark
+
+- model_id: gemma4
+  model_name: gemma4:latest
+  api_base: "https://litellm.spark-one.montel.care"
+  api_key_name: spark
+  supports_tools: true
+  supports_schema: true
+  vision: true
+
+- model_id: llama
+  model_name: llama3.1:8b
+  api_base: "https://litellm.spark-one.montel.care"
+  api_key_name: spark
+  supports_tools: true
