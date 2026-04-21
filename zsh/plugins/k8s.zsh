@@ -10,6 +10,7 @@ k() {
         kubectl "$@"
     fi
 }
+compdef k=kubectl
 
 k9() {
     if [[ -n "$KUBE_NS" ]]; then

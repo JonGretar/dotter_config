@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Set terminal window and tab/icon title
 #
