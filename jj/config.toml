@@ -9,7 +9,11 @@ email = "jon@montel.fi"
 default-command = "log"
 
 [git]
+colocate = true
 private-commits = "blacklist()"
+
+[remotes.origin]
+auto-track-bookmarks = "main | master"
 
 [aliases]
 ui = ["util", "exec", "--", "jjui"]
