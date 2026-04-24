@@ -1,9 +1,61 @@
 # Extra models
 
-# OpenCode
+# OpenCode Zen
 - model_id: nemotron
   model_name: nemotron-3-super-free
   api_base: "https://opencode.ai/zen/v1/"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+
+# OpenCode GO
+- model_id: glm-51
+  model_name: glm-5.1
+  api_base: "https://opencode.ai/zen/go/v1"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+
+- model_id: glm-5
+  model_name: glm-5
+  api_base: "https://opencode.ai/zen/go/v1"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+
+- model_id: kimi-k2
+  model_name: kimi-k2.5
+  api_base: "https://opencode.ai/zen/go/v1"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+  vision: true
+
+- model_id: mimo-pro
+  model_name: mimo-v2-pro
+  api_base: "https://opencode.ai/zen/go/v1"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+
+- model_id: mimo-omni
+  model_name: mimo-v2-omni
+  api_base: "https://opencode.ai/zen/go/v1"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+  vision: true
+
+- model_id: minimax-27
+  model_name: minimax-m2.7
+  api_base: "https://opencode.ai/zen/go/v1"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+
+- model_id: minimax-25
+  model_name: minimax-m2.5
+  api_base: "https://opencode.ai/zen/go/v1"
   api_key_name: opencode
   supports_tools: true
   supports_schema: true
@@ -22,7 +74,7 @@
   api_key_name: spark
 
 - model_id: gemma4
-  model_name: gemma4:latest
+  model_name: gemma4:31b
   api_base: "https://litellm.spark-one.montel.care"
   api_key_name: spark
   supports_tools: true
@@ -31,6 +83,12 @@
 
 - model_id: llama
   model_name: llama3.1:8b
+  api_base: "https://litellm.spark-one.montel.care"
+  api_key_name: spark
+  supports_tools: true
+
+- model_id: granite4
+  model_name: granite4:small-h
   api_base: "https://litellm.spark-one.montel.care"
   api_key_name: spark
   supports_tools: true

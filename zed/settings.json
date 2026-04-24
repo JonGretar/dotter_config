@@ -7,7 +7,8 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  // Visual Settings
+  // Visual Settings"
+
   "theme": "Catppuccin Mocha",
   "icon_theme": "Catppuccin Mocha",
   "buffer_font_size": 15,
@@ -103,7 +104,6 @@
   "bottom_dock_layout": "left_aligned",
   "title_bar": {
     "show_branch_name": true,
-    "show_branch_icon": false,
   },
   "tab_bar": {
     "show": true,
@@ -191,12 +191,14 @@
   "command_aliases": {
     "W": "w",
     "Wq": "wq",
+    "WQ": "wq",
     "Q": "q",
   },
 
   // Zed inner workings.
   "on_last_window_closed": "quit_app",
   "cli_default_open_behavior": "existing_window",
+  "confirm_quit": true,
   "restore_on_startup": "last_session",
   "use_autoclose": true,
   "format_on_save": "on",
@@ -206,6 +208,14 @@
   "auto_signature_help": false,
   "inlay_hints": {
     "enabled": true,
+  },
+  "feature_flags": {
+    "tabular-data-preview": "on",
+    "collab": "on",
+    "agent-skills": "on",
+    "streaming-edit-file-tool": "on",
+    "notebooks": "on",
+    "project-panel-undo-redo": "on",
   },
 
   // Collaborative Stuff
@@ -221,8 +231,8 @@
     "dock": "left",
     "sidebar_side": "left",
     "inline_assistant_model": {
-      "provider": "Montel Al",
-      "model": "gpt-oss:20b",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-latest",
       "enable_thinking": false,
     },
     "tool_permissions": {
@@ -230,8 +240,8 @@
     },
     "default_model": {
       "enable_thinking": false,
-      "provider": "Montel Al",
-      "model": "qwen3-coder-next:q8_0",
+      "provider": "OpenCode Go",
+      "model": "kimi-k2.5",
     },
     "flexible": true,
     "button": true,
@@ -245,16 +255,104 @@
       },
       "type": "registry",
     },
-    "github-copilot-cli": {
-      "type": "registry",
-    },
-    "claude-acp": {
-      "type": "registry",
-    },
+    "github-copilot-cli": { "type": "registry" },
+    "claude-acp": { "type": "registry" },
   },
   "context_servers": {},
   "language_models": {
+    "opencode": {
+      // "available_models": []
+    },
     "openai_compatible": {
+      "OpenCode Go": {
+        "api_url": "https://opencode.ai/zen/go/v1",
+        "available_models": [
+          {
+            "name": "glm-5.1",
+            "display_name": "GLM-5.1",
+            "max_tokens": 202752,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+            },
+          },
+          {
+            "name": "glm-5",
+            "display_name": "GLM-5",
+            "max_tokens": 202752,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+            },
+          },
+          {
+            "name": "kimi-k2.5",
+            "display_name": "Kimi K2.5",
+            "max_tokens": 262144,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+            },
+          },
+          {
+            "name": "mimo-v2-pro",
+            "display_name": "MiMo V2 Pro",
+            "max_tokens": 1048576,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+            },
+          },
+          {
+            "name": "mimo-v2-omni",
+            "display_name": "MiMo V2 Omni",
+            "max_tokens": 262144,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+            },
+          },
+          {
+            "name": "minimax-m2.7",
+            "display_name": "MiniMax M2.7",
+            "max_tokens": 196608,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+            },
+          },
+          {
+            "name": "minimax-m2.5",
+            "display_name": "MiniMax M2.5",
+            "max_tokens": 196608,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+            },
+          },
+        ],
+      },
       "Montel Al": {
         "api_url": "https://litellm.spark-one.montel.care/v1",
         "available_models": [
@@ -356,7 +454,6 @@
   },
 
   "ssh_connections": [],
-
   // Language Specific Settings
   "languages": {
     "Markdown": {
