@@ -5,9 +5,9 @@
       "ctrl-q": "vim::ToggleVisualBlock",
       "cmd-shift-o": "outline::Toggle",
       "cmd-?": "agent::ToggleFocus",
-      "cmd-shift-j": "agent::ToggleNavigationMenu",
       "cmd-ð": "editor::ToggleLineNumbers",
       "cmd-'": ["editor::ToggleComments", { "advance_downwards": false }],
+      "cmd-alt-l": "buffer_search::Deploy",
       "ctrl-shift-up": "editor::SelectToStartOfParagraph",
       "ctrl-shift-down": "editor::SelectToEndOfParagraph",
       "ctrl-shift-left": "editor::SelectSmallerSyntaxNode",
@@ -47,7 +47,9 @@
       "cmd-alt-p": ["task::Spawn", { "task_name": "file_finder", "reveal_target": "center" }],
       "cmd-alt-shift-o": ["task::Spawn", { "task_name": "project_finder", "reveal_target": "center" }],
       "cmd-k cmd-s": "zed::OpenKeymapFile",
+      "cmd-shift-k cmd-shift-s": "zed::OpenKeymap",
       "cmd-,": "zed::OpenSettingsFile",
+      "cmd-;": "zed::OpenSettings",
 
       "ctrl-w z": "workspace::ToggleZoom",
 

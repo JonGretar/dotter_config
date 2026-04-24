@@ -25,6 +25,7 @@ alias imgcat="wezterm imgcat"
 alias zed-preview="zed --zed /Applications/Zed\ Preview.app"
 alias lg="lazygit"
 alias l="ledger"
+alias fabric="fabric-ai"
 
 
 # --- Stop if in non-interactive shell ---
