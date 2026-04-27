@@ -15,12 +15,15 @@ zed = [{ run = 'zed "$@"', desc = "Open in Zed" }]
 harlequin = [
     { run = 'harlequin "$@"', block = true, desc = "Open using Harlequin" },
 ]
+sqlit = [
+    { run = 'sqlit sqlite://"$@"', block = true, desc = "Open using SQLit" },
+]
 skim = [{ run = 'skim-preview "$@"', desc = "Preview in Skim" }]
 sioyek = [{ run = 'sioyek "$@"', desc = "Preview in Sioyek" }]
 
 [open]
 prepend_rules = [
-    { mime = "application/sqlite3", use = "harlequin" },
+    { mime = "application/sqlite3", use = "sqlit" },
     { mime = "application/duckdb", use = "harlequin" },
     { mime = "application/pdf", use = ["sioyek", "skim", "open"] },
     { mime = "text/*", use = ["zed", "edit", "reveal"] },
