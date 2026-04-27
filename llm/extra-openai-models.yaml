@@ -9,7 +9,7 @@
   supports_schema: true
 
 # OpenCode GO
-- model_id: glm-51
+- model_id: glm
   model_name: glm-5.1
   api_base: "https://opencode.ai/zen/go/v1"
   api_key_name: opencode
@@ -23,7 +23,7 @@
   supports_tools: true
   supports_schema: true
 
-- model_id: kimi-k2
+- model_id: kimi
   model_name: kimi-k2.5
   api_base: "https://opencode.ai/zen/go/v1"
   api_key_name: opencode
@@ -46,7 +46,15 @@
   supports_schema: true
   vision: true
 
-- model_id: minimax-27
+- model_id: qwen
+  model_name: qwen3.6-plus
+  api_base: "https://opencode.ai/zen/go/v1"
+  api_key_name: opencode
+  supports_tools: true
+  supports_schema: true
+  vision: true
+
+- model_id: minimax
   model_name: minimax-m2.7
   api_base: "https://opencode.ai/zen/go/v1"
   api_key_name: opencode

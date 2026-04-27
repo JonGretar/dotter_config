@@ -103,6 +103,13 @@
   // Panels
   "bottom_dock_layout": "left_aligned",
   "title_bar": {
+    "show_branch_status_icon": true,
+    "show_project_items": true,
+    "show_onboarding_banner": true,
+    "show_sign_in": true,
+    "show_user_menu": true,
+    "show_user_picture": true,
+    "show_menus": true,
     "show_branch_name": true,
   },
   "tab_bar": {
@@ -140,6 +147,7 @@
     "tree_view": true,
   },
   "outline_panel": {
+    "default_width": 300.0,
     "dock": "right",
   },
   "collaboration_panel": {
@@ -195,7 +203,7 @@
     "Q": "q",
   },
 
-  // Zed inner workings.
+  // Zed internal workings.
   "on_last_window_closed": "quit_app",
   "cli_default_open_behavior": "existing_window",
   "confirm_quit": true,
@@ -228,6 +236,27 @@
     "mode": "subtle",
   },
   "agent": {
+    "limit_content_width": true,
+    "max_content_width": 850,
+    "default_width": 640,
+    "favorite_models": [
+      {
+        "provider": "OpenCode Go",
+        "model": "minimax-m2.7",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "OpenCode Go",
+        "model": "minimax-m2.5",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-6-latest",
+        "enable_thinking": true,
+        "effort": "high",
+      },
+    ],
     "dock": "left",
     "sidebar_side": "left",
     "inline_assistant_model": {
@@ -239,9 +268,10 @@
       "default": "allow",
     },
     "default_model": {
-      "enable_thinking": false,
-      "provider": "OpenCode Go",
-      "model": "kimi-k2.5",
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-latest",
     },
     "flexible": true,
     "button": true,
@@ -258,15 +288,36 @@
     "github-copilot-cli": { "type": "registry" },
     "claude-acp": { "type": "registry" },
   },
-  "context_servers": {},
+  "context_servers": {
+    "tidewave-mcp": {
+      "enabled": true,
+      "remote": false,
+      "settings": {},
+    },
+  },
   "language_models": {
     "opencode": {
-      // "available_models": []
+      "show_zen_models": false,
+      "show_go_models": true,
+      "show_free_models": true,
     },
     "openai_compatible": {
       "OpenCode Go": {
         "api_url": "https://opencode.ai/zen/go/v1",
         "available_models": [
+          {
+            "name": "qwen3.6-plus",
+            "max_tokens": 262144,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 262144,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+            },
+          },
           {
             "name": "glm-5.1",
             "display_name": "GLM-5.1",
@@ -462,6 +513,7 @@
       "preferred_line_length": 120,
     },
     "Elixir": {
+      // "language_servers": ["!expert", "dexter", "!elixir-ls", "!next-ls", "!lexical", "..."],
       "language_servers": ["expert", "!dexter", "!elixir-ls", "!next-ls", "!lexical", "..."],
       // "language_servers": ["expert"],
     },
@@ -586,5 +638,17 @@
     // }
   },
 
-  "profiles": {},
+  "profiles": {
+    "Classic Layout": {
+      "base": "user",
+      "settings": {
+        "agent": { "dock": "right" },
+        "project_panel": { "dock": "left" },
+        "outline_panel": { "dock": "left" },
+        "git_panel": { "dock": "left" },
+      },
+    },
+  },
+
+  // The End...
 }
