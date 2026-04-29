@@ -247,6 +247,16 @@
     },
   },
 
+  {
+    "context": "MarkdownPreview",
+    "bindings": {
+      "j": "markdown::ScrollDown",
+      "k": "markdown::ScrollUp",
+      "shift-J": "markdown::ScrollDownByItem",
+      "shift-K": "markdown::ScrollUpByItem",
+    },
+  },
+
   // *** Extension Based Configurations ***
   // Elixir
   {
