@@ -197,6 +197,7 @@
   "pane_split_direction_horizontal": "down",
   "pane_split_direction_vertical": "right",
   "command_aliases": {
+    "close": "workspace::CloseProject",
     "W": "w",
     "Wq": "wq",
     "WQ": "wq",
@@ -297,7 +298,7 @@
   },
   "language_models": {
     "opencode": {
-      "show_zen_models": false,
+      "show_zen_models": true,
       "show_go_models": true,
       "show_free_models": true,
     },
