@@ -215,13 +215,13 @@
   "extend_comment_on_newline": false,
   "show_signature_help_after_edits": false,
   "auto_signature_help": false,
+  "code_lens": "on",
+  "semantic_tokens": "combined",
   "inlay_hints": {
     "enabled": true,
   },
   "feature_flags": {
     "tabular-data-preview": "on",
-    "collab": "on",
-    "agent-skills": "on",
     "streaming-edit-file-tool": "on",
     "notebooks": "on",
     "project-panel-undo-redo": "on",
@@ -271,8 +271,8 @@
     "default_model": {
       "effort": "high",
       "enable_thinking": true,
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-6-latest",
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
     },
     "flexible": true,
     "button": true,
@@ -303,108 +303,6 @@
       "show_free_models": true,
     },
     "openai_compatible": {
-      "OpenCode Go": {
-        "api_url": "https://opencode.ai/zen/go/v1",
-        "available_models": [
-          {
-            "name": "qwen3.6-plus",
-            "max_tokens": 262144,
-            "max_output_tokens": 65536,
-            "max_completion_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-            },
-          },
-          {
-            "name": "glm-5.1",
-            "display_name": "GLM-5.1",
-            "max_tokens": 202752,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-            },
-          },
-          {
-            "name": "glm-5",
-            "display_name": "GLM-5",
-            "max_tokens": 202752,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-            },
-          },
-          {
-            "name": "kimi-k2.5",
-            "display_name": "Kimi K2.5",
-            "max_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-            },
-          },
-          {
-            "name": "mimo-v2-pro",
-            "display_name": "MiMo V2 Pro",
-            "max_tokens": 1048576,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true,
-            },
-          },
-          {
-            "name": "mimo-v2-omni",
-            "display_name": "MiMo V2 Omni",
-            "max_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true,
-            },
-          },
-          {
-            "name": "minimax-m2.7",
-            "display_name": "MiniMax M2.7",
-            "max_tokens": 196608,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true,
-            },
-          },
-          {
-            "name": "minimax-m2.5",
-            "display_name": "MiniMax M2.5",
-            "max_tokens": 196608,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true,
-            },
-          },
-        ],
-      },
       "Montel Al": {
         "api_url": "https://litellm.spark-one.montel.care/v1",
         "available_models": [
@@ -564,6 +462,14 @@
   },
 
   // LSP Settings
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      { "token_type": "conflictMarker", "foreground_color": "#569cd6" },
+      { "token_type": "conflictSnapshot", "foreground_color": "#9cdcfe" },
+      { "token_type": "conflictAddition", "foreground_color": "#6a9955" },
+      { "token_type": "conflictDeletion", "foreground_color": "#f44747" },
+    ],
+  },
   "lsp": {
     "expert": {
       "binary": {
