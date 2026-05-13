@@ -221,7 +221,9 @@
     "enabled": true,
   },
   "feature_flags": {
+    "agent-panel-terminal": "on",
     "tabular-data-preview": "on",
+    "skills": "on",
     "streaming-edit-file-tool": "on",
     "notebooks": "on",
     "project-panel-undo-redo": "on",
@@ -269,10 +271,9 @@
       "default": "allow",
     },
     "default_model": {
-      "effort": "high",
       "enable_thinking": true,
-      "provider": "deepseek",
-      "model": "deepseek-v4-pro",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
     },
     "flexible": true,
     "button": true,
@@ -280,6 +281,9 @@
     "play_sound_when_agent_done": "always",
   },
   "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
     "opencode": {
       "favorite_config_option_values": {
         "model": ["montel-litellm/gpt-oss:20b", "github-copilot/gpt-5-mini", "opencode/nemotron-3-super-free"],
