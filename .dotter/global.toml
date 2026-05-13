@@ -76,6 +76,7 @@
 "yazi/theme.toml" = "~/.config/yazi/theme.toml"
 
 [zed.files]
+"zed/AGENTS.md" = "~/.config/zed/AGENTS.md"
 "zed/settings.json" = "~/.config/zed/settings.json"
 "zed/keymap.json" = "~/.config/zed/keymap.json"
 "zed/tasks.json" = "~/.config/zed/tasks.json"
