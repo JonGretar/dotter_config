@@ -58,6 +58,8 @@
     "allow_concurrent_runs": true,
     "use_new_terminal": true,
   },
+
+  // Terminal Agents
   {
     "label": "Claude Code",
     "command": "claude",
@@ -72,6 +74,50 @@
     "allow_concurrent_runs": true,
     "use_new_terminal": true,
   },
+  {
+    "label": "Crush",
+    "command": "crush",
+    "hide": "on_success",
+    "reveal_target": "center",
+    "env": {
+      "EDITOR": "zed",
+      "VISUAL": "zed",
+    },
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+  },
+  {
+    "label": "Opencode",
+    "command": "opencode",
+    "hide": "on_success",
+    "reveal_target": "center",
+    "env": {
+      "EDITOR": "zed",
+      "VISUAL": "zed",
+    },
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+  },
+  {
+    "label": "Codex",
+    "command": "codex",
+    "hide": "on_success",
+    "reveal_target": "agent",
+    "env": {
+      "EDITOR": "zed",
+      "VISUAL": "zed",
+    },
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+  },
+
+  // Other Tools
   {
     "label": "Preview in Skim",
     "command": "skim-preview '$ZED_FILE'",
