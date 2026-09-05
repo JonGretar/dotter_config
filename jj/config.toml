@@ -41,6 +41,8 @@ stage = ["stack", "closest_merge(@)+:: ~ empty()"]
 
 [revsets]
 bookmark-advance-to = 'closest_pushable(@)'
+log = "builtin_log() ~ jjj_metadata_lane()"
+short-prefixes = "builtin_log()"
 
 [revset-aliases]
 'closest_bookmark(to)' = "heads(::to & bookmarks())"
@@ -81,6 +83,8 @@ bookmark-advance-to = 'closest_pushable(@)'
 #
 # - jj gerrit send -r 'ready()' --dry-run
 'ready()' = "open() ~ blacklist()::"
+"jjj_metadata_heads()" = "bookmarks(glob:\"jjj*\") | remote_bookmarks(glob:\"jjj*\", remote=glob:\"*\")"
+"jjj_metadata_lane()" = "(::jjj_metadata_heads() | jjj_metadata_heads()::) ~ root()"
 
 [colors]
 # Base customizations
