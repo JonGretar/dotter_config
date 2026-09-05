@@ -3,3 +3,9 @@
 [settings]
 env_file = ".env"
 idiomatic_version_file_enable_tools = ["ruby"]
+
+[tools]
+elixir = "1.20.4"
+erlang = "28.1.1"
+go = "1.22.1"
+node = "24.13.1"
