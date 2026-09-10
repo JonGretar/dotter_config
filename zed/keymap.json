@@ -232,8 +232,9 @@
     "bindings": {
       "^": "vim::StartOfLine",
       "0": "vim::FirstNonWhitespace",
-      "s": "vim::PushSneak",
-      "shift-s": "vim::PushSneakBackward",
+      // "s": "vim::PushSneak",
+      // "shift-s": "vim::PushSneakBackward",
+      "s": "vim::HelixJumpToWord",
     },
   },
 
