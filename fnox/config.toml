@@ -1,0 +1,8 @@
+#:schema https://fnox.jdx.dev/schema.json
+default_provider = "age"
+
+[providers.age]
+type = "age"
+recipients = ["age17h55e5e70erljmy50ye6cd43hjssr079fxwzkrart7al9u7qspvsae6vtc"]
+
+[secrets]

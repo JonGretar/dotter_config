@@ -20,6 +20,10 @@
 "fastfetch/uh_for_under.png" = { target = "~/.config/fastfetch/uh_for_under.png", type = "symbolic" }
 "fastfetch/montel-logo-clean.png" = { target = "~/.config/fastfetch/montel-logo-clean.png", type = "symbolic" }
 
+[fnox.files]
+"fnox/config.toml" = "~/.config/fnox/config.toml"
+"fnox/aerc.toml" = "~/.config/fnox/aerc.toml"
+
 [git.files]
 "git/ignore" = "~/.config/git/ignore"
 "git/gitconfig" = "~/.config/git/config"
