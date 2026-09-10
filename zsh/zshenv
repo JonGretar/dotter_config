@@ -14,6 +14,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Dev flags for apps
 export LOCAL_NOTEBOOK_DEV=true
+export SCCACHE_CACHE_SIZE=20G
 
 # Secrets
 export PUSHOVER_TOKEN=$(security find-generic-password -w -s 'Pushover CLI' -a 'pushover_token' 2> /dev/null)
@@ -24,6 +25,9 @@ export PUSHOVER_USER=$(security find-generic-password -w -s 'Pushover CLI' -a 'p
 
 # Load Mise
 eval "$(mise activate zsh)"
+
+# Load FNox
+eval "$(fnox activate zsh)"
 
 export PATH="/Users/jongretar/.local/bin:$PATH"
 
