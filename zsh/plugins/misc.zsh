@@ -10,5 +10,5 @@ sharelp() {
     echo "Tunnel is active. Press Ctrl+C to close."
 
     # -N prevents executing remote commands (no shell)
-    ssh -N -R 8077:localhost:${local_port} dev1.jongretar.com
+    ssh -N -R 8077:localhost:${local_port} london-one
 }

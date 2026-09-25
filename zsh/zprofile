@@ -26,6 +26,7 @@ source ~/.config/zsh/plugins/misc.zsh
 ZSH_TAB_TITLE_ONLY_FOLDER=true
 source ~/.config/zsh/plugins/zsh-tab-title.plugin.zsh
 
+export PATH="$HOME/.local/share/mise/shims:$PATH"
 
 # Few things should only happen in term.
 if [[ "$TERM_PROGRAM" = "WezTerm" ]]; then
