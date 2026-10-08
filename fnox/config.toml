@@ -1,9 +1,13 @@
-#:schema https://fnox.jdx.dev/schema.json
 default_provider = "age"
 
 [providers.age]
 type = "age"
 recipients = ["age17h55e5e70erljmy50ye6cd43hjssr079fxwzkrart7al9u7qspvsae6vtc"]
+
+[providers.op]
+type = "1password"
+vault = "Shared"
+account = "montel-ig.1password.com"
 
 [secrets]
 PUSHOVER_TOKEN= { provider = "age", value = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhV09mbnd5dVI1WjNHSS9BUlhQa1ZQNFZTSjV3WnJPRHFlUURHZVFsWUdBCjlPenNGbXcyUjl5RTJJdWhEZVZkK1M3a1RGdDZuazE3STVlbXVsYTk0WW8KLT4gNCtcWi1ncmVhc2UgIiBECkp5QWhvWVEKLS0tIEdqQmVva2lvYTNyMUJOQUYzMUNZNi80K2tPMVhOcGRzRmhxbzVtMk9VQWMKtDDhBeXSKeRxGkpHzWHZWilUtv1K4bkBfUF+qbX73tU/G36R0J1stuvG8MRC7Q1mFWuXEQtr6lLE21zs3Q0=" }
