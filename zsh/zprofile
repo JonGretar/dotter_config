@@ -18,6 +18,7 @@ source ~/.config/zsh/plugins/zsh-vi-mode.plugin.zsh
 source ~/.config/zsh/plugins/yazi-command.zsh
 source ~/.config/zsh/plugins/jupyter-count.zsh
 source ~/.config/zsh/plugins/television.zsh
+source ~/.config/zsh/plugins/aws-creds.zsh
 source ~/.config/zsh/plugins/k8s.zsh
 source ~/.config/zsh/plugins/llm-cmd-comp.zsh
 source ~/.config/zsh/plugins/misc.zsh
