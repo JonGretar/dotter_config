@@ -4,6 +4,7 @@
     "unbind": {
       "ctrl-q": "vim::ToggleVisualBlock",
       "cmd-shift-o": "outline::Toggle",
+      "cmd-shift-c": "collab_panel::ToggleFocus",
       "cmd-?": "agent::ToggleFocus",
       "cmd-ð": "editor::ToggleLineNumbers",
       "cmd-'": ["editor::ToggleComments", { "advance_downwards": false }],
@@ -50,6 +51,11 @@
       "cmd-shift-k cmd-shift-s": "zed::OpenKeymap",
       "cmd-,": "zed::OpenSettingsFile",
       "cmd-;": "zed::OpenSettings",
+
+      "cmd-shift-T": "agent::NewTerminalThread",
+      // "cmd-shift-N": ["agent::NewThread", "Zed"],
+      "cmd-shift-N": ["agent::NewExternalAgentThread", { "agent": "NativeAgent" }],
+      "cmd-shift-C": ["agent::NewExternalAgentThread", { "agent": "claude-acp" }],
 
       "ctrl-w z": "workspace::ToggleZoom",
 

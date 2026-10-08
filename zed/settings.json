@@ -238,6 +238,10 @@
     "mode": "subtle",
   },
   "agent": {
+    "threads_sidebar": {
+      "position": "left"
+    },
+    "terminal_init_command": "apicker --loop",
     "use_modifier_to_send": true,
     "sandbox_permissions": {
       "allow_unsandboxed": true,
@@ -249,40 +253,39 @@
       {
         "provider": "OpenCode Go",
         "model": "minimax-m2.7",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "OpenCode Go",
         "model": "minimax-m2.5",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "anthropic",
         "model": "claude-sonnet-4-6-latest",
         "enable_thinking": true,
-        "effort": "high"
+        "effort": "high",
       },
       {
         "provider": "openai-subscribed",
         "model": "gpt-6-astra",
         "enable_thinking": true,
-        "effort": "low"
+        "effort": "low",
       },
       {
         "provider": "openai-subscribed",
         "model": "gpt-6-sol",
         "enable_thinking": true,
-        "effort": "medium"
+        "effort": "medium",
       },
       {
         "provider": "deepseek",
         "model": "deepseek-v4-pro",
         "enable_thinking": true,
-        "effort": "high"
-      }
+        "effort": "high",
+      },
     ],
     "dock": "left",
-    "sidebar_side": "left",
     "inline_assistant_model": {
       "provider": "anthropic",
       "model": "claude-sonnet-4-6-latest",
@@ -299,15 +302,22 @@
     },
     "flexible": true,
     "button": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "play_sound_when_agent_done": "always",
   },
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "mode": "auto"
+      },
       "type": "registry",
     },
   },
   "context_servers": {
+    "tidewave-apj": {
+      "enabled": false,
+      "url": "http://localhost:3000/tidewave/mcp"
+    },
     "exa": {
       "enabled": true,
       "url": "https://mcp.exa.ai/mcp",
