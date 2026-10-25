@@ -38,6 +38,7 @@ fpath=(${ASDF_DIR}/completions $HOMEBREW_PREFIX/share/zsh/site-functions ~/.conf
 # -- Bindings --
 bindkey "\e[1;3D" backward-word     # ⌥←
 bindkey "\e[1;3C" forward-word      # ⌥→
+bindkey -s "\C-g" "\C-ahowto \C-j"  # https://github.com/antonmedv/howto
 
 
 # --- Starship ---
