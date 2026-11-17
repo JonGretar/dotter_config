@@ -239,7 +239,7 @@
   },
   "agent": {
     "threads_sidebar": {
-      "position": "left"
+      "position": "left",
     },
     "terminal_init_command": "apicker --loop",
     "use_modifier_to_send": true,
@@ -284,6 +284,11 @@
         "enable_thinking": true,
         "effort": "high",
       },
+      {
+        "provider": "Montel Al",
+        "model": "qwen3.8-flash-next-think",
+        "enable_thinking": false,
+      },
     ],
     "dock": "left",
     "inline_assistant_model": {
@@ -295,10 +300,9 @@
       "default": "allow",
     },
     "default_model": {
-      "effort": "medium",
       "enable_thinking": true,
       "provider": "openai-subscribed",
-      "model": "gpt-6-sol",
+      "model": "gpt-6-astra",
     },
     "flexible": true,
     "button": true,
@@ -308,21 +312,13 @@
   "agent_servers": {
     "claude-acp": {
       "default_config_options": {
-        "mode": "auto"
+        "model": "fable",
+        "mode": "auto",
       },
       "type": "registry",
     },
   },
-  "context_servers": {
-    "tidewave-apj": {
-      "enabled": false,
-      "url": "http://localhost:3000/tidewave/mcp"
-    },
-    "exa": {
-      "enabled": true,
-      "url": "https://mcp.exa.ai/mcp",
-    },
-  },
+  "context_servers": {},
   "language_models": {
     "opencode": {
       "show_zen_models": true,
@@ -352,9 +348,10 @@
         "api_url": "https://litellm.spark-one.montel.care/v1",
         "available_models": [
           {
-            "name": "gpt-oss:20b",
-            "display_name": "GPT OSS 20b",
-            "max_tokens": 32768,
+            "name": "qwen3.8-flash-next",
+            "display_name": "qwen3.8 Flash Next",
+            "max_tokens": 262144,
+            "max_output_tokens": 32768,
             "capabilities": {
               "tools": true,
               "images": false,
@@ -363,45 +360,13 @@
             },
           },
           {
-            "name": "qwen3-coder-next:q8_0",
-            "display_name": "Qwen3 Coder Next (Q8)",
-            "max_tokens": 32768,
+            "name": "qwen3.8-flash-next-think",
+            "display_name": "qwen3.8 Flash Next (Thinker)",
+            "max_tokens": 262144,
+            "max_output_tokens": 32768,
             "capabilities": {
               "tools": true,
               "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-            },
-          },
-          {
-            "name": "qwen3.6:35b",
-            "display_name": "Qwen3.6 35b",
-            "max_tokens": 32768,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-            },
-          },
-          {
-            "name": "gemma4:31b",
-            "display_name": "Gemma 4 31b",
-            "max_tokens": 131072,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-            },
-          },
-          {
-            "name": "gemma4:latest",
-            "display_name": "Gemma 4",
-            "max_tokens": 131072,
-            "capabilities": {
-              "tools": true,
-              "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
             },
